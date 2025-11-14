@@ -33,6 +33,34 @@ def landing():
     """Landing page pública"""
     return render_template('landing.html', version=VERSION_APP, creador=CREATOR_APP)
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    """Página de login con validación"""
+    if request.method == 'POST':
+        usuario = request.form.get('usuario')
+        password = request.form.get('password')
+        
+        # Validar usuario en MongoDB
+        user_data = mongo.validar_usuario(usuario, password, MONGO_COLECCION)
+        
+        if user_data:
+            # Guardar sesión
+            session['usuario'] = usuario
+            session['permisos'] = user_data.get('permisos', {})
+            session['logged_in'] = True
+            
+            flash('¡Bienvenido! Inicio de sesión exitoso', 'success')
+            return redirect(url_for('admin'))
+        else:
+            flash('Usuario o contraseña incorrectos', 'danger')
+    
+    return render_template('login.html')
+
+@app.route('/about')
+def about():
+    """Página About"""
+    return render_template('about.html', version=VERSION_APP, creador=CREATOR_APP)
+
 # ==================== MAIN ====================
 if __name__ == '__main__':
     # Crear carpetas necesarias
@@ -51,3 +79,4 @@ if __name__ == '__main__':
         print("✅ ElasticSearch Cloud: Conectado")
     else:
         print("❌ ElasticSearch Cloud: Error de conexión")
+
