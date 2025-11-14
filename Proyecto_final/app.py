@@ -33,6 +33,12 @@ def landing():
     """Landing page pública"""
     return render_template('landing.html', version=VERSION_APP, creador=CREATOR_APP)
 
+@app.route('/about')
+def about():
+    """Página About"""
+    return render_template('about.html', version=VERSION_APP, creador=CREATOR_APP)
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     """Página de login con validación"""
@@ -56,10 +62,14 @@ def login():
     
     return render_template('login.html')
 
-@app.route('/about')
-def about():
-    """Página About"""
-    return render_template('about.html', version=VERSION_APP, creador=CREATOR_APP)
+@app.route('/admin')
+def admin():
+    """Página de administración (protegida requiere login)"""
+    if not session.get('logged_in'):
+        flash('Por favor, inicia sesión para acceder al área de administración', 'warning')
+        return redirect(url_for('login'))
+    
+    return render_template('admin.html', usuario=session.get('usuario'), permisos=session.get('permisos'))
 
 # ==================== MAIN ====================
 if __name__ == '__main__':
