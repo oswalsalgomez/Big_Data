@@ -21,7 +21,7 @@ ELASTIC_API_KEY = os.getenv('ELASTIC_API_KEY')
 
 # Versión de la aplicación
 VERSION_APP = "1.0.0"
-CREATOR_APP = "LuisFCG"
+CREATOR_APP = "Oswaldo Salgado Gómez"
 
 # Inicializar conexiones
 mongo = MongoDB(MONGO_URI, MONGO_DB)
