@@ -16,7 +16,7 @@ MONGO_COLECCION = os.getenv('MONGO_COLECCION', 'usuario_roles')
 
 
 # Configuración ElasticSearch Cloud
-ELASTIC_CLOUD_URL = os.getenv('ELASTIC_CLOUD_URL')
+ELASTIC_CLOUD = os.getenv('ELASTIC_CLOUD')
 ELASTIC_API_KEY = os.getenv('ELASTIC_API_KEY')
 
 # Versión de la aplicación
@@ -25,7 +25,7 @@ CREATOR_APP = "Oswaldo Salgado Gómez"
 
 # Inicializar conexiones
 mongo = MongoDB(MONGO_URI, MONGO_DB)
-elastic = ElasticSearch(ELASTIC_CLOUD_URL, ELASTIC_API_KEY)
+elastic = ElasticSearch(ELASTIC_CLOUD, ELASTIC_API_KEY)
 
 # ==================== RUTAS ====================
 @app.route('/')

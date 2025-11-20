@@ -12,7 +12,7 @@ class ElasticSearch:
             api_key: API Key para autenticación
         """
         self.client = Elasticsearch(
-            cloud_url,
+            cloud_id=cloud_url,
             api_key=api_key,
             verify_certs=True
         )
