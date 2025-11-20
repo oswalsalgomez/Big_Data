@@ -43,6 +43,7 @@
             border-radius: 10px;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -79,22 +80,28 @@
             <!-- Columna Foto y Datos -->
             <div class="col-md-5 text-center">
                 <img src="{{ url_for('static', filename='images/Foto_creador.jpg') }}" 
-                     alt="Foto del creador" class="profile-img">
+                alt="Foto del creador" class="profile-img">
 
                 <h3 class="mt-4 fw-bold">Oswaldo Salgado Gómez</h3>
                 <p class="fs-5">Estudiante de Maestría en Analítica de Datos</p>
 
                 <div class="mt-4">
-                    <a href="https://github.com/oswalsalgomez" target="_blank" class="btn btn-primary btn-custom me-2">GitHub</a>
-                    <a href="https://www.linkedin.com/in/oswaldo-salgado-gómez-80767228" 
-                       target="_blank" class="btn btn-warning btn-custom">LinkedIn</a>
+                    <a href="https://github.com/oswalsalgomez"
+                    target="_blank" 
+                    class="btn btn-primary btn-custom me-2">
+                    <i class="fab fa-github fa-lg me-2"></i>GitHub
+                </a>
+                    <a href="https://www.linkedin.com/in/oswaldo-salgado-gomez-80767228" 
+                    target="_blank" class="btn btn-warning btn-custom"> 
+                    <i class="fab fa-linkedin fa-lg me-2"></i>LinkedIn
+                </a>
                 </div>
             </div>
 
             <!-- Columna Logo Universidad -->
             <div class="col-md-5 text-center d-flex flex-column justify-content-center">
                 <img src="{{ url_for('static', filename='images/logo_u.webp') }}" 
-                     alt="Universidad Central" class="logo-ucentral">
+                alt="Universidad Central" class="logo-ucentral">
             </div>
 
         </div>
