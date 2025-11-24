@@ -8,29 +8,31 @@
 {% endblock %}
 
 {% block content %}
+<div class="main-container">
 
-<h1 class="text-center mb-4">Panel de Administración</h1>
+    <h1 class="text-center mb-4">Panel de Administración</h1>
 
-<p class="text-center mb-3">
-    Bienvenido <strong>{{ usuario }}</strong> al panel de administración.
-</p>
-<p class="text-center mb-4">
-    Desde aquí puedes gestionar los usuarios, administrar índices y datos en ElasticSearch
-    y cargar nuevos documentos para análisis.
-</p>
+    <p class="text-center mb-3">
+        Bienvenido <strong>{{ usuario }}</strong> al panel de administración.
+    </p>
+    <p class="text-center mb-4">
+        Desde aquí puedes gestionar los usuarios, administrar índices y datos en ElasticSearch
+        y cargar nuevos documentos para análisis.
+    </p>
 
-<div class="d-flex justify-content-center flex-wrap gap-3">
-    <a href="{{ url_for('gestor_usuarios') }}" class="btn btn-linkedin">
-        Gestionar Usuarios
-    </a>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+        <a href="{{ url_for('gestor_usuarios') }}" class="btn btn-linkedin">
+            Gestionar Usuarios
+        </a>
 
-    <a href="{{ url_for('gestor_elastic') }}" class="btn btn-linkedin">
-        Gestionar Elastic
-    </a>
+        <a href="{{ url_for('gestor_elastic') }}" class="btn btn-linkedin">
+            Gestionar Elastic
+        </a>
 
-    <a href="{{ url_for('cargar_doc_elastic') }}" class="btn btn-linkedin">
-        Cargar archivos a Elastic
-    </a>
+        <a href="{{ url_for('cargar_doc_elastic') }}" class="btn btn-linkedin">
+            Cargar archivos a Elastic
+        </a>
+    </div>
+
 </div>
-
 {% endblock %}
