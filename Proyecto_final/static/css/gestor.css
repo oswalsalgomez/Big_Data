@@ -1,23 +1,28 @@
+/* Estilos específicos para las páginas de gestión (usuarios, elastic, etc.) */
 
-body {
-    background: linear-gradient(to right, #f9cbac, #f7f7f1);
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+.gestor-titulo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
-.header {
-    background-color: rgba(138, 193, 242, 0.9);
-    padding: 1rem 0;
+
+.gestor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
 }
-.container {
-    background-color: rgba(130, 180, 201, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
-    margin-top: 2rem;
+
+.gestor-table th,
+.gestor-table td {
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid #ddd;
 }
-footer {
-    background-color: rgba(80, 129, 242, 0.9);
-    padding: 1rem 0;
-    margin-top: 2rem;
-    color: #666;
+
+.gestor-table th {
+    font-weight: 600;
+}
+
+.gestor-actions .btn {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
 }
