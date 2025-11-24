@@ -154,4 +154,241 @@
                         document.getElementById('opciones_webscraping').style.display = 'block';
                         metodoActual = 'webscraping';
                     }
-                    document.get
+                    document.getElementById('seccion_resultados').style.display = 'none';
+                });
+            });
+        }
+
+        function cargarIndices() {
+            fetch('{{ url_for("listar_indices_elastic") }}')
+                .then(response => response.json())
+                .then(data => {
+                    const select = document.getElementById('select_index');
+                    select.innerHTML = '<option value="">Seleccione un índice</option>';
+                    
+                    data.forEach(indice => {
+                        const option = document.createElement('option');
+                        option.value = indice.nombre;
+                        option.textContent = `${indice.nombre} (${indice.total_documentos} docs)`;
+                        select.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('select_index').innerHTML = '<option value="">Error al cargar índices</option>';
+                });
+        }
+
+        function procesarZip() {
+            const fileInput = document.getElementById('file_zip');
+            const selectIndex = document.getElementById('select_index');
+            
+            if (!fileInput.files || fileInput.files.length === 0) {
+                alert('Por favor, seleccione un archivo ZIP');
+                return;
+            }
+            
+            if (!selectIndex.value) {
+                alert('Por favor, seleccione un índice de destino');
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            formData.append('index', selectIndex.value);
+            
+            mostrarCargando('Procesando archivo ZIP...');
+            
+            fetch('{{ url_for("procesar_zip_elastic") }}', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                ocultarCargando();
+                
+                if (data.success) {
+                    archivosActuales = data.archivos;
+                    mostrarResultados(data);
+                } else {
+                    alert('Error: ' + (data.error || 'Error desconocido'));
+                }
+            })
+            .catch(error => {
+                ocultarCargando();
+                console.error('Error:', error);
+                alert('Error al procesar ZIP');
+            });
+        }
+
+        function procesarWebScraping() {
+            const url = document.getElementById('url_webscraping').value.trim();
+            const extensionesNavegar = document.getElementById('extensiones_navegar').value.trim();
+            const tiposArchivos = document.getElementById('tipos_archivos').value.trim();
+            const selectIndex = document.getElementById('select_index');
+            
+            if (!url) {
+                alert('Por favor, ingrese una URL');
+                return;
+            }
+            
+            if (!selectIndex.value) {
+                alert('Por favor, seleccione un índice de destino');
+                return;
+            }
+            
+            mostrarCargando('Realizando Web Scraping... Esto puede tardar varios minutos.');
+            
+            fetch('{{ url_for("procesar_webscraping_elastic") }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    url: url,
+                    extensiones_navegar: extensionesNavegar,
+                    tipos_archivos: tiposArchivos,
+                    index: selectIndex.value
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                ocultarCargando();
+                
+                if (data.success) {
+                    archivosActuales = data.archivos;
+                    mostrarResultados(data);
+                } else {
+                    alert('Error: ' + (data.error || 'Error desconocido'));
+                }
+            })
+            .catch(error => {
+                ocultarCargando();
+                console.error('Error:', error);
+                alert('Error al procesar Web Scraping');
+            });
+        }
+
+        function mostrarResultados(data) {
+            document.getElementById('seccion_resultados').style.display = 'block';
+            
+            let infoHtml = `<strong>Total de archivos:</strong> ${data.archivos.length}`;
+            if (data.mensaje) {
+                infoHtml += `<br>${data.mensaje}`;
+            }
+            document.getElementById('info_resultados').innerHTML = infoHtml;
+            
+            if (metodoActual === 'webscraping') {
+                document.getElementById('texto_boton_cargar').textContent = 'PLN/Cargar Seleccionados';
+            } else {
+                document.getElementById('texto_boton_cargar').textContent = 'Cargar Seleccionados';
+            }
+            
+            const tbody = document.getElementById('tabla_archivos');
+            tbody.innerHTML = '';
+            
+            data.archivos.forEach((archivo, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <input type="checkbox" class="archivo-checkbox" data-index="${index}" checked>
+                    </td>
+                    <td>${archivo.nombre}</td>
+                    <td><span class="badge bg-secondary">${archivo.extension || 'json'}</span></td>
+                    <td>${formatearTamaño(archivo.tamaño || 0)}</td>
+                    <td><span class="badge bg-warning">Pendiente</span></td>
+                `;
+                tbody.appendChild(row);
+            });
+            
+            document.getElementById('seccion_resultados').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function cargarSeleccionados() {
+            const checkboxes = document.querySelectorAll('.archivo-checkbox:checked');
+            if (checkboxes.length === 0) {
+                alert('Por favor, seleccione al menos un archivo');
+                return;
+            }
+            
+            const selectIndex = document.getElementById('select_index');
+            if (!selectIndex.value) {
+                alert('Por favor, seleccione un índice de destino');
+                return;
+            }
+            
+            const indicesSeleccionados = Array.from(checkboxes).map(cb => parseInt(cb.dataset.index));
+            const archivosSeleccionados = indicesSeleccionados.map(i => archivosActuales[i]);
+            
+            mostrarCargando('Cargando documentos a ElasticSearch...');
+            
+            fetch('{{ url_for("cargar_documentos_elastic") }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    archivos: archivosSeleccionados,
+                    index: selectIndex.value,
+                    metodo: metodoActual
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                ocultarCargando();
+                
+                if (data.success) {
+                    alert(`Carga completada:\n- Documentos indexados: ${data.indexados}\n- Errores: ${data.errores}`);
+                    
+                    checkboxes.forEach(cb => {
+                        const row = cb.closest('tr');
+                        const badge = row.querySelector('td:last-child span');
+                        badge.className = 'badge bg-success';
+                        badge.textContent = 'Cargado';
+                        cb.disabled = true;
+                    });
+                    
+                    cargarIndices();
+                } else {
+                    alert('Error al cargar documentos: ' + (data.error || 'Error desconocido'));
+                }
+            })
+            .catch(error => {
+                ocultarCargando();
+                console.error('Error:', error);
+                alert('Error al cargar documentos');
+            });
+        }
+
+        function toggleSeleccionarTodos() {
+            const checkHeader = document.getElementById('check_header');
+            const checkTodos = document.getElementById('seleccionar_todos');
+            const checkboxes = document.querySelectorAll('.archivo-checkbox:not(:disabled)');
+            
+            if (checkHeader && checkTodos) {
+                checkHeader.checked = checkTodos.checked;
+                checkTodos.checked = checkHeader.checked;
+            }
+            
+            const estado = checkHeader ? checkHeader.checked : checkTodos.checked;
+            checkboxes.forEach(cb => cb.checked = estado);
+        }
+
+        function formatearTamaño(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+        }
+
+        function mostrarCargando(mensaje) {
+            document.getElementById('mensaje_cargando').textContent = mensaje;
+            document.getElementById('div_cargando').style.display = 'block';
+        }
+
+        function ocultarCargando() {
+            document.getElementById('div_cargando').style.display = 'none';
+        }
+    </script>
+{% endblock %}
