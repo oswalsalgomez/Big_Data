@@ -135,8 +135,6 @@
         let archivosActuales = [];
         let metodoActual = 'zip';
 
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
         document.addEventListener('DOMContentLoaded', function() {
             cargarIndices();
             configurarRadioButtons();
@@ -166,6 +164,11 @@
                     const select = document.getElementById('select_index');
                     select.innerHTML = '<option value="">Seleccione un índice</option>';
                     
+                    if (!Array.isArray(data) || data.length === 0) {
+                        select.innerHTML = '<option value="">No hay índices disponibles</option>';
+                        return;
+                    }
+
                     data.forEach(indice => {
                         const option = document.createElement('option');
                         option.value = indice.nombre;
@@ -207,12 +210,13 @@
             .then(data => {
                 ocultarCargando();
                 
-                if (data.success) {
-                    archivosActuales = data.archivos;
-                    mostrarResultados(data);
-                } else {
-                    alert('Error: ' + (data.error || 'Error desconocido'));
+                if (!data || data.success !== true) {
+                    alert('Error al procesar ZIP: ' + (data && data.error ? data.error : 'Error desconocido'));
+                    return;
                 }
+
+                archivosActuales = data.archivos || [];
+                mostrarResultados(data);
             })
             .catch(error => {
                 ocultarCargando();
@@ -255,12 +259,13 @@
             .then(data => {
                 ocultarCargando();
                 
-                if (data.success) {
-                    archivosActuales = data.archivos;
-                    mostrarResultados(data);
-                } else {
-                    alert('Error: ' + (data.error || 'Error desconocido'));
+                if (!data || data.success !== true) {
+                    alert('Error en Web Scraping: ' + (data && data.error ? data.error : 'Error desconocido'));
+                    return;
                 }
+
+                archivosActuales = data.archivos || [];
+                mostrarResultados(data);
             })
             .catch(error => {
                 ocultarCargando();
@@ -272,10 +277,15 @@
         function mostrarResultados(data) {
             document.getElementById('seccion_resultados').style.display = 'block';
             
-            let infoHtml = `<strong>Total de archivos:</strong> ${data.archivos.length}`;
+            const archivos = data.archivos || [];
+            let infoHtml = `<strong>Total de archivos:</strong> ${archivos.length}`;
+
             if (data.mensaje) {
                 infoHtml += `<br>${data.mensaje}`;
+            } else if (archivos.length === 0) {
+                infoHtml += '<br>No se encontraron archivos para procesar.';
             }
+
             document.getElementById('info_resultados').innerHTML = infoHtml;
             
             if (metodoActual === 'webscraping') {
@@ -287,7 +297,18 @@
             const tbody = document.getElementById('tabla_archivos');
             tbody.innerHTML = '';
             
-            data.archivos.forEach((archivo, index) => {
+            if (archivos.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="5" class="text-center text-muted">
+                            No hay archivos disponibles para mostrar.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            archivos.forEach((archivo, index) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>
@@ -337,21 +358,22 @@
             .then(data => {
                 ocultarCargando();
                 
-                if (data.success) {
-                    alert(`Carga completada:\n- Documentos indexados: ${data.indexados}\n- Errores: ${data.errores}`);
-                    
-                    checkboxes.forEach(cb => {
-                        const row = cb.closest('tr');
-                        const badge = row.querySelector('td:last-child span');
-                        badge.className = 'badge bg-success';
-                        badge.textContent = 'Cargado';
-                        cb.disabled = true;
-                    });
-                    
-                    cargarIndices();
-                } else {
-                    alert('Error al cargar documentos: ' + (data.error || 'Error desconocido'));
+                if (!data || data.success !== true) {
+                    alert('Error al cargar documentos: ' + (data && data.error ? data.error : 'Error desconocido'));
+                    return;
                 }
+
+                alert(`Carga completada:\n- Documentos indexados: ${data.indexados}\n- Errores: ${data.errores}`);
+                
+                checkboxes.forEach(cb => {
+                    const row = cb.closest('tr');
+                    const badge = row.querySelector('td:last-child span');
+                    badge.className = 'badge bg-success';
+                    badge.textContent = 'Cargado';
+                    cb.disabled = true;
+                });
+                
+                cargarIndices();
             })
             .catch(error => {
                 ocultarCargando();
@@ -375,7 +397,7 @@
         }
 
         function formatearTamaño(bytes) {
-            if (bytes === 0) return '0 Bytes';
+            if (!bytes || bytes === 0) return '0 Bytes';
             const k = 1024;
             const sizes = ['Bytes', 'KB', 'MB', 'GB'];
             const i = Math.floor(Math.log(bytes) / Math.log(k));
