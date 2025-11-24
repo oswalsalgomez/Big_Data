@@ -7,3 +7,15 @@ bcrypt
 pandas
 numpy
 elasticsearch==8.11.0
+beautifulsoup4
+lxml
+spacy
+transformers
+sentence-transformers
+nltk
+scikit-learn
+PyPDF2
+pytesseract
+pdf2image
+Pillow
+werkzeug
