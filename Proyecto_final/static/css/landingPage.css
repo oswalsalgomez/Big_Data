@@ -1,4 +1,5 @@
 /* Fondo general */
+
 body {
     background: linear-gradient(to right, #255821, #40E0D0);
     min-height: 100vh;
@@ -6,23 +7,23 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* HEADER */
 .header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.90);
     padding: 1rem 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Contenedor blanco principal */
+/* CONTENEDOR BLANCO CENTRAL */
 .main-container {
-    background-color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2.5rem;
-    border-radius: 16px;
+    border-radius: 14px;
     margin-top: 2rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.18);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
     background-color: rgba(0, 95, 73, 0.9);
     padding: 1rem 0;
@@ -31,7 +32,7 @@ footer {
     text-align: center;
 }
 
-/* Foto de perfil */
+/* Foto perfil */
 .profile-img {
     width: 210px;
     height: 210px;
@@ -48,24 +49,22 @@ footer {
     filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
 }
 
-/* Botón GitHub */
+/* Botón GitHub oficial */
 .btn-github {
     background-color: #24292e;
-    color: white;
-    border: none;
+    color: white !important;
     padding: 10px 22px;
     border-radius: 10px;
     font-weight: bold;
 }
 .btn-github:hover {
-    background-color: #000000;
+    background-color: #000;
 }
 
-/* Botón LinkedIn */
+/* Botón LinkedIn oficial */
 .btn-linkedin {
     background-color: #0A66C2;
-    color: white;
-    border: none;
+    color: white !important;
     padding: 10px 22px;
     border-radius: 10px;
     font-weight: bold;
