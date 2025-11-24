@@ -3,52 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de - BigData-Análisis Resoluciones Ambientales</title>
+    <title>Acerca de - BigData Resoluciones Ambientales</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-    <style>
-        body {
-            background: linear-gradient(135deg, #0d4d35, #34c9b6);
-            min-height: 100vh;
-        }
+    <!-- CSS institucional -->
+    <link href="{{ url_for('static', filename='css/landingPage.css') }}" rel="stylesheet">
 
-        .content-box {
-            background: rgba(255, 255, 255, 0.90);
-            border-radius: 18px;
-            padding: 40px;
-            margin-top: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
-
-        .profile-img {
-            width: 210px;
-            height: 210px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #0a4836;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-        }
-
-        .logo-ucentral {
-            width: 260px;
-            margin-top: 20px;
-            filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
-        }
-
-        .btn-custom {
-            padding: 10px 22px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 10px;
-        }
-    </style>
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<header class="p-3 bg-light shadow-sm">
+<header class="header">
     <div class="container d-flex justify-content-between align-items-center">
         <h1 class="h3 mb-0">BigData-MiProyecto</h1>
 
@@ -64,40 +33,40 @@
 </header>
 
 <div class="container">
-    <div class="content-box">
+    <div class="main-container">
 
         <h2 class="text-center mb-4 fw-bold">BigData-MiProyecto</h2>
         <h4 class="text-center mb-4">Descripción del Proyecto</h4>
 
         <p class="text-center fs-5 px-4">
-            Este proyecto es una aplicación web desarrollada para la gestión y el análisis de las resoluciones emitidas por la Autoridad Nacional de Licencias Ambientales utilizando MongoDB y Elasticsearch.
-            Su objetivo es analizar a que se refiere cada una de las resoluciones con el fin de determinar orientaciones para dar respuesta a requerimientos de esa autoridad mediante la análitica de datos.
+            Plataforma de analítica de datos orientada al estudio y clasificación de resoluciones ambientales 
+            emitidas por la Autoridad Nacional de Licencias Ambientales (ANLA), utilizando MongoDB, Python 
+            y motores de búsqueda como Elasticsearch.
         </p>
 
         <div class="row justify-content-center mt-5">
 
-            <!-- Columna Foto y Datos -->
+            <!-- Foto + Info Persona -->
             <div class="col-md-5 text-center">
                 <img src="{{ url_for('static', filename='images/Foto_creador.jpg') }}" 
                 alt="Foto del creador" class="profile-img">
 
                 <h3 class="mt-4 fw-bold">Oswaldo Salgado Gómez</h3>
-                <p class="fs-5">Estudiante de Maestría en Analítica de Datos</p>
+                <p class="fs-5">Estudiante de Maestría en Analítica de Datos<br>Universidad Central</p>
 
                 <div class="mt-4">
-                    <a href="https://github.com/oswalsalgomez"
-                    target="_blank" 
-                    class="btn btn-primary btn-custom me-2">
-                    <i class="fab fa-github fa-lg me-2"></i>GitHub
-                </a>
+                    <a href="https://github.com/oswalsalgomez" target="_blank" class="btn-github me-2">
+                        <i class="fab fa-github fa-lg me-2"></i>GitHub
+                    </a>
+
                     <a href="https://www.linkedin.com/in/oswaldo-salgado-gomez-80767228" 
-                    target="_blank" class="btn btn-warning btn-custom"> 
-                    <i class="fab fa-linkedin fa-lg me-2"></i>LinkedIn
-                </a>
+                    target="_blank" class="btn-linkedin">
+                        <i class="fab fa-linkedin fa-lg me-2"></i>LinkedIn
+                    </a>
                 </div>
             </div>
 
-            <!-- Columna Logo Universidad -->
+            <!-- Logo Universidad -->
             <div class="col-md-5 text-center d-flex flex-column justify-content-center">
                 <img src="{{ url_for('static', filename='images/logo_u.webp') }}" 
                 alt="Universidad Central" class="logo-ucentral">
@@ -107,7 +76,7 @@
     </div>
 </div>
 
-<footer class="text-center text-light mt-4 py-3">
+<footer>
     <p class="mb-0">Creado por Oswaldo Salgado Gómez</p>
     <p class="mb-0" id="year"></p>
     <p class="mb-0">Versión 1.0.0</p>

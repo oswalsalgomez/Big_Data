@@ -1,24 +1,75 @@
-
+/* Fondo general */
 body {
     background: linear-gradient(to right, #255821, #40E0D0);
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
+
+/* Header */
 .header {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
+
+/* Contenedor blanco principal */
+.main-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
     margin-top: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
 }
+
+/* Footer */
 footer {
     background-color: rgba(0, 95, 73, 0.9);
     padding: 1rem 0;
     margin-top: 2rem;
-    color: #666;
+    color: #fff;
+    text-align: center;
 }
-    
+
+/* Foto de perfil */
+.profile-img {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #0a4836;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+/* Logo Universidad */
+.logo-ucentral {
+    width: 260px;
+    margin-top: 20px;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+}
+
+/* Botón GitHub */
+.btn-github {
+    background-color: #24292e;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.btn-github:hover {
+    background-color: #000000;
+}
+
+/* Botón LinkedIn */
+.btn-linkedin {
+    background-color: #0A66C2;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.btn-linkedin:hover {
+    background-color: #004182;
+}
