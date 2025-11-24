@@ -20,7 +20,9 @@ class MongoDB:
     def validar_usuario(self, usuario: str, password: str, coleccion: str) -> Optional[Dict]:
         """Valida usuario y contraseña con MD5"""
         try:
-            password_md5 = hashlib.md5(password.encode()).hexdigest()
+            
+            #password_md5 = hashlib.md5(password.encode()).hexdigest()
+            password_md5 =password  # Deshabilitado MD5 para pruebas
             user = self.db[coleccion].find_one({
                 'usuario': usuario,
                 'password': password_md5
@@ -41,7 +43,7 @@ class MongoDB:
     def listar_usuarios(self, coleccion: str) -> List[Dict]:
         """Lista todos los usuarios"""
         try:
-            return list(self.db[coleccion].find({}, {'password': 0}))
+            return list(self.db[coleccion].find({}))
         except Exception as e:
             print(f"Error al listar usuarios: {e}")
             return []
@@ -49,10 +51,11 @@ class MongoDB:
     def crear_usuario(self, usuario: str, password: str, permisos: Dict, coleccion: str) -> bool:
         """Crea un nuevo usuario"""
         try:
-            password_md5 = hashlib.md5(password.encode()).hexdigest()
+            #password_md5 = hashlib.md5(password.encode()).hexdigest()
+            password_plain = password  # Deshabilitado MD5 para pruebas (consistente con validar_usuario)
             documento = {
                 'usuario': usuario,
-                'password': password_md5,
+                'password': password_plain,
                 'permisos': permisos
             }
             self.db[coleccion].insert_one(documento)
@@ -64,8 +67,9 @@ class MongoDB:
     def actualizar_usuario(self, usuario: str, nuevos_datos: Dict, coleccion: str) -> bool:
         """Actualiza un usuario existente"""
         try:
-            if 'password' in nuevos_datos:
-                nuevos_datos['password'] = hashlib.md5(nuevos_datos['password'].encode()).hexdigest()
+            # Mantener password sin MD5 (consistente con validar_usuario y crear_usuario)
+            # if 'password' in nuevos_datos:
+            #     nuevos_datos['password'] = hashlib.md5(nuevos_datos['password'].encode()).hexdigest()
             
             self.db[coleccion].update_one(
                 {'usuario': usuario},

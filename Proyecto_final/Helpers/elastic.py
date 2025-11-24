@@ -12,7 +12,7 @@ class ElasticSearch:
             api_key: API Key para autenticación
         """
         self.client = Elasticsearch(
-            cloud_id=cloud_url,
+            cloud_url,
             api_key=api_key,
             verify_certs=True
         )
@@ -120,10 +120,22 @@ class ElasticSearch:
             return False
     
     def listar_indices(self) -> List[Dict]:
-        """Lista todos los índices"""
+        """Lista todos los índices con información detallada"""
         try:
-            indices = self.client.cat.indices(format='json')
-            return indices
+            indices = self.client.cat.indices(format='json', h='index,docs.count,store.size,health,status')
+            
+            # Convertir a formato más legible
+            indices_formateados = []
+            for idx in indices:
+                indices_formateados.append({
+                    'nombre': idx.get('index', ''),
+                    'total_documentos': int(idx.get('docs.count', 0)) if idx.get('docs.count', '0').isdigit() else 0,
+                    'tamaño': idx.get('store.size', '0b'),
+                    'salud': idx.get('health', 'unknown'),
+                    'estado': idx.get('status', 'unknown')
+                })
+            
+            return indices_formateados
         except Exception as e:
             print(f"Error al listar índices: {e}")
             return []
@@ -185,27 +197,132 @@ class ElasticSearch:
                 'error': str(e)
             }
     
-    def buscar(self, index: str, query: Dict, size: int = 10) -> Dict:
+    def buscar(self, index: str, query: Dict, aggs=None, size: int = 10) -> Dict:
         """
         Realiza una búsqueda en ElasticSearch
         
         Args:
             index: Nombre del índice
-            query: Query de búsqueda
+            query: Query de búsqueda (puede ser un dict completo con 'query' o solo la query)
+            aggs: Agregaciones a ejecutar (opcional)
             size: Número de resultados
         """
         try:
-            response = self.client.search(index=index, body=query, size=size)
+            # Construir el body de la búsqueda
+            body = query.copy() if query else {}
+            
+            # Agregar las agregaciones al body si existen
+            if aggs:
+                body['aggs'] = aggs
+            
+            # Ejecutar búsqueda
+            response = self.client.search(index=index, body=body, size=size)
+            
             return {
                 'success': True,
                 'total': response['hits']['total']['value'],
-                'resultados': response['hits']['hits']
+                'resultados': response['hits']['hits'],
+                'aggs': aggs
             }
         except Exception as e:
             return {
                 'success': False,
                 'error': str(e)
             }
+    
+    def ejecutar_query(self, query_json: str) -> Dict:
+        """
+        Ejecuta una query en ElasticSearch
+        
+        Args:
+            query_json: Query en formato JSON string
+            
+        Returns:
+            Resultado de la búsqueda con hits y aggregations
+        """
+        try:
+            import json
+            query = json.loads(query_json)
+            
+            # Si la query tiene 'index' específico, extraerlo
+            index = query.pop('index', '_all')
+            
+            # Ejecutar búsqueda
+            response = self.client.search(index=index, body=query)
+            
+            return {
+                'success': True,
+                'total': response['hits']['total']['value'],
+                'hits': response['hits']['hits'],
+                'aggs': response.get('aggregations', {})
+            }
+        except json.JSONDecodeError as e:
+            return {'success': False, 'error': f'JSON inválido: {str(e)}'}
+        except Exception as e:
+            return {'success': False, 'error': str(e)}
+    
+    def ejecutar_dml(self, comando_json: str) -> Dict:
+        """
+        Ejecuta un comando DML (Data Manipulation Language) en ElasticSearch
+        Permite ejecutar comandos como index, update, delete directamente
+        
+        Args:
+            comando_json: Comando DML en formato JSON string
+            
+        Returns:
+            Resultado de la ejecución
+        """
+        try:
+            import json
+            comando = json.loads(comando_json)
+            
+            operacion = comando.get('operacion')
+            
+            if operacion == 'index' or operacion == 'create':
+                # Indexar documento
+                index = comando.get('index')
+                documento = comando.get('documento', comando.get('body', {}))
+                doc_id = comando.get('id')
+                
+                if doc_id:
+                    response = self.client.index(index=index, id=doc_id, document=documento)
+                else:
+                    response = self.client.index(index=index, document=documento)
+                
+                return {'success': True, 'data': response}
+                
+            elif operacion == 'update':
+                # Actualizar documento
+                index = comando.get('index')
+                doc_id = comando.get('id')
+                doc = comando.get('doc', comando.get('documento', {}))
+                
+                response = self.client.update(index=index, id=doc_id, doc=doc)
+                return {'success': True, 'data': response}
+                
+            elif operacion == 'delete':
+                # Eliminar documento
+                index = comando.get('index')
+                doc_id = comando.get('id')
+                
+                response = self.client.delete(index=index, id=doc_id)
+                return {'success': True, 'data': response}
+                
+            elif operacion == 'delete_by_query':
+                # Eliminar por query
+                index = comando.get('index')
+                query = comando.get('query', {})
+                
+                response = self.client.delete_by_query(index=index, body={'query': query})
+                return {'success': True, 'data': response}
+                
+            else:
+                return {'success': False, 'error': f'Operación DML no soportada: {operacion}'}
+                
+        except json.JSONDecodeError as e:
+            return {'success': False, 'error': f'JSON inválido: {str(e)}'}
+        except Exception as e:
+            return {'success': False, 'error': str(e)}
     
     def buscar_texto(self, index: str, texto: str, campos: List[str] = None, size: int = 10) -> Dict:
         """
