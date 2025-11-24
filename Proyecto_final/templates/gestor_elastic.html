@@ -1,350 +1,184 @@
-{% extends "base.html" %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+<script>
+    // 🔴 Esta línea se elimina, ya que no existe 'current-year' y el año se maneja en base.html
+    // document.getElementById('current-year').textContent = new Date().getFullYear();
 
-{% block title %}Gestor de ElasticSearch - BigData{% endblock %}
+    document.addEventListener('DOMContentLoaded', function() {
+        cargarIndices();
+    });
 
-{% block extra_css %}
-<link href="{{ url_for('static', filename='css/gestor.css') }}" rel="stylesheet">
-<style>
-    .query-result {
-        max-height: 600px;
-        overflow-y: auto;
+    function cargarIndices() {
+        document.getElementById('div_cargando').style.display = 'block';
+        
+        fetch('{{ url_for("listar_indices_elastic") }}')
+            .then(response => response.json())
+            .then(data => {
+                const tablaIndices = document.getElementById('tablaIndices');
+                tablaIndices.innerHTML = '';
+                
+                if (!Array.isArray(data) || data.length === 0) {
+                    tablaIndices.innerHTML = '<tr><td colspan="5" class="text-center">No hay índices disponibles</td></tr>';
+                } else {
+                    data.forEach(indice => {
+                        const row = document.createElement('tr');
+                        
+                        let saludBadge = '';
+                        const salud = indice.salud || 'unknown';
+                        if (salud === 'green') {
+                            saludBadge = '<span class="badge bg-success">Verde</span>';
+                        } else if (salud === 'yellow') {
+                            saludBadge = '<span class="badge bg-warning">Amarillo</span>';
+                        } else if (salud === 'red') {
+                            saludBadge = '<span class="badge bg-danger">Rojo</span>';
+                        } else {
+                            saludBadge = '<span class="badge bg-secondary">Desconocido</span>';
+                        }
+                        
+                        let estadoBadge = '';
+                        const estado = indice.estado || 'unknown';
+                        if (estado === 'open') {
+                            estadoBadge = '<span class="badge bg-success">Abierto</span>';
+                        } else {
+                            estadoBadge = '<span class="badge bg-secondary">Cerrado</span>';
+                        }
+                        
+                        row.innerHTML = `
+                            <td><strong>${indice.nombre || ''}</strong></td>
+                            <td>${indice.total_documentos || 0}</td>
+                            <td>${indice.tamaño || '0b'}</td>
+                            <td>${saludBadge}</td>
+                            <td>${estadoBadge}</td>
+                        `;
+                        tablaIndices.appendChild(row);
+                    });
+                }
+                
+                document.getElementById('div_cargando').style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al cargar la lista de índices');
+                document.getElementById('div_cargando').style.display = 'none';
+            });
     }
-    .json-view {
-        background-color: #f8f9fa;
-        border: 1px solid #dee2e6;
-        border-radius: 0.25rem;
-        padding: 1rem;
-        font-family: 'Courier New', monospace;
-        font-size: 0.875rem;
-        white-space: pre-wrap;
-        word-wrap: break-word;
+
+    function ejecutarComando() {
+        const tipoOperacion = document.querySelector('input[name="tipo_operacion"]:checked').value;
+        const queryText = document.getElementById('queryTextarea').value.trim();
+        
+        if (!queryText) {
+            alert('Por favor, ingrese una query o comando');
+            return;
+        }
+        
+        try {
+            JSON.parse(queryText);
+        } catch (e) {
+            alert('Error: El texto ingresado no es un JSON válido.\n' + e.message);
+            return;
+        }
+        
+        document.getElementById('div_cargando').style.display = 'block';
+        document.getElementById('divResultadosQuery').style.display = 'none';
+        document.getElementById('divResultadosDML').style.display = 'none';
+        
+        if (tipoOperacion === 'QUERY') {
+            ejecutarQuery(queryText);
+        } else if (tipoOperacion === 'DML') {
+            ejecutarDML(queryText);
+        }
     }
-</style>
-{% endblock %}
 
-{% block content %}
-    <h2 class="h3 mb-3">Gestión de ElasticSearch</h2>
-    <p class="mb-4">Usuario: <strong>{{ usuario }}</strong></p>
-
-    <!-- Tabla de índices -->
-    <div class="card mb-4">
-        <div class="card-header">
-            <h5 class="mb-0">Índices de ElasticSearch</h5>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-striped table-bordered table-hover">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Nombre del Índice</th>
-                            <th>Total de Documentos</th>
-                            <th>Tamaño</th>
-                            <th>Salud</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaIndices">
-                        <tr>
-                            <td colspan="5" class="text-center">Cargando índices...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- Formulario de consultas -->
-    <div class="card mb-4">
-        <div class="card-header">
-            <h5 class="mb-0">Ejecutar Consulta o Comando</h5>
-        </div>
-        <div class="card-body">
-            <form id="formElasticQuery">
-                <div class="mb-3">
-                    <label class="form-label">Tipo de Operación</label>
-                    <div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="tipo_operacion" id="radioQuery" value="QUERY" checked>
-                            <label class="form-check-label" for="radioQuery">QUERY</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="tipo_operacion" id="radioDML" value="DML">
-                            <label class="form-check-label" for="radioDML">DML</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="queryTextarea" class="form-label">Query/Comando (JSON)</label>
-                    <textarea class="form-control" id="queryTextarea" name="query" rows="10" required 
-                              placeholder='Ejemplo QUERY:
-{
-  "index": "nombre_indice",
-  "query": {
-    "match_all": {}
-  }
-}
-
-Ejemplo DML:
-{
-  "operacion": "index",
-  "index": "nombre_indice",
-  "id": "1",
-  "documento": {
-    "campo": "valor"
-  }
-}'></textarea>
-                </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button type="button" class="btn btn-linkedin" onclick="ejecutarComando()">
-                        Ejecutar
-                    </button>
-                    <button type="button" class="btn btn-secondary" onclick="limpiarFormulario()">
-                        Limpiar
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Resultados de QUERY -->
-    <div id="divResultadosQuery" style="display: none;">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h5 class="mb-0">Resultados de la Consulta</h5>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <!-- Columna 1: Aggregations -->
-                    <div class="col-md-6 mb-3">
-                        <h6>Aggregations</h6>
-                        <div id="divAggregations" class="json-view query-result">
-                            No hay aggregations en esta consulta
-                        </div>
-                    </div>
-                    <!-- Columna 2: Hits -->
-                    <div class="col-md-6 mb-3">
-                        <h6>Resultados (Hits) - Total: <span id="totalHits">0</span></h6>
-                        <div class="table-responsive query-result">
-                            <table class="table table-sm table-striped table-bordered">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Índice</th>
-                                        <th>Score</th>
-                                        <th>Datos</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tablaHits">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Resultados de DML -->
-    <div id="divResultadosDML" style="display: none;">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h5 class="mb-0">Resultado del Comando DML</h5>
-            </div>
-            <div class="card-body">
-                <div id="divResultadoDML" class="json-view">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mensaje de carga -->
-    <div id="div_cargando" class="text-center mt-4" style="display: none;">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Cargando...</span>
-        </div>
-        <p class="mt-2">Procesando su solicitud...</p>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            crossorigin="anonymous"></script>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        document.addEventListener('DOMContentLoaded', function() {
-            cargarIndices();
+    function ejecutarQuery(queryText) {
+        fetch('{{ url_for("ejecutar_query_elastic") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query: queryText })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('div_cargando').style.display = 'none';
+            
+            if (data.success) {
+                document.getElementById('divResultadosQuery').style.display = 'block';
+                
+                document.getElementById('totalHits').textContent = data.total || 0;
+                
+                const divAggs = document.getElementById('divAggregations');
+                if (data.aggs && Object.keys(data.aggs).length > 0) {
+                    divAggs.textContent = JSON.stringify(data.aggs, null, 2);
+                } else {
+                    divAggs.textContent = 'No hay aggregations en esta consulta';
+                }
+                
+                const tablaHits = document.getElementById('tablaHits');
+                tablaHits.innerHTML = '';
+                
+                if (data.hits && data.hits.length > 0) {
+                    data.hits.forEach(hit => {
+                        const row = document.createElement('tr');
+                        const source = hit._source || {};
+                        
+                        row.innerHTML = `
+                            <td>${hit._id || ''}</td>
+                            <td>${hit._index || ''}</td>
+                            <td>${hit._score ? hit._score.toFixed(4) : 'N/A'}</td>
+                            <td><pre class="mb-0" style="font-size: 0.75rem; max-height: 150px; overflow-y: auto;">${JSON.stringify(source, null, 2)}</pre></td>
+                        `;
+                        tablaHits.appendChild(row);
+                    });
+                } else {
+                    tablaHits.innerHTML = '<tr><td colspan="4" class="text-center">No hay resultados</td></tr>';
+                }
+            } else {
+                alert('Error al ejecutar la query: ' + (data.error || 'Error desconocido'));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('div_cargando').style.display = 'none';
+            alert('Error al ejecutar la query');
         });
+    }
 
-        function cargarIndices() {
-            document.getElementById('div_cargando').style.display = 'block';
+    function ejecutarDML(queryText) {
+        fetch('{{ url_for("ejecutar_dml_elastic") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ comando: queryText })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('div_cargando').style.display = 'none';
             
-            fetch('{{ url_for("listar_indices_elastic") }}')
-                .then(response => response.json())
-                .then(data => {
-                    const tablaIndices = document.getElementById('tablaIndices');
-                    tablaIndices.innerHTML = '';
-                    
-                    if (data.length === 0) {
-                        tablaIndices.innerHTML = '<tr><td colspan="5" class="text-center">No hay índices disponibles</td></tr>';
-                    } else {
-                        data.forEach(indice => {
-                            const row = document.createElement('tr');
-                            
-                            let saludBadge = '';
-                            const salud = indice.salud || 'unknown';
-                            if (salud === 'green') {
-                                saludBadge = '<span class="badge bg-success">Verde</span>';
-                            } else if (salud === 'yellow') {
-                                saludBadge = '<span class="badge bg-warning">Amarillo</span>';
-                            } else if (salud === 'red') {
-                                saludBadge = '<span class="badge bg-danger">Rojo</span>';
-                            } else {
-                                saludBadge = '<span class="badge bg-secondary">Desconocido</span>';
-                            }
-                            
-                            let estadoBadge = '';
-                            const estado = indice.estado || 'unknown';
-                            if (estado === 'open') {
-                                estadoBadge = '<span class="badge bg-success">Abierto</span>';
-                            } else {
-                                estadoBadge = '<span class="badge bg-secondary">Cerrado</span>';
-                            }
-                            
-                            row.innerHTML = `
-                                <td><strong>${indice.nombre || ''}</strong></td>
-                                <td>${indice.total_documentos || 0}</td>
-                                <td>${indice.tamaño || '0b'}</td>
-                                <td>${saludBadge}</td>
-                                <td>${estadoBadge}</td>
-                            `;
-                            tablaIndices.appendChild(row);
-                        });
-                    }
-                    
-                    document.getElementById('div_cargando').style.display = 'none';
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error al cargar la lista de índices');
-                    document.getElementById('div_cargando').style.display = 'none';
-                });
-        }
-
-        function ejecutarComando() {
-            const tipoOperacion = document.querySelector('input[name="tipo_operacion"]:checked').value;
-            const queryText = document.getElementById('queryTextarea').value.trim();
-            
-            if (!queryText) {
-                alert('Por favor, ingrese una query o comando');
-                return;
-            }
-            
-            try {
-                JSON.parse(queryText);
-            } catch (e) {
-                alert('Error: El texto ingresado no es un JSON válido.\n' + e.message);
-                return;
-            }
-            
-            document.getElementById('div_cargando').style.display = 'block';
-            document.getElementById('divResultadosQuery').style.display = 'none';
-            document.getElementById('divResultadosDML').style.display = 'none';
-            
-            if (tipoOperacion === 'QUERY') {
-                ejecutarQuery(queryText);
-            } else if (tipoOperacion === 'DML') {
-                ejecutarDML(queryText);
-            }
-        }
-
-        function ejecutarQuery(queryText) {
-            fetch('{{ url_for("ejecutar_query_elastic") }}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ query: queryText })
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('div_cargando').style.display = 'none';
+            if (data.success) {
+                // 🔧 aquí estaba el bug: faltaba .style.display
+                document.getElementById('divResultadosDML').style.display = 'block';
+                const divResultado = document.getElementById('divResultadoDML');
+                divResultado.textContent = JSON.stringify(data.data, null, 2);
                 
-                if (data.success) {
-                    document.getElementById('divResultadosQuery').style.display = 'block';
-                    
-                    document.getElementById('totalHits').textContent = data.total || 0;
-                    
-                    const divAggs = document.getElementById('divAggregations');
-                    if (data.aggs && Object.keys(data.aggs).length > 0) {
-                        divAggs.textContent = JSON.stringify(data.aggs, null, 2);
-                    } else {
-                        divAggs.textContent = 'No hay aggregations en esta consulta';
-                    }
-                    
-                    const tablaHits = document.getElementById('tablaHits');
-                    tablaHits.innerHTML = '';
-                    
-                    if (data.hits && data.hits.length > 0) {
-                        data.hits.forEach(hit => {
-                            const row = document.createElement('tr');
-                            const source = hit._source || {};
-                            
-                            row.innerHTML = `
-                                <td>${hit._id || ''}</td>
-                                <td>${hit._index || ''}</td>
-                                <td>${hit._score ? hit._score.toFixed(4) : 'N/A'}</td>
-                                <td><pre class="mb-0" style="font-size: 0.75rem; max-height: 150px; overflow-y: auto;">${JSON.stringify(source, null, 2)}</pre></td>
-                            `;
-                            tablaHits.appendChild(row);
-                        });
-                    } else {
-                        tablaHits.innerHTML = '<tr><td colspan="4" class="text-center">No hay resultados</td></tr>';
-                    }
-                } else {
-                    alert('Error al ejecutar la query: ' + (data.error || 'Error desconocido'));
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('div_cargando').style.display = 'none';
-                alert('Error al ejecutar la query');
-            });
-        }
+                setTimeout(() => {
+                    cargarIndices();
+                }, 1000);
+            } else {
+                alert('Error al ejecutar el comando DML: ' + (data.error || 'Error desconocido'));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('div_cargando').style.display = 'none';
+            alert('Error al ejecutar el comando DML');
+        });
+    }
 
-        function ejecutarDML(queryText) {
-            fetch('{{ url_for("ejecutar_dml_elastic") }}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ comando: queryText })
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('div_cargando').style.display = 'none';
-                
-                if (data.success) {
-                    document.getElementById('divResultadosDML').display = 'block';
-                    const divResultado = document.getElementById('divResultadoDML');
-                    divResultado.textContent = JSON.stringify(data.data, null, 2);
-                    
-                    setTimeout(() => {
-                        cargarIndices();
-                    }, 1000);
-                } else {
-                    alert('Error al ejecutar el comando DML: ' + (data.error || 'Error desconocido'));
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('div_cargando').style.display = 'none';
-                alert('Error al ejecutar el comando DML');
-            });
-        }
-
-        function limpiarFormulario() {
-            document.getElementById('queryTextarea').value = '';
-            document.getElementById('divResultadosQuery').style.display = 'none';
-            document.getElementById('divResultadosDML').style.display = 'none';
-        }
-    </script>
-{% endblock %}
+    function limpiarFormulario() {
+        document.getElementById('queryTextarea').value = '';
+        document.getElementById('divResultadosQuery').style.display = 'none';
+        document.getElementById('divResultadosDML').style.display = 'none';
+    }
+</script>
