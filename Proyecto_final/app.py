@@ -9,7 +9,7 @@ from Helpers import MongoDB, ElasticSearch, Funciones, WebScraping
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = os.getenv('SECRET_KEY', 'clave_segura_encefalitis13*')
+app.secret_key = os.getenv('SECRET_KEY', 'Perroviejo13*_siempre_ganador')
 
 # Configuración MongoDB
 MONGO_URI = os.getenv('MONGO_URI')
@@ -19,7 +19,7 @@ MONGO_COLECCION = os.getenv('MONGO_COLECCION', 'usuario_roles')
 # Configuración ElasticSearch Cloud
 ELASTIC_CLOUD_URL       = os.getenv('ELASTIC_CLOUD_URL')
 ELASTIC_API_KEY         = os.getenv('ELASTIC_API_KEY')
-ELASTIC_INDEX_DEFAULT   = os.getenv('ELASTIC_INDEX_DEFAULT', 'index_cuentos')
+ELASTIC_INDEX_DEFAULT   = os.getenv('ELASTIC_INDEX_DEFAULT', 'index_anla')
 
 # Versión de la aplicación
 VERSION_APP = "1.3.0"
