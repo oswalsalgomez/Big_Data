@@ -19,7 +19,7 @@ MONGO_COLECCION = os.getenv('MONGO_COLECCION', 'usuario_roles')
 # Configuración ElasticSearch Cloud
 ELASTIC_CLOUD_URL       = os.getenv('ELASTIC_CLOUD_URL')
 ELASTIC_API_KEY         = os.getenv('ELASTIC_API_KEY')
-ELASTIC_INDEX_DEFAULT   = os.getenv('ELASTIC_INDEX_DEFAULT', 'index_anla')
+ELASTIC_INDEX_DEFAULT   = os.getenv('ELASTIC_INDEX_DEFAULT', 'anla_resoluciones')
 
 # Versión de la aplicación
 VERSION_APP = "1.3.0"
@@ -50,57 +50,78 @@ def buscador():
 
 @app.route('/buscar-elastic', methods=['POST'])
 def buscar_elastic():
-    """API para realizar búsqueda en ElasticSearch"""
+    """API para búsquedas en ElasticSearch - Resoluciones ANLA"""
     try:
         data = request.get_json() or {}
-        texto_buscar = data.get('texto', '').strip()
-        campo = data.get('campo') or 'texto'
+        texto_buscar = (data.get('texto') or '').strip()
+        campo = data.get('campo', '_all')  # '_all', 'nombre_proyecto', 'empresa', etc.
 
-        # Si viene '_all' desde el front, usamos el campo 'texto' del índice
-        if campo == '_all':
-            campo = 'texto'
-        
         if not texto_buscar:
             return jsonify({
                 'success': False,
-                'error': 'Texto de búsqueda es requerido'
+                'error': 'Debe ingresar un texto para buscar.'
             }), 400
-        
-        # Query base
-        query_base = {
-            "query": {
-                "match": {
-                    campo: texto_buscar
+
+        # ====== QUERY PRINCIPAL ======
+        if campo == '_all':
+            # Búsqueda combinada en varios campos + texto completo
+            query_base = {
+                "query": {
+                    "multi_match": {
+                        "query": texto_buscar,
+                        "fields": [
+                            "texto_completo",
+                            "numero_resolución^3",
+                            "nombre_proyecto^2",
+                            "empresa^2",
+                            "descripcion^2",
+                            "numero_expediente",
+                            "radicados"
+                        ]
+                    }
                 }
             }
-        }
+        else:
+            # Búsqueda en un campo específico
+            query_base = {
+                "query": {
+                    "match": {
+                        campo: texto_buscar
+                    }
+                }
+            }
 
-        # Definir aggregations (puedes ajustar campos según tu índice real)
+        # ====== AGGREGATIONS ÚTILES ======
         aggs = {
-            "cuentos_por_mes": {
+            "resoluciones_por_anio": {
                 "date_histogram": {
-                    "field": "fecha_creacion",
-                    "calendar_interval": "month"
+                    "field": "fecha_resolución",
+                    "calendar_interval": "year"
                 }
             },
-            "cuentos_por_autor": {
+            "resoluciones_por_empresa": {
                 "terms": {
-                    "field": "autor",
+                    "field": "empresa.keyword",
+                    "size": 10
+                }
+            },
+            "resoluciones_por_infraccion": {
+                "terms": {
+                    "field": "tipos_infraccion",
                     "size": 10
                 }
             }
         }
-        
-        # Ejecutar búsqueda sobre Elastic
+
         resultado = elastic.buscar(
-            index=ELASTIC_INDEX_DEFAULT,
+            index=ELASTIC_INDEX_DEFAULT,  # 'anla_resoluciones'
             query=query_base,
             aggs=aggs,
             size=100
         )
-        
+
         return jsonify(resultado)
-        
+
     except Exception as e:
         return jsonify({
             'success': False,
