@@ -20,7 +20,11 @@ class WebScraping:
         self.dominio_base = dominio_base
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            'User-Agent': (
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                'AppleWebKit/537.36 (KHTML, like Gecko) '
+                'Chrome/91.0.4472.124 Safari/537.36'
+            )
         })
     
     def extract_links(self, url: str, listado_extensiones: List[str] = None) -> List[Dict]:
@@ -34,59 +38,42 @@ class WebScraping:
         Returns:
             Lista de diccionarios con 'url' y 'type' de cada enlace encontrado
         """
-<<<<<<< HEAD
         print(f"Extrayendo links de: {url}")
-=======
->>>>>>> origin/main
+        
         if listado_extensiones is None:
             listado_extensiones = ['pdf', 'aspx']
         
         try:
             response = self.session.get(url, timeout=30)
-            response.raise_for_status()  # Raise an exception for bad status codes
+            response.raise_for_status()  # Lanza excepción para códigos de error
             
             soup = BeautifulSoup(response.content, 'lxml')
             container_div = soup.find('div', class_='containerblanco')
-<<<<<<< HEAD
-            #print(f"Encontrado div containerblanco: {container_div is not None}")
-=======
+            # print(f"Encontrado div containerblanco: {container_div is not None}")
             
->>>>>>> origin/main
-            links = []
+            links: List[Dict] = []
+            
             if container_div:
                 for link in container_div.find_all('a'):
                     href = link.get('href')
-                    if href:
-<<<<<<< HEAD
-                        #print(f"Encontrado link: {href}")
-                        full_url = urljoin(url, href)
-                        # Verificar extensión
-                        for ext in listado_extensiones:
-                            ext_lower = ext.lower().strip()
-                            if full_url.lower().endswith(f'.{ext_lower}'):
-                                print(f"Agregando link: {full_url} de tipo [{ext_lower}]")
-                                links.append({
-                                    'url': full_url,
-                                    'type': ext_lower
-                                })
-                                break  # Solo agregar una vez
-                            else:
-                                print(f"Link {full_url} NO coincide con la extensión {ext_lower}")
-=======
-                        full_url = urljoin(url, href)
-                        
-                        # Check if the link is within the specified domain
-                        if full_url.startswith(self.dominio_base):
-                            # Verificar extensión
-                            for ext in listado_extensiones:
-                                ext_lower = ext.lower().strip()
-                                if full_url.lower().endswith(f'.{ext_lower}'):
-                                    links.append({
-                                        'url': full_url,
-                                        'type': ext_lower
-                                    })
-                                    break  # Solo agregar una vez
->>>>>>> origin/main
+                    if not href:
+                        continue
+
+                    full_url = urljoin(url, href)
+
+                    # Filtrar por dominio base
+                    if not full_url.startswith(self.dominio_base):
+                        continue
+                    
+                    # Verificar extensión
+                    for ext in listado_extensiones:
+                        ext_lower = ext.lower().strip()
+                        if full_url.lower().endswith(f'.{ext_lower}'):
+                            links.append({
+                                'url': full_url,
+                                'type': ext_lower
+                            })
+                            break  # Solo agregar una vez
             
             return links
             
@@ -97,14 +84,13 @@ class WebScraping:
             print(f"Error procesando {url}: {e}")
             return []
     
-    def extraer_todos_los_links(self, url_inicial: str, json_file_path: str, 
-<<<<<<< HEAD
-                                listado_extensiones: List[str] = None,
-                                max_iteraciones: int = 100) -> Dict:
-=======
-                                 listado_extensiones: List[str] = None,
-                                 max_iteraciones: int = 100) -> Dict:
->>>>>>> origin/main
+    def extraer_todos_los_links(
+        self,
+        url_inicial: str,
+        json_file_path: str,
+        listado_extensiones: List[str] = None,
+        max_iteraciones: int = 100
+    ) -> Dict:
         """
         Extrae todos los links de forma recursiva desde una URL inicial
         
@@ -129,11 +115,7 @@ class WebScraping:
             all_links = self.extract_links(url_inicial, listado_extensiones)
         
         # Filtrar links para que solo estén en el dominio especificado
-<<<<<<< HEAD
-        # all_links = [link for link in all_links if link['url'].startswith(self.dominio_base)]
-=======
         all_links = [link for link in all_links if link['url'].startswith(self.dominio_base)]
->>>>>>> origin/main
         
         # Obtener links ASPX para visitar
         aspx_links_to_visit = [
@@ -168,11 +150,7 @@ class WebScraping:
             print(f"Advertencia: Se alcanzó el máximo de {max_iteraciones} iteraciones")
         
         # Filtrar nuevamente para asegurar que todos están en el dominio
-<<<<<<< HEAD
-        #all_links = [link for link in all_links if link['url'].startswith(self.dominio_base)]
-=======
         all_links = [link for link in all_links if link['url'].startswith(self.dominio_base)]
->>>>>>> origin/main
         
         # Guardar en JSON
         json_output = {"links": all_links}
@@ -326,4 +304,3 @@ class WebScraping:
     def close(self):
         """Cierra la sesión de requests"""
         self.session.close()
-
