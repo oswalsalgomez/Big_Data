@@ -1,6 +1,15 @@
 from elasticsearch import Elasticsearch
 from typing import Dict, List, Optional, Any
 import json
+import os
+from dotenv import load_dotenv
+
+# Cargar variables de entorno (.env en local, env vars en Render)
+load_dotenv()
+ELASTIC_CLOUD_URL = os.getenv("ELASTIC_CLOUD_URL")
+ELASTIC_API_KEY = os.getenv("ELASTIC_API_KEY")
+ELASTIC_INDEX_DEFAULT = os.getenv("ELASTIC_INDEX_DEFAULT", "anla_resoluciones")
+
 
 class ElasticSearch:
     def __init__(self, cloud_url: str, api_key: str):
@@ -391,3 +400,83 @@ class ElasticSearch:
     def close(self):
         """Cierra la conexión"""
         self.client.close()
+        
+# Instancia global que usaremos en app.py
+elastic = ElasticSearch(
+    cloud_url=ELASTIC_CLOUD_URL,
+    api_key=ELASTIC_API_KEY
+)
+
+from elasticsearch.helpers import bulk
+
+def crear_indice_anla_si_no_existe(index_name: str = None):
+    """
+    Crea el índice de resoluciones ANLA con el mapping adecuado
+    si aún no existe.
+    """
+    index_name = index_name or ELASTIC_INDEX_DEFAULT
+
+    if elastic.client.indices.exists(index=index_name):
+        return
+
+    body = {
+        "mappings": {
+            "properties": {
+                "fuente":            { "type": "keyword" },
+                "numero_resolución": { "type": "text" },
+                "fecha_resolución":  { "type": "date", "format": "yyyy-MM-dd" },
+                "nombre_proyecto":   { "type": "text" },
+                "ubicación":         { "type": "text" },
+                "empresa": {
+                    "type": "text",
+                    "fields": { "keyword": { "type": "keyword" } }
+                },
+                "numero_expediente": { "type": "keyword" },
+                "radicados":         { "type": "keyword" },
+                "descripcion":       { "type": "text" },
+                "tipos_infraccion":  { "type": "keyword" },
+                "pdf_id":            { "type": "keyword" },
+                "file_name":         { "type": "keyword" },
+                "texto_completo":    { "type": "text" }
+            }
+        }
+    }
+
+    elastic.client.indices.create(index=index_name, body=body)
+
+def indexar_json_anla(json_dir: str, index_name: str = None) -> Dict:
+    """
+    Lee todos los JSON de una carpeta y los indexa en el índice ANLA.
+    """
+    index_name = index_name or ELASTIC_INDEX_DEFAULT
+    crear_indice_anla_si_no_existe(index_name)
+
+    documentos = []
+    for fname in os.listdir(json_dir):
+        if not fname.lower().endswith(".json"):
+            continue
+
+        path = os.path.join(json_dir, fname)
+        with open(path, "r", encoding="utf-8") as f:
+            doc = json.load(f)
+
+        # Usamos pdf_id como _id si existe
+        doc_id = doc.get("pdf_id", os.path.splitext(fname)[0])
+
+        documentos.append({
+            "_index": index_name,
+            "_id": doc_id,
+            "_source": doc
+        })
+
+    if not documentos:
+        return {"success": True, "indexados": 0, "fallidos": 0, "errores": []}
+
+    success, errors = bulk(elastic.client, documentos, raise_on_error=False)
+
+    return {
+        "success": True,
+        "indexados": success,
+        "fallidos": len(errors) if errors else 0,
+        "errores": errors or []
+    }
