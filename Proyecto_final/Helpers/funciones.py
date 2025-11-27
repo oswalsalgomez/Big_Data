@@ -8,6 +8,7 @@ import pytesseract
 from typing import Dict, List
 from werkzeug.utils import secure_filename
 from datetime import datetime
+from pdf2image import convert_from_path
 
 class Funciones:
     @staticmethod
@@ -81,43 +82,41 @@ class Funciones:
     @staticmethod
     def borrar_contenido_carpeta(ruta: str) -> bool:
         """
-        Borra el contenido de una carpeta sin eliminar la carpeta misma
-        
-        Args:
-            ruta: Ruta de la carpeta a limpiar
-            
-        Returns:
-            True si se borró correctamente, False en caso de error
+        Elimina todo el contenido de una carpeta sin borrar la carpeta en sí.
+        Retorna True si todo sale bien, False si hay algún error.
         """
+        import shutil
+
         try:
+            # Si no existe, no hay nada que borrar
             if not os.path.exists(ruta):
-                return True  # Si no existe, no hay nada que borrar
-            
+                return True
+
+            # Si no es una carpeta, no se puede procesar
             if not os.path.isdir(ruta):
-                return False  # No es una carpeta
-            
+                return False
+
             # Eliminar todos los archivos y subcarpetas dentro
             for item in os.listdir(ruta):
                 item_path = os.path.join(ruta, item)
                 try:
                     if os.path.isfile(item_path) or os.path.islink(item_path):
-                        os.unlink(item_path)  # Eliminar archivo o enlace simbólico
+                        os.unlink(item_path)
                     elif os.path.isdir(item_path):
-                        import shutil
-                        shutil.rmtree(item_path)  # Eliminar directorio y su contenido
-<<<<<<< HEAD
-                        print(f"Eliminado directorio: {item_path}")
-=======
->>>>>>> origin/main
+                        shutil.rmtree(item_path)
+
+                    print(f"Eliminado: {item_path}")
+
                 except Exception as e:
                     print(f"Error al eliminar {item_path}: {e}")
                     return False
-            
+
             return True
+
         except Exception as e:
-            print(f"Error al borrar contenido de carpeta: {e}")
+            print(f"Error al borrar contenido de carpeta '{ruta}': {e}")
             return False
-    
+
     @staticmethod
     def extraer_texto_pdf(ruta_pdf: str) -> str:
         """
@@ -152,8 +151,7 @@ class Funciones:
             Texto extraído usando OCR
         """
         try:
-            from pdf2image import convert_from_path
-            
+     
             # Convertir PDF a imágenes
             images = convert_from_path(ruta_pdf)
             
