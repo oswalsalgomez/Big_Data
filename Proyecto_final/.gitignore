@@ -1,0 +1,26 @@
+# Entornos virtuales
+venv/
+.Venv/
+env/
+ENV/
+Proyecto_final/venv/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Variables de entorno
+.env
+
+# Archivos grandes
+*.dll
+*.bin
+*.dat
+*.pkl
+
+# Archivos ZIP temporales
+*.zip
+!ANLA_json.zip   # excepción: este sí lo queremos subir
+
+# Archivos de VSCode
+.vscode/
