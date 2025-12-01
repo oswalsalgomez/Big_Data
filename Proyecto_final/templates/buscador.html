@@ -70,26 +70,15 @@
                            value="{{ num_expediente_filtro or '' }}">
                 </div>
 
-                <!-- PROYECTO / CAMPO -->
-                <div class="col-md-4">
-                    <label for="proyecto" class="form-label">Proyecto / Campo</label>
-                    <input type="text"
-                           class="form-control"
-                           id="proyecto"
-                           name="proyecto"
-                           placeholder="Ej: Campo Cusiana"
-                           value="{{ proyecto_filtro or '' }}">
-                </div>
-
                 <!-- BOTÓN BUSCAR -->
-                <div class="col-md-2 d-flex align-items-end">
+                <div class="col-md-2 offset-md-4 d-flex align-items-end">
                     <button type="submit" class="btn btn-primary w-100">
                         Buscar
                     </button>
                 </div>
             </div>
 
-            {% if empresa_filtro or anio_filtro or num_resolucion_filtro or num_expediente_filtro or proyecto_filtro %}
+            {% if empresa_filtro or anio_filtro or num_resolucion_filtro or num_expediente_filtro %}
             <div class="row mt-3">
                 <div class="col">
                     <span class="badge bg-secondary me-2">
@@ -98,7 +87,6 @@
                         {% if anio_filtro %} · Año={{ anio_filtro }}{% endif %}
                         {% if num_resolucion_filtro %} · Res={{ num_resolucion_filtro }}{% endif %}
                         {% if num_expediente_filtro %} · Exp={{ num_expediente_filtro }}{% endif %}
-                        {% if proyecto_filtro %} · Proyecto="{{ proyecto_filtro }}"{% endif %}
                     </span>
                     <a href="{{ url_for('buscador') }}" class="btn btn-sm btn-outline-secondary">
                         Limpiar filtros
