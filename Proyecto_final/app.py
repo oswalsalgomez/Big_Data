@@ -70,88 +70,94 @@ def about():
 
 @app.route('/buscador')
 def buscador():
-    """Página de búsqueda pública"""
-    return render_template('buscador.html', version=VERSION_APP, creador=CREATOR_APP)
+    """
+    Página de búsqueda pública.
+    Si viene ?texto=... en la URL, hace la búsqueda en Elastic y
+    pasa los resultados al template.
+    """
+    texto = (request.args.get('texto') or '').strip()
+    resultados = None
+    total = None
+    error = None
 
-@app.route('/buscar-elastic', methods=['POST'])
-def buscar_elastic():
-    """API para búsquedas en ElasticSearch - Resoluciones ANLA"""
-    try:
-        data = request.get_json() or {}
-        texto_buscar = (data.get('texto') or '').strip()
-        campo = data.get('campo', '_all')  # '_all', 'nombre_proyecto', 'empresa', etc.
+    if texto:
+        try:
+            # ====== QUERY PRINCIPAL (igual que en /buscar-elastic) ======
+            campo = '_all'  # por ahora siempre buscamos en varios campos
 
-        if not texto_buscar:
-            return jsonify({
-                'success': False,
-                'error': 'Debe ingresar un texto para buscar.'
-            }), 400
+            if campo == '_all':
+                query_base = {
+                    "query": {
+                        "multi_match": {
+                            "query": texto,
+                            "fields": [
+                                "texto_completo",
+                                "numero_resolución^3",
+                                "nombre_proyecto^2",
+                                "empresa^2",
+                                "descripcion^2",
+                                "numero_expediente",
+                                "radicados"
+                            ]
+                        }
+                    }
+                }
+            else:
+                query_base = {
+                    "query": {
+                        "match": {
+                            campo: texto
+                        }
+                    }
+                }
 
-        # ====== QUERY PRINCIPAL ======
-        if campo == '_all':
-            # Búsqueda combinada en varios campos + texto completo
-            query_base = {
-                "query": {
-                    "multi_match": {
-                        "query": texto_buscar,
-                        "fields": [
-                            "texto_completo",
-                            "numero_resolución^3",
-                            "nombre_proyecto^2",
-                            "empresa^2",
-                            "descripcion^2",
-                            "numero_expediente",
-                            "radicados"
-                        ]
+            # ====== AGGREGATIONS (opcional, por ahora no las mostramos) ======
+            aggs = {
+                "resoluciones_por_anio": {
+                    "date_histogram": {
+                        "field": "fecha_resolución",
+                        "calendar_interval": "year"
+                    }
+                },
+                "resoluciones_por_empresa": {
+                    "terms": {
+                        "field": "empresa.keyword",
+                        "size": 10
+                    }
+                },
+                "resoluciones_por_infraccion": {
+                    "terms": {
+                        "field": "tipos_infraccion",
+                        "size": 10
                     }
                 }
             }
-        else:
-            # Búsqueda en un campo específico
-            query_base = {
-                "query": {
-                    "match": {
-                        campo: texto_buscar
-                    }
-                }
-            }
 
-        # ====== AGGREGATIONS ÚTILES ======
-        aggs = {
-            "resoluciones_por_anio": {
-                "date_histogram": {
-                    "field": "fecha_resolución",
-                    "calendar_interval": "year"
-                }
-            },
-            "resoluciones_por_empresa": {
-                "terms": {
-                    "field": "empresa.keyword",
-                    "size": 10
-                }
-            },
-            "resoluciones_por_infraccion": {
-                "terms": {
-                    "field": "tipos_infraccion",
-                    "size": 10
-                }
-            }
-        }
+            resultado = elastic.buscar(
+                index=ELASTIC_INDEX_DEFAULT,
+                query=query_base,
+                aggs=aggs,
+                size=50
+            )
 
-        resultado = elastic.buscar(
-            index=ELASTIC_INDEX_DEFAULT,  # 'anla_resoluciones'
-            query=query_base,
-            aggs=aggs,
-            size=100
-        )
+            if resultado.get('success'):
+                resultados = resultado.get('resultados', [])
+                total = resultado.get('total', 0)
+            else:
+                error = resultado.get('error', 'Error desconocido en Elastic')
 
-        return jsonify(resultado)
+        except Exception as e:
+            error = str(e)
 
-    except Exception as e:
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
+    return render_template(
+        'buscador.html',
+        version=VERSION_APP,
+        creador=CREATOR_APP,
+        texto=texto,
+        resultados=resultados,
+        total=total,
+        error=error
+    )
 
 # ==================== AUTENTICACIÓN / USUARIOS (MONGO) ====================
 
