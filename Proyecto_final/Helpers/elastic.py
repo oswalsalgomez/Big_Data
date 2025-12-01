@@ -26,43 +26,46 @@ ELASTIC_INDEX_DEFAULT = os.getenv("ELASTIC_INDEX_DEFAULT", "anla_resoluciones")
 
 def get_es_client() -> Elasticsearch:
     """
-    Devuelve un cliente Elasticsearch válido:
-    - Si hay ELASTIC_CLOUD_ID y ELASTIC_API_KEY → conecta a Elastic Cloud (modo recomendado)
-    - Si hay ELASTIC_CLOUD_URL y ELASTIC_API_KEY → conecta a Elastic Cloud usando la URL
-    - Si hay ELASTIC_HOST / ELASTIC_USERNAME / ELASTIC_PASSWORD → conecta al Elasticsearch local
+    Devuelve un cliente Elasticsearch válido, priorizando:
+
+    1. Elasticsearch LOCAL (ELASTIC_HOST / ELASTIC_USERNAME / ELASTIC_PASSWORD)
+    2. Elasticsearch Cloud por URL (ELASTIC_CLOUD_URL / ELASTIC_API_KEY)
+    3. Elasticsearch Cloud por ID (ELASTIC_CLOUD_ID / ELASTIC_API_KEY)
     """
 
-    # ----- Elastic CLOUD con Cloud ID -----
-    if ELASTIC_CLOUD_ID and ELASTIC_API_KEY:
+    # ----- 1. Elastic LOCAL -----
+    if ELASTIC_HOST and ELASTIC_USERNAME and ELASTIC_PASSWORD:
         return Elasticsearch(
-            cloud_id=ELASTIC_CLOUD_ID,
-            api_key=ELASTIC_API_KEY
+            hosts=[ELASTIC_HOST],                    # p.ej. https://localhost:9200
+            basic_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD),
+            verify_certs=False,                     # certificado auto-generado
+            ssl_show_warn=False
         )
 
-    # ----- Elastic CLOUD con URL -----
+    # ----- 2. Elastic CLOUD con URL -----
     if ELASTIC_CLOUD_URL and ELASTIC_API_KEY:
-        # ELASTIC_CLOUD_URL debe ser algo tipo: https://xxxxxx.es.io:9243
+        # ELASTIC_CLOUD_URL debe ser algo tipo: https://xxxx.es.io:9243
         return Elasticsearch(
             ELASTIC_CLOUD_URL,
             api_key=ELASTIC_API_KEY,
             verify_certs=True
         )
 
-    # ----- Elastic LOCAL -----
-    if ELASTIC_HOST and ELASTIC_USERNAME and ELASTIC_PASSWORD:
-        # Ejemplo ELASTIC_HOST=https://localhost:9200
+    # ----- 3. Elastic CLOUD con Cloud ID -----
+    # Solo usamos cloud_id si parece tener un formato válido (debe tener al menos ':')
+    if ELASTIC_CLOUD_ID and ELASTIC_API_KEY and ':' in ELASTIC_CLOUD_ID:
         return Elasticsearch(
-            hosts=[ELASTIC_HOST],
-            basic_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD),
-            verify_certs=False,    
-            ssl_show_warn=False
+            cloud_id=ELASTIC_CLOUD_ID,
+            api_key=ELASTIC_API_KEY
         )
 
-    # Si nada de lo anterior aplica:
+    # Si nada aplica, error claro
     raise RuntimeError(
         "❌ No se encontraron variables de entorno válidas para Elastic.\n"
-        "Configura ELASTIC_CLOUD_ID/ELASTIC_API_KEY o ELASTIC_CLOUD_URL/ELASTIC_API_KEY "
-        "o ELASTIC_HOST/ELASTIC_USERNAME/ELASTIC_PASSWORD."
+        "Configura alguna de estas opciones:\n"
+        "- Elastic LOCAL: ELASTIC_HOST / ELASTIC_USERNAME / ELASTIC_PASSWORD\n"
+        "- Elastic CLOUD URL: ELASTIC_CLOUD_URL / ELASTIC_API_KEY\n"
+        "- Elastic CLOUD ID: ELASTIC_CLOUD_ID / ELASTIC_API_KEY (formato correcto)"
     )
 
 
