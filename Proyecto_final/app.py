@@ -9,24 +9,49 @@ from Helpers import MongoDB, ElasticSearch, Funciones, WebScraping
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = os.getenv('SECRET_KEY', 'Perroviejo13*_siempre_ganador')
+app.secret_key = os.getenv('SECRET_KEY', 'cambiar_clave')
 
-# Configuración MongoDB
+# ==================== CONFIGURACIÓN MONGO ====================
+
 MONGO_URI = os.getenv('MONGO_URI')
 MONGO_DB = os.getenv('MONGO_DB')
 MONGO_COLECCION = os.getenv('MONGO_COLECCION', 'usuario_roles')
 
-# Configuración ElasticSearch Cloud
-ELASTIC_CLOUD_URL       = os.getenv('ELASTIC_CLOUD_URL')
-ELASTIC_API_KEY         = os.getenv('ELASTIC_API_KEY')
-ELASTIC_INDEX_DEFAULT   = os.getenv('ELASTIC_INDEX_DEFAULT', 'anla_resoluciones')
+# ==================== CONFIGURACIÓN ELASTIC ====================
+# Ahora soportamos:
+# - Elastic Cloud (ELASTIC_CLOUD_URL / ELASTIC_API_KEY, y opcionalmente ELASTIC_CLOUD_ID)
+# - Elastic local (ELASTIC_HOST / ELASTIC_USERNAME / ELASTIC_PASSWORD)
+# La clase Helpers.ElasticSearch ya está preparada para usar estas variables
+# a través del helper get_es_client() que modificamos en elastic.py
+
+# Elastic Cloud
+ELASTIC_CLOUD_URL     = os.getenv('ELASTIC_CLOUD_URL')      # endpoint https://...
+ELASTIC_API_KEY       = os.getenv('ELASTIC_API_KEY')
+ELASTIC_CLOUD_ID      = os.getenv('ELASTIC_CLOUD_ID')       # opcional (si lo usas)
+
+# Elastic local
+ELASTIC_HOST          = os.getenv('ELASTIC_HOST')           # p.ej. https://localhost:9200
+ELASTIC_USERNAME      = os.getenv('ELASTIC_USERNAME')       # p.ej. elastic
+ELASTIC_PASSWORD      = os.getenv('ELASTIC_PASSWORD')       # tu password local
+
+# Índice por defecto para resoluciones ANLA
+ELASTIC_INDEX_DEFAULT = os.getenv('ELASTIC_INDEX_DEFAULT', 'anla_resoluciones')
 
 # Versión de la aplicación
 VERSION_APP = "1.3.0"
 CREATOR_APP = "Oswaldo Salgado Gómez"
 
-# Inicializar conexiones
+# ==================== INICIALIZAR CONEXIONES ====================
+
 mongo = MongoDB(MONGO_URI, MONGO_DB)
+
+# IMPORTANTE:
+# La clase ElasticSearch que ajustamos en elastic.py tiene esta lógica:
+# - Si recibe cloud_url y api_key → conecta a Elastic Cloud con esa URL.
+# - Si NO recibe parámetros (o son None) → usa get_es_client(), que a su vez
+#   intenta ELASTIC_CLOUD_ID/ELASTIC_API_KEY o ELASTIC_HOST/ELASTIC_USERNAME/ELASTIC_PASSWORD.
+#
+# Por eso este constructor funciona tanto en local como en Render:
 elastic = ElasticSearch(ELASTIC_CLOUD_URL, ELASTIC_API_KEY)
 
 # ==================== RUTAS PÚBLICAS ====================
@@ -383,7 +408,7 @@ def ejecutar_dml_elastic():
         if not comando_json:
             return jsonify({'success': False, 'error': 'Comando es requerido'}), 400
 
-        # Aquí podrías implementar lógica específica para DML (index, update, delete, etc.)
+        # Aquí podrías implementar lógica específica para DML (index, update, delete, etc.).
         # Por ahora, se delega al helper como si fuera una operación genérica.
         resultado = elastic.ejecutar_query(comando_json)
 
@@ -674,9 +699,9 @@ if __name__ == '__main__':
         print("❌ MongoDB Atlas: Error de conexión")
     
     if elastic.test_connection():
-        print("✅ ElasticSearch Cloud: Conectado")
+        print("✅ ElasticSearch: Conectado")
     else:
-        print("❌ ElasticSearch Cloud: Error de conexión")
+        print("❌ ElasticSearch: Error de conexión")
 
     # Ejecutar la aplicación (localmente para pruebas)
     app.run(debug=True, host='0.0.0.0', port=5000)

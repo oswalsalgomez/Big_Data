@@ -39,7 +39,7 @@ def get_es_client() -> Elasticsearch:
             api_key=ELASTIC_API_KEY
         )
 
-    # ----- Elastic CLOUD con URL (tu caso actual en Render) -----
+    # ----- Elastic CLOUD con URL -----
     if ELASTIC_CLOUD_URL and ELASTIC_API_KEY:
         # ELASTIC_CLOUD_URL debe ser algo tipo: https://xxxxxx.es.io:9243
         return Elasticsearch(
@@ -54,7 +54,7 @@ def get_es_client() -> Elasticsearch:
         return Elasticsearch(
             hosts=[ELASTIC_HOST],
             basic_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD),
-            verify_certs=False,    # certificado auto-generado
+            verify_certs=False,    
             ssl_show_warn=False
         )
 
