@@ -2,312 +2,81 @@
 
 {% block title %}Buscador - BigData{% endblock %}
 
-{% block extra_css %}
-<style>
-    .resultados-container {
-        margin-top: 2rem;
-    }
-    .aggs-list {
-        background-color: #f8f9fa;
-        border: 1px solid #dee2e6;
-        border-radius: 0.25rem;
-        padding: 1rem;
-        max-height: 600px;
-        overflow-y: auto;
-    }
-    .aggs-item {
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid #dee2e6;
-    }
-    .aggs-item:last-child {
-        border-bottom: none;
-    }
-    .aggs-item h6 {
-        color: #495057;
-        margin-bottom: 0.5rem;
-    }
-    .aggs-item ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-    .aggs-item li {
-        padding: 0.25rem 0;
-        font-size: 0.9rem;
-    }
-    .aggs-item .badge {
-        margin-left: 0.5rem;
-    }
-    .tabla-resultados {
-        max-height: 600px;
-        overflow-y: auto;
-    }
-    .json-view {
-        background-color: #f8f9fa;
-        border: 1px solid #dee2e6;
-        border-radius: 0.25rem;
-        padding: 0.5rem;
-        font-family: 'Courier New', monospace;
-        font-size: 0.75rem;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        max-height: 200px;
-        overflow-y: auto;
-    }
-</style>
-{% endblock %}
-
 {% block content %}
-    <h1 class="text-center mb-4">Buscador de documentos</h1>
-    
-    <!-- Formulario de búsqueda -->
-    <div class="card mb-4">
-        <div class="card-body">
-            <form id="formBuscar" onsubmit="buscar(event)">
-                <div class="row g-3 align-items-end">
-                    <div class="col-md-10">
-                        <label for="textoBuscar" class="form-label">Texto a buscar</label>
-                        <input type="text" class="form-control" id="textoBuscar" name="texto" 
-                               placeholder="Ingrese el texto que desea buscar..." required>
-                    </div>
-                    <div class="col-md-2">
-                        <button type="submit" class="btn btn-linkedin w-100">
-                            Buscar
-                        </button>
-                    </div>
+<h1 class="text-center mb-4">Buscador de documentos</h1>
+
+<!-- FORMULARIO GET -->
+<div class="card mb-4">
+    <div class="card-body">
+        <form method="get" action="{{ url_for('buscador') }}">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-10">
+                    <label for="texto" class="form-label">Texto a buscar</label>
+                    <input type="text"
+                           class="form-control"
+                           id="texto"
+                           name="texto"
+                           placeholder="Ingrese el texto que desea buscar..."
+                           value="{{ texto or '' }}"
+                           required>
                 </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Mensaje de carga -->
-    <div id="div_cargando" class="text-center mt-4" style="display: none;">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Buscando...</span>
-        </div>
-        <p class="mt-2">Buscando documentos... Por favor espere.</p>
-    </div>
-
-    <!-- Resultados -->
-    <div id="divResultados" class="resultados-container" style="display: none;">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0">Resultados de la búsqueda - Total encontrado: <span id="totalResultados">0</span></h5>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <!-- Columna 1: Aggregations (Filtros) -->
-                    <div class="col-md-3">
-                        <div class="aggs-list">
-                            <h6 class="mb-3">Filtros</h6>
-                            <div id="divAggregations">
-                                <!-- Las aggregations se mostrarán aquí -->
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Columna 2: Tabla de resultados -->
-                    <div class="col-md-9">
-                        <div class="tabla-resultados">
-                            <table class="table table-striped table-bordered table-hover">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th style="width: 5%;">#</th>
-                                        <th style="width: 10%;">ID</th>
-                                        <th style="width: 10%;">Score</th>
-                                        <th style="width: 15%;">Índice</th>
-                                        <th style="width: 60%;">Contenido</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tablaResultados">
-                                    <!-- Los resultados se mostrarán aquí -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        Buscar
+                    </button>
                 </div>
             </div>
+        </form>
+    </div>
+</div>
+
+<!-- MENSAJE DE ERROR -->
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+<!-- MENSAJE SIN RESULTADOS -->
+{% if resultados is not none and total == 0 %}
+<div class="alert alert-warning">
+    No se encontraron documentos para <strong>"{{ texto }}"</strong>.
+</div>
+{% endif %}
+
+<!-- TABLA DE RESULTADOS -->
+{% if resultados and total > 0 %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">Resultados de la búsqueda ({{ total }})</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>N° Resolución</th>
+                        <th>Fecha</th>
+                        <th>Empresa</th>
+                        <th>Proyecto</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for hit in resultados %}
+                        {% set doc = hit['_source'] %}
+                        <tr>
+                            <td>{{ doc.get('numero_resolución', '') }}</td>
+                            <td>{{ doc.get('fecha_resolución', '') }}</td>
+                            <td>{{ doc.get('empresa', '') }}</td>
+                            <td>{{ doc.get('nombre_proyecto', '') }}</td>
+                            <td>{{ doc.get('descripcion', doc.get('texto_completo', ''))[:200] }}...</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
+{% endif %}
 
-    <!-- Mensaje de error -->
-    <div id="divError" class="alert alert-danger mt-4" style="display: none;" role="alert">
-        <strong>Error:</strong> <span id="mensajeError"></span>
-    </div>
-
-    <!-- Modal para mostrar detalle completo -->
-    <div class="modal fade" id="modalDetalle" tabindex="-1" aria-labelledby="modalDetalleLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalDetalleLabel">Detalle del Documento</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body" id="modalDetalleBody">
-                    <!-- El contenido se mostrará aquí -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            crossorigin="anonymous"></script>
-    <script>
-        #document.getElementById('current-year').textContent = new Date().getFullYear(); #pendiente de eliminar
-
-        // Variable global para almacenar última búsqueda
-        let ultimaBusqueda = [];
-
-        function buscar(event) {
-            event.preventDefault();
-            
-            const textoBuscar = document.getElementById('textoBuscar').value.trim();
-            
-            if (!textoBuscar) {
-                alert('Por favor, ingrese un texto para buscar');
-                return;
-            }
-            
-            document.getElementById('divResultados').style.display = 'none';
-            document.getElementById('divError').style.display = 'none';
-            document.getElementById('div_cargando').style.display = 'block';
-            
-            fetch('{{ url_for("buscar_elastic") }}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    texto: textoBuscar,
-                    campo: '_all'
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('div_cargando').style.display = 'none';
-                
-                if (data.success) {
-                    mostrarResultados(data);
-                } else {
-                    mostrarError(data.error || 'Error desconocido');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('div_cargando').style.display = 'none';
-                mostrarError('Error al realizar la búsqueda');
-            });
-        }
-
-        function mostrarResultados(data) {
-            document.getElementById('totalResultados').textContent = data.total || 0;
-
-            mostrarAggregations(data.aggs || {});
-
-            const hits = data.resultados || data.hits || [];
-            mostrarHits(hits);
-            
-            ultimaBusqueda = hits;
-
-            document.getElementById('divResultados').style.display = 'block';
-        }
-
-        function mostrarAggregations(aggs) {
-            const divAggregations = document.getElementById('divAggregations');
-            divAggregations.innerHTML = '';
-            
-            if (!aggs || Object.keys(aggs).length === 0) {
-                divAggregations.innerHTML = '<p class="text-muted">No hay agregaciones disponibles</p>';
-                return;
-            }
-            
-            if (aggs.cuentos_por_mes && aggs.cuentos_por_mes.buckets) {
-                const divMes = document.createElement('div');
-                divMes.className = 'aggs-item';
-                divMes.innerHTML = '<h6>Cuentos por Mes</h6><ul id="listCuentosPorMes"></ul>';
-                divAggregations.appendChild(divMes);
-                
-                const listMes = document.getElementById('listCuentosPorMes');
-                aggs.cuentos_por_mes.buckets.forEach(bucket => {
-                    const li = document.createElement('li');
-                    const fecha = new Date(bucket.key_as_string || bucket.key)
-                        .toLocaleDateString('es-ES', { year: 'numeric', month: 'long' });
-                    li.innerHTML = `${fecha} <span class="badge bg-primary">${bucket.doc_count}</span>`;
-                    listMes.appendChild(li);
-                });
-            }
-            
-            if (aggs.cuentos_por_autor && aggs.cuentos_por_autor.buckets) {
-                const divAutor = document.createElement('div');
-                divAutor.className = 'aggs-item';
-                divAutor.innerHTML = '<h6>Cuentos por Autor</h6><ul id="listCuentosPorAutor"></ul>';
-                divAggregations.appendChild(divAutor);
-                
-                const listAutor = document.getElementById('listCuentosPorAutor');
-                aggs.cuentos_por_autor.buckets.forEach(bucket => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `${bucket.key} <span class="badge bg-success">${bucket.doc_count}</span>`;
-                    listAutor.appendChild(li);
-                });
-            }
-        }
-
-        function mostrarHits(hits) {
-            const tablaResultados = document.getElementById('tablaResultados');
-            tablaResultados.innerHTML = '';
-            
-            if (!hits || hits.length === 0) {
-                tablaResultados.innerHTML = '<tr><td colspan="5" class="text-center">No se encontraron resultados</td></tr>';
-                return;
-            }
-            
-            hits.forEach((hit, index) => {
-                const row = document.createElement('tr');
-                const source = hit._source || {};
-                
-                let contenidoVista = '';
-                if (source.contenido) {
-                    contenidoVista = source.contenido.substring(0, 200);
-                    if (source.contenido.length > 200) contenidoVista += '...';
-                } else if (source.texto) {
-                    contenidoVista = source.texto.substring(0, 200);
-                    if (source.texto.length > 200) contenidoVista += '...';
-                } else {
-                    const str = JSON.stringify(source, null, 2);
-                    contenidoVista = str.substring(0, 200) + (str.length > 200 ? '...' : '');
-                }
-                
-                row.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td>${hit._id || ''}</td>
-                    <td>${hit._score ? hit._score.toFixed(4) : 'N/A'}</td>
-                    <td><small>${hit._index || ''}</small></td>
-                    <td>
-                        <div class="json-view">${contenidoVista}</div>
-                        <button class="btn btn-sm btn-link mt-1" onclick="mostrarDetalle(${index})"
-                                data-bs-toggle="modal" data-bs-target="#modalDetalle">
-                            Ver completo
-                        </button>
-                    </td>
-                `;
-                tablaResultados.appendChild(row);
-            });
-        }
-
-        function mostrarDetalle(index) {
-            if (!ultimaBusqueda[index]) return;
-            const source = ultimaBusqueda[index]._source || {};
-            const modalBody = document.getElementById('modalDetalleBody');
-            modalBody.innerHTML = '<pre class="json-view" style="max-height: 500px; overflow-y: auto;">'
-                                  + JSON.stringify(source, null, 2) + '</pre>';
-        }
-
-        function mostrarError(mensaje) {
-            document.getElementById('mensajeError').textContent = mensaje;
-            document.getElementById('divError').style.display = 'block';
-        }
-    </script>
 {% endblock %}
+
