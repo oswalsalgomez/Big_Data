@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01514",
   "fecha_resolución": "2022-07-13",
-  "nombre_proyecto": "proyecto “Construcción y Operación de la Línea de Conducción de Hidrocarburos",
-  "ubicación": "departamento del Meta, hasta las facilidades del CPF Cusiana.",
-  "empresa": "otorgó licencia ambiental ordinaria a la sociedad META PETROLEUM LTD",
+  "nombre_proyecto": "“Construcción y Operación de la Línea de Conducción de Hidrocarburos desde el Campo Rubiales”, localizado en jurisdicció",
+  "nombre_proyecto_normalizada": "\"construccion y operacion de la linea de conduccion de hidrocarburos desde el campo rubiales\", localizado en jurisdiccio",
+  "ubicación": "jurisdicción del municipio de Puerto Gaitán, departamento del Meta, hasta las facilidades del CPF Cusiana",
+  "ubicacion_normalizada": "jurisdiccion del municipio de puerto gaitan, departamento del meta, hasta las facilidades del cpf cusiana",
+  "empresa": "META PETROLEUM LTDA",
+  "empresa_normalizada": "meta petroleum ltda",
   "numero_expediente": "D-7946",
   "radicados": [
     "2020010562",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "39753",
   "file_name": "ANLA_39753.pdf",

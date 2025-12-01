@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00880",
   "fecha_resolución": "2022-05-02",
-  "nombre_proyecto": "proyecto “Sistema de",
-  "ubicación": "departamento del Meta, consistente en un ducto de 10”; para el transporte de crudo desde la Estación de Chichimene (localizada en el Bloque Cubarral Campos Castilla y Chichimene) hasta la Estación Apiay; y de Nafta desde la Estación Apiay hasta la Estación de Chichimene.",
-  "empresa": "en donde de manera independiente se archivarán las actuaciones específicas de dicho Sistema, cuyo titular ante esta Autoridad, es la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "“Sistema de Transporte de Hidrocarburos Apiay – Chichimene” localizado en los municipios de Villavicencio y Acacías en e",
+  "nombre_proyecto_normalizada": "\"sistema de transporte de hidrocarburos apiay – chichimene\" localizado en los municipios de villavicencio y acacias en e",
+  "ubicación": "el Bloque Cubarral Campos Castilla y Chichimene) hasta la Estación Apiay; y de Nafta desde la Estación Apiay hasta la Estación de Chichimene",
+  "ubicacion_normalizada": "el bloque cubarral campos castilla y chichimene) hasta la estacion apiay; y de nafta desde la estacion apiay hasta la estacion de chichimene",
+  "empresa": "en su argumento de que la probabilidad de afectación es baja",
+  "empresa_normalizada": "en su argumento de que la probabilidad de afectacion es baja",
   "numero_expediente": "LAM0227",
   "radicados": [
     "2022005795",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "38956",
   "file_name": "ANLA_38956.pdf",

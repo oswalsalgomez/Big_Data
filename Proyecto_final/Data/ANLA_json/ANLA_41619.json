@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00263",
   "fecha_resolución": "2023-02-15",
-  "nombre_proyecto": "proyecto de “Área de Pozos de Desarrollo CUSIANA TA.” ubicado en jurisdicción del",
-  "ubicación": "departamento del Casanare, además en su artículo quinto estableció la obligación de la inversión forzosa de no menos del 1%.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad BRITISH PETROLEUM EXPLORATION COMPANY COLOMBIA LTD",
+  "nombre_proyecto": "de “Área de Pozos de Desarrollo CUSIANA TA",
+  "nombre_proyecto_normalizada": "de \"area de pozos de desarrollo cusiana ta",
+  "ubicación": "jurisdicción del municipio de Aguazul en el departamento del Casanare, además en su artículo quinto estableció la obligación de la inversión forzosa de no menos del 1%",
+  "ubicacion_normalizada": "jurisdiccion del municipio de aguazul en el departamento del casanare, ademas en su articulo quinto establecio la obligacion de la inversion forzosa de no menos del 1%",
+  "empresa": "BRITISH PETROLEUM EXPLORATION COMPANY COLOMBIA LTD",
+  "empresa_normalizada": "british petroleum exploration company colombia ltd",
   "numero_expediente": "LAM1651",
   "radicados": [
     "2022281160",
@@ -16,6 +19,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "41619",
   "file_name": "ANLA_41619.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01186",
   "fecha_resolución": "2022-06-07",
-  "nombre_proyecto": "proyecto que se enmarque en las contempladas en el artículo",
+  "nombre_proyecto": "que se enmarque en las contempladas en el artículo 2",
+  "nombre_proyecto_normalizada": "que se enmarque en las contempladas en el articulo 2",
   "ubicación": null,
-  "empresa": "Ecopetrol S.A.",
+  "ubicacion_normalizada": null,
+  "empresa": "Ecopetrol S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM1282",
   "radicados": [
     "2022005776",
@@ -13,6 +16,9 @@
   "descripcion": "Por la cual se resuelve recurso de reposición interpuesto contra la Resolución 2438 de 31 de diciembre de 2021",
   "tipos_infraccion": [
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento del pma"
   ],
   "pdf_id": "39684",
   "file_name": "ANLA_39684.pdf",

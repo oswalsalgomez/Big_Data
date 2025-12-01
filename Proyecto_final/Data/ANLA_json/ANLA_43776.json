@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1946",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto denominado “Perforación exploratoria bloque CPO-7A”, ubicado en jurisdicción del",
-  "ubicación": "departamento del Meta; a su vez, en el Numeral 3 del Artículo Cuarto autorizó el aprovechamiento forestal de las especies requeridas para la ejecución del proyecto e impuso en el Artículo Décimo Segundo la correspondiente medida de compensación.",
-  "empresa": "ANLA -, en adelante la Autoridad Nacional, otorgó Licencia Ambiental a la sociedad TECPECOL S.A.",
+  "nombre_proyecto": "denominado “Perforación exploratoria bloque CPO-7A”, ubicado en jurisdicción del municipio de Puerto Gaitán en el depart",
+  "nombre_proyecto_normalizada": "denominado \"perforacion exploratoria bloque cpo-7a\", ubicado en jurisdiccion del municipio de puerto gaitan en el depart",
+  "ubicación": null,
+  "ubicacion_normalizada": null,
+  "empresa": "TECPECOL S",
+  "empresa_normalizada": "tecpecol s",
   "numero_expediente": "No",
   "radicados": [
     "2022115321",
@@ -15,6 +18,10 @@
   "tipos_infraccion": [
     "Vertimientos",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "43776",
   "file_name": "ANLA_43776.pdf",

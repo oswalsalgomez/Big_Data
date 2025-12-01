@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000198",
   "fecha_resolución": "2023-09-05",
-  "nombre_proyecto": "proyecto “Campo Rubiales”, en lo referente a los siguientes aspectos: área,",
-  "ubicación": "departamento del Meta.",
-  "empresa": "y área de aspersión. En dicha cesión actúan la empresa Meta Petroleum Corp., en calidad de cedente y la empresa Oleoducto de los Llanos S.A.",
+  "nombre_proyecto": "“Campo Rubiales”, en lo referente a los siguientes aspectos: área, infraestructura y operación de la Estación de Bombeo",
+  "nombre_proyecto_normalizada": "\"campo rubiales\", en lo referente a los siguientes aspectos: area, infraestructura y operacion de la estacion de bombeo",
+  "ubicación": "el municipio de Puerto Gaitán, departamento del Meta",
+  "ubicacion_normalizada": "el municipio de puerto gaitan, departamento del meta",
+  "empresa": "Metapetroleum Corp mediante Resolución 1286 del 13 de octubre de 2015 expediente LAM4795",
+  "empresa_normalizada": "metapetroleum corp mediante resolucion 1286 del 13 de octubre de 2015 expediente lam4795",
   "numero_expediente": "LAM0019",
   "radicados": [
     "2023620637012",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Vertimientos",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "45459",
   "file_name": "ANLA_45459.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02633",
   "fecha_resolución": "2022-11-02",
-  "nombre_proyecto": "proyecto “Área de Perforación Exploratoria El Portón”, ubicado en",
-  "ubicación": "departamento del Casanare.",
-  "empresa": "en favor de la sociedad GRAN TIERRA ENERGY COLOMBIA LTD",
+  "nombre_proyecto": "“Área de Perforación Exploratoria El Portón”, ubicado en jurisdicción de los municipios de Yopal y Aguazul en el departa",
+  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria el porton\", ubicado en jurisdiccion de los municipios de yopal y aguazul en el departa",
+  "ubicación": "jurisdicción de los municipios de Yopal y Aguazul en el departamento del Casanare",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de yopal y aguazul en el departamento del casanare",
+  "empresa": "CEPSA COLOMBIA SA – CEPCOLSA",
+  "empresa_normalizada": "cepsa colombia sa – cepcolsa",
   "numero_expediente": "LAM4277",
   "radicados": [
     "2022048271"
@@ -13,6 +16,10 @@
   "tipos_infraccion": [
     "Vertimientos",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "40876",
   "file_name": "ANLA_40876.pdf",

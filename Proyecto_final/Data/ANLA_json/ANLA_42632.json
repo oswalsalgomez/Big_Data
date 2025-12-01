@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1079",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Campo de producción 50K, perteneciente al Bloque CPO9 Llanos Orientales”,",
-  "ubicación": "departamento del Meta.",
-  "empresa": "la Autoridad Nacional de Licencias Ambientales, en adelante la Autoridad Nacional, otorgó licencia ambiental a la Sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "“Campo de producción 50K, perteneciente al Bloque CPO9 Llanos Orientales”, localizado en los municipios de Acacías y Gua",
+  "nombre_proyecto_normalizada": "\"campo de produccion 50k, perteneciente al bloque cpo9 llanos orientales\", localizado en los municipios de acacias y gua",
+  "ubicación": "los municipios de Acacías y Guamal en el departamento del Meta",
+  "ubicacion_normalizada": "los municipios de acacias y guamal en el departamento del meta",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "de",
   "radicados": [
     "2022071066",
@@ -17,6 +20,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "42632",
   "file_name": "ANLA_42632.pdf",

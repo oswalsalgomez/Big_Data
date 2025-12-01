@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02711",
   "fecha_resolución": "2022-11-15",
-  "nombre_proyecto": "proyecto “Pozos de Desarrollo Apiay A y",
-  "ubicación": "departamento del Meta.",
-  "empresa": "Así las cosas",
+  "nombre_proyecto": "Pozos de Desarrollo Apiay A y Suria A y B y Libertad",
+  "nombre_proyecto_normalizada": "pozos de desarrollo apiay a y suria a y b y libertad",
+  "ubicación": "los municipios de Acacias, San Carlos de Guaroa y Villavicencio, en el departamento del Meta",
+  "ubicacion_normalizada": "los municipios de acacias, san carlos de guaroa y villavicencio, en el departamento del meta",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM0198",
   "radicados": [
     "2018186892",
@@ -19,6 +22,14 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "residuos solidos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "40966",
   "file_name": "ANLA_40966.pdf",

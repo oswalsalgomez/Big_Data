@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00905",
   "fecha_resolución": "2022-05-05",
-  "nombre_proyecto": "proyecto y cumplan con los objetivos de la inversión",
-  "ubicación": "Departamento de Boyacá y en el Municipio de Yondó (40 hectáreas) en el Departamento de Antioquia, y se requieren las actas de compromiso suscritas con las Corporaciones y/o los municipios involucrados.",
-  "empresa": "otorgó Licencia Ambiental Ordinaria a la Sociedad Oleoducto Central S.A.",
+  "nombre_proyecto": "y cumplan con los objetivos de la inversión del 1%",
+  "nombre_proyecto_normalizada": "y cumplan con los objetivos de la inversion del 1%",
+  "ubicación": "la vereda Mata, corregimiento San Mateo, [M]unicipio de Remedios, [D]epartamento de Antioquia",
+  "ubicacion_normalizada": "la vereda mata, corregimiento san mateo, [m]unicipio de remedios, [d]epartamento de antioquia",
+  "empresa": "Oleoducto Central S",
+  "empresa_normalizada": "oleoducto central s",
   "numero_expediente": "LAM0318",
   "radicados": [
     "2018096106",
@@ -14,6 +17,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "39033",
   "file_name": "ANLA_39033.pdf",

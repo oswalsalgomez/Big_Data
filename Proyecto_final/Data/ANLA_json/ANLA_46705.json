@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001084",
   "fecha_resolución": "2023-12-06",
-  "nombre_proyecto": "proyecto “Área de Interés Exploratoria Llanos",
-  "ubicación": "Departamento de Casanare.",
-  "empresa": "la Autoridad Nacional de Licencias Ambientales - ANLA otorgó licencia ambiental a la sociedad TC OIL S.A.",
+  "nombre_proyecto": "“Área de Interés Exploratoria Llanos 32”, localizado en los municipios de Tauramena y Maní en el Departamento de Casanar",
+  "nombre_proyecto_normalizada": "\"area de interes exploratoria llanos 32\", localizado en los municipios de tauramena y mani en el departamento de casanar",
+  "ubicación": "los municipios de Tauramena y Maní en el Departamento de Casanare",
+  "ubicacion_normalizada": "los municipios de tauramena y mani en el departamento de casanare",
+  "empresa": "TC OIL S.A",
+  "empresa_normalizada": "tc oil s.a",
   "numero_expediente": "y",
   "radicados": [
     "20236201064592"
@@ -14,6 +17,11 @@
     "Vertimientos",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46705",
   "file_name": "ANLA_46705.pdf",

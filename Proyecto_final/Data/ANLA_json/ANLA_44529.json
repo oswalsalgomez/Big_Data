@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2580",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Bloque Exploratorio CPO4”, localizado en jurisdicción de",
-  "ubicación": "departamento de Cundinamarca, y en los municipios de Cabuyaro, Cumaral, Restrepo, Puerto López y Villavicencio, en el departamento del Meta.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad SK INNOVATION CO LTD",
+  "nombre_proyecto": "“Bloque Exploratorio CPO4”, localizado en jurisdicción de los municipios de Paratebueno, en el departamento de Cundinama",
+  "nombre_proyecto_normalizada": "\"bloque exploratorio cpo4\", localizado en jurisdiccion de los municipios de paratebueno, en el departamento de cundinama",
+  "ubicación": "jurisdicción de los municipios de Paratebueno, en el departamento de Cundinamarca, y en los municipios de Cabuyaro, Cumaral, Restrepo, Puerto López y Villavicencio, en el departamento del Meta",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de paratebueno, en el departamento de cundinamarca, y en los municipios de cabuyaro, cumaral, restrepo, puerto lopez y villavicencio, en el departamento del meta",
+  "empresa": "SK INNOVATION CO LTD",
+  "empresa_normalizada": "sk innovation co ltd",
   "numero_expediente": "LAM4829",
   "radicados": [
     "20236200555602",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Manejo de aguas",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "incumplimiento del pma"
   ],
   "pdf_id": "44529",
   "file_name": "ANLA_44529.pdf",

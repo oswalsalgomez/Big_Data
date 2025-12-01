@@ -2,14 +2,20 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00151",
   "fecha_resolución": "2023-02-03",
-  "nombre_proyecto": "proyecto denominado “Área de Perforación",
-  "ubicación": "departamento de Santander.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "denominado “Área de Perforación Exploratoria Marteja”, ubicado en jurisdicción de los municipios de San Vicente de Chucu",
+  "nombre_proyecto_normalizada": "denominado \"area de perforacion exploratoria marteja\", ubicado en jurisdiccion de los municipios de san vicente de chucu",
+  "ubicación": "jurisdicción de los municipios de San Vicente de Chucurí, El Carmen de Chucurí y Barrancabermeja del departamento de Santander",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de san vicente de chucuri, el carmen de chucuri y barrancabermeja del departamento de santander",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "No",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "41558",
   "file_name": "ANLA_41558.pdf",

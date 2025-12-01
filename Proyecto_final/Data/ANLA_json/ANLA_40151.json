@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01783",
   "fecha_resolución": "2022-08-19",
-  "nombre_proyecto": "proyecto denominado “Combustoleoducto en el tramo Ayacucho-Coveñas entre los PK",
-  "ubicación": "departamento del Magdalena.",
-  "empresa": "esta Autoridad otorgó licencia ambiental a la sociedad CENIT TRANSPORTE Y LOGÍSTICA DE HIDROCARBUROS S.A.",
+  "nombre_proyecto": "denominado “Combustoleoducto en el tramo Ayacucho-Coveñas entre los PK 59+000 y PK 63+676” localizado en jurisdicción de",
+  "nombre_proyecto_normalizada": "denominado \"combustoleoducto en el tramo ayacucho-covenas entre los pk 59+000 y pk 63+676\" localizado en jurisdiccion de",
+  "ubicación": "jurisdicción del municipio de El Banco en el departamento del Magdalena",
+  "ubicacion_normalizada": "jurisdiccion del municipio de el banco en el departamento del magdalena",
+  "empresa": "CENIT TRANSPORTE Y LOGÍSTICA DE HIDROCARBUROS S",
+  "empresa_normalizada": "cenit transporte y logistica de hidrocarburos s",
   "numero_expediente": "al",
   "radicados": [
     "2022128945",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "40151",
   "file_name": "ANLA_40151.pdf",

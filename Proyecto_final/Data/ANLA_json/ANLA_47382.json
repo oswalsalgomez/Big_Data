@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001630",
   "fecha_resolución": "2023-09-11",
-  "nombre_proyecto": "proyecto denominado \"Perforación Exploratoria Bloque CP0-6”, ubicado en jurisdicción de los",
-  "ubicación": "departamento del Meta.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad TECPECOL S.A.",
+  "nombre_proyecto": "denominado \"Perforación Exploratoria Bloque CP0-6”, ubicado en jurisdicción de los municipios de Puerto Gaitán y Puerto",
+  "nombre_proyecto_normalizada": "denominado \"perforacion exploratoria bloque cp0-6\", ubicado en jurisdiccion de los municipios de puerto gaitan y puerto",
+  "ubicación": "jurisdicción de los municipios de Puerto Gaitán y Puerto López, en el departamento del Meta",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de puerto gaitan y puerto lopez, en el departamento del meta",
+  "empresa": "TECPECOL S",
+  "empresa_normalizada": "tecpecol s",
   "numero_expediente": "LAM5131",
   "radicados": [
     "20236200654152",
@@ -13,6 +16,9 @@
   "descripcion": "Por la cual se resuelve un recurso de reposición interpuesto contra la Resolución 2076 del 11 de septiembre de 2023 y se adoptan otras determinaciones",
   "tipos_infraccion": [
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento del pma"
   ],
   "pdf_id": "47382",
   "file_name": "ANLA_47382.pdf",

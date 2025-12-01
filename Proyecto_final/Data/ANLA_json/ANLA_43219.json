@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1560",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto Oleoducto Castilla - Apiay",
-  "ubicación": "Departamento del Meta, así.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "Oleoducto Castilla - Apiay Línea 30”",
+  "nombre_proyecto_normalizada": "oleoducto castilla - apiay linea 30\"",
+  "ubicación": "el Municipio de San Martín de los Llanos en el Departamento del Meta, así",
+  "ubicacion_normalizada": "el municipio de san martin de los llanos en el departamento del meta, asi",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM2947",
   "radicados": [
     "2022237705",
@@ -16,6 +19,10 @@
   "tipos_infraccion": [
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "43219",
   "file_name": "ANLA_43219.pdf",

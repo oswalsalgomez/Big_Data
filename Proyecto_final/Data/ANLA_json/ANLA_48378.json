@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002195",
   "fecha_resolución": "2024-06-18",
-  "nombre_proyecto": "proyecto “Campo Rubiales”, en lo referente a los siguientes aspectos: área,",
-  "ubicación": "departamento del Meta.",
-  "empresa": "y área de aspersión. En dicha cesión actúan la empresa Meta Petroleum Corp., en calidad de cedente y la empresa Oleoducto de los Llanos S.A.",
+  "nombre_proyecto": "“Campo Rubiales”, en lo referente a los siguientes aspectos: área, Resolución No",
+  "nombre_proyecto_normalizada": "\"campo rubiales\", en lo referente a los siguientes aspectos: area, resolucion no",
+  "ubicación": "el municipio de Puerto Gaitán, departamento del Meta",
+  "ubicacion_normalizada": "el municipio de puerto gaitan, departamento del meta",
+  "empresa": "Meta Petroleum Limited",
+  "empresa_normalizada": "meta petroleum limited",
   "numero_expediente": "LAM0019",
   "radicados": [
     "20246200745942"
@@ -13,6 +16,10 @@
   "tipos_infraccion": [
     "Vertimientos",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "incumplimiento del pma"
   ],
   "pdf_id": "48378",
   "file_name": "ANLA_48378.pdf",

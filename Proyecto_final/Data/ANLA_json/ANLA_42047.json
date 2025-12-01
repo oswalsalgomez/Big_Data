@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00588",
   "fecha_resolución": "2023-03-23",
-  "nombre_proyecto": "proyecto denominado “Campo de Producción Medina”",
-  "ubicación": "departamento de Boyacá, en el municipio de Sabanalarga en el departamento de Casanare; en el municipio de Paratebueno en el departamento de Cundinamarca y en el municipio de Barranca de Upía, en el departamento del Meta.",
-  "empresa": "el Ministerio de Ambiente, Vivienda y Desarrollo Territorial- MAVD, en adelante el Ministerio, otorgó Licencia Ambiental Global a la sociedad LUKOIL OVERSEAS COLOMBIA LTD",
+  "nombre_proyecto": "denominado “Campo de Producción Medina” localizado en el municipio de San Luis de Gaceno, departamento de Boyacá, en el",
+  "nombre_proyecto_normalizada": "denominado \"campo de produccion medina\" localizado en el municipio de san luis de gaceno, departamento de boyaca, en el",
+  "ubicación": "departamento de Casanare; en el municipio de Paratebueno en el departamento de Cundinamarca y en el municipio de Barranca de Upía, en el departamento del Meta",
+  "ubicacion_normalizada": "departamento de casanare; en el municipio de paratebueno en el departamento de cundinamarca y en el municipio de barranca de upia, en el departamento del meta",
+  "empresa": "LUKOIL OVERSEAS COLOMBIA LTD",
+  "empresa_normalizada": "lukoil overseas colombia ltd",
   "numero_expediente": "ANLA",
   "radicados": [
     "2022292697",
@@ -16,6 +19,11 @@
     "Residuos sólidos",
     "Manejo de aguas",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "residuos solidos",
+    "manejo de aguas",
+    "incumplimiento del pma"
   ],
   "pdf_id": "42047",
   "file_name": "ANLA_42047.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001027",
   "fecha_resolución": "2024-03-15",
-  "nombre_proyecto": "proyecto “Bloque Esperanza”, localizado en jurisdicción de los municipios de Sahagún y",
-  "ubicación": "departamento de Córdoba, y San Marcos, en el departamento de Sucre.",
-  "empresa": "esta Autoridad Nacional aceptó el cambio de razón social de Geoproduction Oil And Gas Company Of Colombia, por el de Canacol Energy Colombia S.A.",
+  "nombre_proyecto": "“Bloque Esperanza”, localizado en jurisdicción de los municipios de Sahagún y Pueblo Nuevo, en el departamento de Córdob",
+  "nombre_proyecto_normalizada": "\"bloque esperanza\", localizado en jurisdiccion de los municipios de sahagun y pueblo nuevo, en el departamento de cordob",
+  "ubicación": "jurisdicción de los municipios de Sahagún y Pueblo Nuevo, en el departamento de Córdoba, y San Marcos, en el departamento de Sucre",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de sahagun y pueblo nuevo, en el departamento de cordoba, y san marcos, en el departamento de sucre",
+  "empresa": "Geoproduction Oil And Gas Company Of Colombia",
+  "empresa_normalizada": "geoproduction oil and gas company of colombia",
   "numero_expediente": "LAM3189",
   "radicados": [
     "20246200373282",
@@ -20,6 +23,14 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "residuos solidos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46580",
   "file_name": "ANLA_46580.pdf",

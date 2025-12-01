@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1738",
   "fecha_resolución": "2022-10-18",
-  "nombre_proyecto": "proyecto “Campo de producción Bloque Casanare A1a”, ubicado en jurisdicción del Departamento del",
-  "ubicación": "Departamento del Casanare.",
-  "empresa": "se procede a resolver el recuro de reposición interpuesto por el representante legal de la sociedad Perenco Colombia Ltd",
+  "nombre_proyecto": "“Campo de producción Bloque Casanare A1a”, ubicado en jurisdicción del Departamento del Casanare",
+  "nombre_proyecto_normalizada": "\"campo de produccion bloque casanare a1a\", ubicado en jurisdiccion del departamento del casanare",
+  "ubicación": "jurisdicción del Departamento del Casanare",
+  "ubicacion_normalizada": "jurisdiccion del departamento del casanare",
+  "empresa": "Ecopetrol S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "SAN0336-00-2019",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE EL RECURSO DE REPOSICIÓN INTERPUESTO CONTRA LA RESOLUCIÓN No. 2513 DEL 18 DE OCTUBRE DE 2022 Y SE ADOPTAN OTRAS DETERMINACIONES",
@@ -13,6 +16,12 @@
     "Incumplimiento de norma",
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "residuos solidos",
+    "incumplimiento de norma",
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "43531",
   "file_name": "ANLA_43531.pdf",

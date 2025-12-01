@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002270",
   "fecha_resolución": "2024-07-26",
-  "nombre_proyecto": "proyecto: “Campo Guamal” a localizarse en jurisdicción del departamento del Meta,",
-  "ubicación": "departamento del Meta, cuyo polígono de intervención se localiza en las veredas Brisas de Orotoy, Santa Bárbara, Pio XII, La Isla, Montecristo, El Carmen, San Miguel, Santa Ana, El Encanto y Casco Urbano del municipio de Guamal, presentado por la Solicitante Ecopetrol S.A.",
-  "empresa": "a localizarse en jurisdicción del departamento del Meta, cuyo polígono de intervención se localiza en las veredas Brisas de Orotoy, Santa Bárbara, Pio XII, La Isla, Montecristo, El Carmen, San Miguel, Santa Ana, El Encanto y Casco Urbano del municipio de Guamal, presentado por la Solicitante Ecopetrol S.A.",
+  "nombre_proyecto": "“Campo Guamal” a localizarse en jurisdicción del departamento del Meta, cuyo polígono de intervención se localiza en las",
+  "nombre_proyecto_normalizada": "\"campo guamal\" a localizarse en jurisdiccion del departamento del meta, cuyo poligono de intervencion se localiza en las",
+  "ubicación": "la ruta 2_Anexos/9_Cartografía/Insumos/Raster/ImagenProyecto",
+  "ubicacion_normalizada": "la ruta 2_anexos/9_cartografia/insumos/raster/imagenproyecto",
+  "empresa": "que, hubo un desconocimiento de la robustez y complejidad del estudio presentado",
+  "empresa_normalizada": "que, hubo un desconocimiento de la robustez y complejidad del estudio presentado",
   "numero_expediente": "LAV0057-00-2023",
   "radicados": [
     "20246200916162",
@@ -23,6 +26,14 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "incumplimiento de norma",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "48370",
   "file_name": "ANLA_48370.pdf",

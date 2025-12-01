@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001517",
   "fecha_resolución": "2024-01-17",
-  "nombre_proyecto": "proyecto Bloque Santana B, localizado en el municipio de Piamonte, departamento del",
-  "ubicación": "departamento del Cauca, entre otros aspectos.",
-  "empresa": "esta Autoridad Nacional de Licencias Ambientales aceptó el cambio de razón social de la sociedad GRAN TIERRA ENERGY COLOMBIA LTD",
+  "nombre_proyecto": "Bloque Santana B, localizado en el municipio de Piamonte, departamento del Cauca, entre otros aspectos",
+  "nombre_proyecto_normalizada": "bloque santana b, localizado en el municipio de piamonte, departamento del cauca, entre otros aspectos",
+  "ubicación": "el municipio de Piamonte, departamento del Cauca, entre otros aspectos",
+  "ubicacion_normalizada": "el municipio de piamonte, departamento del cauca, entre otros aspectos",
+  "empresa": "Argosy Energy International",
+  "empresa_normalizada": "argosy energy international",
   "numero_expediente": "LAM0199",
   "radicados": [
     "20246200119562",
@@ -16,6 +19,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "47141",
   "file_name": "ANLA_47141.pdf",

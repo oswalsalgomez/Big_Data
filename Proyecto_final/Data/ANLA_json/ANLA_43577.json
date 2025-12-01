@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1788",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Campos Petroleros",
-  "ubicación": "Municipio de Yondó para la compensación de las 532,72 ha identificadas inicialmente como área por compensar, lo que equivale a un área catorce (14) veces más grande que el área por compensar, considerando que las 532,72 ha representan el 6,74 % del área propuesta para implementar la compensación, dejando una incertidumbre considerable frente a la ubicación final de las acciones de compensación y su eficacia.” De lo anterior, Ecopetrol S.A., considera que las áreas preliminarmente propuestas no representan desproporcionalidad, teniendo en cuenta que en los procesos de implementación de medidas de compensación históricamente la Autoridad Ambiental ha evidenciado las dificultades que se presentan en el momento de la búsqueda de participantes con interés en el desarrollo de este tipo de actividades.",
-  "empresa": "estableció el Plan de Manejo Ambiental a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "“Campos Petroleros Casabe y Peñas Blancas”, ubicado en jurisdicción del Municipio Yondó en el Departamento de Antioquia",
+  "nombre_proyecto_normalizada": "\"campos petroleros casabe y penas blancas\", ubicado en jurisdiccion del municipio yondo en el departamento de antioquia",
+  "ubicación": "jurisdicción del Municipio Yondó en el Departamento de Antioquia",
+  "ubicacion_normalizada": "jurisdiccion del municipio yondo en el departamento de antioquia",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM0855",
   "radicados": [
     "2022218625",
@@ -20,6 +23,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "residuos solidos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43577",
   "file_name": "ANLA_43577.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002047",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto de disposición de gas en Yaguará, tendiente",
-  "ubicación": "Departamento del Huila.",
-  "empresa": "otorgó a la Sociedad PETROBRAS INTERNACIONAL S.A.",
+  "nombre_proyecto": "de disposición de gas en Yaguará, tendiente a implementar la inyección de gas en el yacimiento y a proveer de gas domici",
+  "nombre_proyecto_normalizada": "de disposicion de gas en yaguara, tendiente a implementar la inyeccion de gas en el yacimiento y a proveer de gas domici",
+  "ubicación": "jurisdicción del Municipio de Yaguará en el Departamento del Huila",
+  "ubicacion_normalizada": "jurisdiccion del municipio de yaguara en el departamento del huila",
+  "empresa": "PETROBRAS INTERNACIONAL S",
+  "empresa_normalizada": "petrobras internacional s",
   "numero_expediente": "LAM0989",
   "radicados": [
     "2023045540",
@@ -23,6 +26,13 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "47987",
   "file_name": "ANLA_47987.pdf",

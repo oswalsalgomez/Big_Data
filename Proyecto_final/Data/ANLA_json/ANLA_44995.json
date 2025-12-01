@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002841",
   "fecha_resolución": "2023-07-19",
-  "nombre_proyecto": "proyecto de reactivación de actividades de los pozos exploratorios Quintero 1, Quintero 2, Quintero 3 y Armero",
-  "ubicación": null,
-  "empresa": "en favor de la sociedad VAROSA ENERGY LTD",
+  "nombre_proyecto": "de reactivación de actividades de los pozos exploratorios Quintero 1, Quintero 2, Quintero 3 y Armero 2, autorizado medi",
+  "nombre_proyecto_normalizada": "de reactivacion de actividades de los pozos exploratorios quintero 1, quintero 2, quintero 3 y armero 2, autorizado medi",
+  "ubicación": "los municipios de Guaduas (Cundinamarca) y Lérida (Tolima), a través de Resolución No",
+  "ubicacion_normalizada": "los municipios de guaduas (cundinamarca) y lerida (tolima), a traves de resolucion no",
+  "empresa": "VAROSA ENERGY S",
+  "empresa_normalizada": "varosa energy s",
   "numero_expediente": "SAN0994-00-2019",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE EL RECURSO DE REPOSICIÓN INTERPUESTO EN CONTRA DE LA RESOLUCIÓN No. 1576 DEL 19 DE JULIO DE 2023 Y SE ADOPTA OTRAS DETERMINACIONES",
@@ -12,6 +15,11 @@
     "Incumplimiento de norma",
     "Manejo de aguas",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento de norma",
+    "manejo de aguas",
+    "incumplimiento del pma"
   ],
   "pdf_id": "44995",
   "file_name": "ANLA_44995.pdf",

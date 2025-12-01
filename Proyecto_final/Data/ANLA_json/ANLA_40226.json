@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01827",
   "fecha_resolución": "2022-08-25",
-  "nombre_proyecto": "proyecto denominado “Área de perforación exploratoria Princesa del bloque CPO11”, localizado en",
-  "ubicación": "Departamento del Meta.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "denominado “Área de perforación exploratoria Princesa del bloque CPO11”, localizado en jurisdicción de los Municipios de",
+  "nombre_proyecto_normalizada": "denominado \"area de perforacion exploratoria princesa del bloque cpo11\", localizado en jurisdiccion de los municipios de",
+  "ubicación": "jurisdicción de los Municipios de San Martín de los Llanos y Puerto López, en el Departamento del Meta",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de san martin de los llanos y puerto lopez, en el departamento del meta",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAV0046-13",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
@@ -12,6 +15,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "40226",
   "file_name": "ANLA_40226.pdf",

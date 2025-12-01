@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2340",
   "fecha_resolución": "2022-11-24",
-  "nombre_proyecto": "proyecto licenciado, entre otros.",
-  "ubicación": "departamento de Huila, y aprobó la declaración de Impacto Ambiental para la carretera El Monal – Dina la cual hace parte del proyecto.",
-  "empresa": "de acuerdo con la solicitud presentada por ECOPETROL S.A.",
+  "nombre_proyecto": "licenciado, entre otros",
+  "nombre_proyecto_normalizada": "licenciado, entre otros",
+  "ubicación": "jurisdicción del municipio de Aipe, Huila",
+  "ubicacion_normalizada": "jurisdiccion del municipio de aipe, huila",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM0215",
   "radicados": [
     "2022277382",
@@ -17,6 +20,12 @@
     "Emisiones atmosféricas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "44257",
   "file_name": "ANLA_44257.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2576",
   "fecha_resolución": "2022-12-26",
-  "nombre_proyecto": "proyecto Plan de Manejo Ambiental",
-  "ubicación": "departamento del Cesar, en jurisdicción de los municipios de la Jagua de Ibirico, El Paso, Becerril, Chiriguaná, Agustín Codazzi y Tamalameque, para su evaluación, control y seguimiento.",
-  "empresa": "se procede a resolver el recurso de reposición interpuesto por IVAN ANDRES PAEZ PAEZ, obrando como apoderado principal de las sociedades CARBONES DE LA JAGUA S.A.-CDJ, CONSORCIO MINERO UNIDO S.A.-CMU y CARBONES EL TESORO S.A.",
+  "nombre_proyecto": "Plan de Manejo Ambiental Unificado para el desarrollo de la actividad de la Operación Integrada de los contratos mineros",
+  "nombre_proyecto_normalizada": "plan de manejo ambiental unificado para el desarrollo de la actividad de la operacion integrada de los contratos mineros",
+  "ubicación": "los municipios de la Jagua de Ibirico, El Paso, Becerril, Chiriguaná, Agustín Codazzi y Tamalameque, para su evaluación, control y seguimiento",
+  "ubicacion_normalizada": "los municipios de la jagua de ibirico, el paso, becerril, chiriguana, agustin codazzi y tamalameque, para su evaluacion, control y seguimiento",
+  "empresa": "CARBONES DE LA JAGUA S",
+  "empresa_normalizada": "carbones de la jagua s",
   "numero_expediente": "SAN0430-00-2018",
   "radicados": [
     "2023007589",
@@ -16,6 +19,11 @@
     "Emisiones atmosféricas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "emisiones atmosfericas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "44626",
   "file_name": "ANLA_44626.pdf",

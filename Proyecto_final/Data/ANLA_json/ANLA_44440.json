@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2509",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto denominado \"Construcción y Operación del Gasoducto Gibraltar — Bucaramanga\", entre",
-  "ubicación": "Departamento de Norte de Santander y en el artículo décimo tercero impuso a la Sociedad la obligación presentar el Plan de Compensación por Pérdida de Biodiversidad, entre otras determinaciones.",
-  "empresa": "a su vez en el artículo segundo otorgó licencia ambiental a la Sociedad TRANSORIENTE S.A.",
+  "nombre_proyecto": "denominado \"Construcción y Operación del Gasoducto Gibraltar — Bucaramanga\", entre la Estación Gibraltar y la Estación E",
+  "nombre_proyecto_normalizada": "denominado \"construccion y operacion del gasoducto gibraltar — bucaramanga\", entre la estacion gibraltar y la estacion e",
+  "ubicación": "jurisdicción del municipio de Bucaramanga",
+  "ubicacion_normalizada": "jurisdiccion del municipio de bucaramanga",
+  "empresa": "TRANSORIENTE S",
+  "empresa_normalizada": "transoriente s",
   "numero_expediente": "LAM3952",
   "radicados": [
     "2022230264",
@@ -16,6 +19,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "44440",
   "file_name": "ANLA_44440.pdf",

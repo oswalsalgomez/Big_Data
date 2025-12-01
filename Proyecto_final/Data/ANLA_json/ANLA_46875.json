@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001269",
   "fecha_resolución": "2010-10-14",
-  "nombre_proyecto": "proyecto denominado “Campo Colón”",
-  "ubicación": "departamento de Santander.",
-  "empresa": "dispuso la creación del Ministerio del Medio Ambiente, como el organismo rector de la gestión del medio ambiente y de los recursos naturales renovables, encargado entre otras cosas",
+  "nombre_proyecto": "denominado “Campo Colón” localizado en jurisdicción de los municipios de Sabana de Torres, Puerto Wilches y Río Negro, e",
+  "nombre_proyecto_normalizada": "denominado \"campo colon\" localizado en jurisdiccion de los municipios de sabana de torres, puerto wilches y rio negro, e",
+  "ubicación": "jurisdicción de los municipios de Sabana de Torres, Puerto Wilches y Río Negro, en el departamento de Santander",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de sabana de torres, puerto wilches y rio negro, en el departamento de santander",
+  "empresa": "de realizar monitoreos a la fuente hídrica río Lebrija e incluyó los parámetros para los puntos de monitoreo",
+  "empresa_normalizada": "de realizar monitoreos a la fuente hidrica rio lebrija e incluyo los parametros para los puntos de monitoreo",
   "numero_expediente": "como",
   "radicados": [
     "2019184354",
@@ -16,6 +19,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46875",
   "file_name": "ANLA_46875.pdf",

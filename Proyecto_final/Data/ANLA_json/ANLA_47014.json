@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001400",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto \"Explotación y Desarrollo del Bloque de Asociación Tolima B\"",
-  "ubicación": "Departamento del Tolima.",
-  "empresa": "el Ministerio autorizó la cesión de los derechos y obligaciones otorgados a HOCOL S.A en favor de la sociedad PETROTESTING COLOMBIA S.A.",
+  "nombre_proyecto": "\"Explotación y Desarrollo del Bloque de Asociación Tolima B\" Resolución No",
+  "nombre_proyecto_normalizada": "\"explotacion y desarrollo del bloque de asociacion tolima b\" resolucion no",
+  "ubicación": "el Municipio de Chaparral, Departamento del Tolima, en cuya área se encuentra el proyecto \"Campos Río Saldaña y Oliní”, que corresponde al proyecto LAM1366",
+  "ubicacion_normalizada": "el municipio de chaparral, departamento del tolima, en cuya area se encuentra el proyecto \"campos rio saldana y olini\", que corresponde al proyecto lam1366",
+  "empresa": "HOCOL S.A para la reiniciación de operaciones de los Campos Río Saldaña y Oliní",
+  "empresa_normalizada": "hocol s.a para la reiniciacion de operaciones de los campos rio saldana y olini",
   "numero_expediente": "LAM1366",
   "radicados": [
     "2023068756",
@@ -15,6 +18,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "incumplimiento del pma"
   ],
   "pdf_id": "47014",
   "file_name": "ANLA_47014.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000998",
   "fecha_resolución": "2024-02-02",
-  "nombre_proyecto": "proyecto “Cupiagua K”, en el sentido de autorizar la quema",
-  "ubicación": "departamento del Casanare.",
-  "empresa": "a la Sociedad BP EXPLORATION COMPANY -COLOMBIA- LIMITED, a favor de la empresa ECOPETROL S.A.",
+  "nombre_proyecto": "“Cupiagua K”, en el sentido de autorizar la quema de crudo de las pruebas de los pozos, hasta cuando empezara a operar l",
+  "nombre_proyecto_normalizada": "\"cupiagua k\", en el sentido de autorizar la quema de crudo de las pruebas de los pozos, hasta cuando empezara a operar l",
+  "ubicación": "departamento del Casanare",
+  "ubicacion_normalizada": "departamento del casanare",
+  "empresa": "BP EXPLORATION COMPANY COLOMBIA UMITED – BPXC Licencia Ambiental para la perforación del primer pozo Cupiagua K",
+  "empresa_normalizada": "bp exploration company colombia umited – bpxc licencia ambiental para la perforacion del primer pozo cupiagua k",
   "numero_expediente": "LAM0134",
   "radicados": [
     "2020062137",
@@ -15,6 +18,10 @@
   "tipos_infraccion": [
     "Residuos sólidos",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "residuos solidos",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46541",
   "file_name": "ANLA_46541.pdf",

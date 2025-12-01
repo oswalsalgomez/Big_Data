@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02999",
   "fecha_resolución": "2022-12-19",
-  "nombre_proyecto": "proyecto de Explotación de",
-  "ubicación": "departamento del Meta.",
-  "empresa": "localizado en jurisdicción del municipio de Puerto Gaitán en el departamento del Meta, y cuyo titular es la empresa Meta Petroleum Corp, a favor de la sociedad Ecopetrol S.A.",
+  "nombre_proyecto": "de Explotación de hidrocarburos en el “Campo Rubiales”, localizado en jurisdicción del municipio de Puerto Gaitán en el",
+  "nombre_proyecto_normalizada": "de explotacion de hidrocarburos en el \"campo rubiales\", localizado en jurisdiccion del municipio de puerto gaitan en el",
+  "ubicación": "el municipio de Puerto Gaitán, departamento del Meta",
+  "ubicacion_normalizada": "el municipio de puerto gaitan, departamento del meta",
+  "empresa": "Coplex Colombia Limited",
+  "empresa_normalizada": "coplex colombia limited",
   "numero_expediente": "del",
   "radicados": [
     "2022131433",
@@ -19,6 +22,12 @@
     "Emisiones atmosféricas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "41179",
   "file_name": "ANLA_41179.pdf",

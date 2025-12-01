@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02747",
   "fecha_resolución": "2022-11-21",
-  "nombre_proyecto": "proyecto “Área",
-  "ubicación": "departamento de Casanare.",
-  "empresa": "Así las cosas",
+  "nombre_proyecto": "“Área de Perforación Exploratoria Llanos 25”, localizado en jurisdicción de los municipios de Sabanalarga, Tauramena y M",
+  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria llanos 25\", localizado en jurisdiccion de los municipios de sabanalarga, tauramena y m",
+  "ubicación": "jurisdicción de los municipios de Sabanalarga, Tauramena y Monterrey en el departamento de Casanare",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de sabanalarga, tauramena y monterrey en el departamento de casanare",
+  "empresa": "Petrominerales Colombia Limited",
+  "empresa_normalizada": "petrominerales colombia limited",
   "numero_expediente": "No",
   "radicados": [
     "2022179020",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "41028",
   "file_name": "ANLA_41028.pdf",

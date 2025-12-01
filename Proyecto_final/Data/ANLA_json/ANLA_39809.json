@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01568",
   "fecha_resolución": "2022-07-21",
-  "nombre_proyecto": "proyecto de “Explotación de los",
-  "ubicación": "Departamento del Tolima.",
-  "empresa": "respectivamente, de la sociedad PERENCO OIL AND GAS COLOMBIA a favor de la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "de “Explotación de los Campos Venganza y Revancha” localizados en el municipio de Purificación en el Departamento del To",
+  "nombre_proyecto_normalizada": "de \"explotacion de los campos venganza y revancha\" localizados en el municipio de purificacion en el departamento del to",
+  "ubicación": "el municipio de Purificación en el Departamento del Tolima",
+  "ubicacion_normalizada": "el municipio de purificacion en el departamento del tolima",
+  "empresa": "LASMO OIL (COLOMBIA) LIMITED",
+  "empresa_normalizada": "lasmo oil (colombia) limited",
   "numero_expediente": "LAM",
   "radicados": [
     "2021133493",
@@ -22,6 +25,10 @@
   "tipos_infraccion": [
     "Vertimientos",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "39809",
   "file_name": "ANLA_39809.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02822",
   "fecha_resolución": "2022-11-30",
-  "nombre_proyecto": "proyecto “Área de Explotación Pendare - Bloque CPO-13\",",
-  "ubicación": "Departamento del Meta.",
-  "empresa": "otorgó Licencia Ambiental a la Sociedad TECPETROL COLOMBIA S.A.",
+  "nombre_proyecto": "“Área de Explotación Pendare - Bloque CPO-13\", localizado en jurisdicción de las veredas Los Kioscos, Puerto Triunfo, Sa",
+  "nombre_proyecto_normalizada": "\"area de explotacion pendare - bloque cpo-13\", localizado en jurisdiccion de las veredas los kioscos, puerto triunfo, sa",
+  "ubicación": "jurisdicción de las veredas Los Kioscos, Puerto Triunfo, Santa Catalina y Santa Helena del Municipio de Puerto Gaitán del Departamento del Meta",
+  "ubicacion_normalizada": "jurisdiccion de las veredas los kioscos, puerto triunfo, santa catalina y santa helena del municipio de puerto gaitan del departamento del meta",
+  "empresa": "TECPETROL COLOMBIA S",
+  "empresa_normalizada": "tecpetrol colombia s",
   "numero_expediente": "LAV0041-13",
   "radicados": [
     "2022072359",
@@ -13,6 +16,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "41079",
   "file_name": "ANLA_41079.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1201",
   "fecha_resolución": "2022-10-24",
-  "nombre_proyecto": "proyecto denominado “Campo de producción 50K, perteneciente al Bloque CPO9 Llanos Orientales”,",
-  "ubicación": "departamento del Meta.",
-  "empresa": "la Autoridad Nacional de Licencias Ambientales - ANLA, otorgó licencia ambiental global a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "denominado “Campo de producción 50K, perteneciente al Bloque CPO9 Llanos Orientales”, localizado en jurisdicción de los",
+  "nombre_proyecto_normalizada": "denominado \"campo de produccion 50k, perteneciente al bloque cpo9 llanos orientales\", localizado en jurisdiccion de los",
+  "ubicación": "jurisdicción de los municipios de Acacías y Guamal en el departamento del Meta",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de acacias y guamal en el departamento del meta",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAV0089-",
   "radicados": [
     "2021134433",
@@ -18,6 +21,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "42826",
   "file_name": "ANLA_42826.pdf",

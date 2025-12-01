@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00552",
   "fecha_resolución": "2023-03-16",
-  "nombre_proyecto": "proyecto denominado “Área de Interés Exploratoria Cámbulos”, localizado en jurisdicción del",
-  "ubicación": "departamento de Cundinamarca y se estableció un Plan de Manejo Ambiental para la plataforma de perforación Guadual-A.",
-  "empresa": "para la Plataforma de Perforación Exploratoria Islero, presentado por HARKEN DE COLOMBIA LTD",
+  "nombre_proyecto": "denominado “Área de Interés Exploratoria Cámbulos”, localizado en jurisdicción del municipio de Chaguaní del departament",
+  "nombre_proyecto_normalizada": "denominado \"area de interes exploratoria cambulos\", localizado en jurisdiccion del municipio de chaguani del departament",
+  "ubicación": "jurisdicción del municipio de Chaguaní del departamento de Cundinamarca y se estableció un Plan de Manejo Ambiental para la plataforma de perforación Guadual-A",
+  "ubicacion_normalizada": "jurisdiccion del municipio de chaguani del departamento de cundinamarca y se establecio un plan de manejo ambiental para la plataforma de perforacion guadual-a",
+  "empresa": "HARKEN DE COLOMBIA LTD",
+  "empresa_normalizada": "harken de colombia ltd",
   "numero_expediente": "LAM1275",
   "radicados": [
     "2022043637",
@@ -18,6 +21,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "41936",
   "file_name": "ANLA_41936.pdf",

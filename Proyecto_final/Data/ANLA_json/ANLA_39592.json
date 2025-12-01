@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01379",
   "fecha_resolución": "2022-06-24",
-  "nombre_proyecto": "proyecto “Área de Interés de",
-  "ubicación": "departamento del Casanare.",
-  "empresa": "el Ministerio estableció el Plan de Manejo Ambiental - PMA para las pruebas extensas",
+  "nombre_proyecto": "“Área de Interés de Perforación Exploratoria Tambaquí”, localizado en jurisdicción del municipio de Orocué, en el depart",
+  "nombre_proyecto_normalizada": "\"area de interes de perforacion exploratoria tambaqui\", localizado en jurisdiccion del municipio de orocue, en el depart",
+  "ubicación": "jurisdicción del municipio de Orocué, en el departamento del Casanare",
+  "ubicacion_normalizada": "jurisdiccion del municipio de orocue, en el departamento del casanare",
+  "empresa": "HUGHES PETRÓLEOS DE COLOMBIA INC",
+  "empresa_normalizada": "hughes petroleos de colombia inc",
   "numero_expediente": "LAM2016",
   "radicados": [
     "2021282418",
@@ -16,6 +19,11 @@
     "Vertimientos",
     "Residuos sólidos",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "residuos solidos",
+    "incumplimiento del pma"
   ],
   "pdf_id": "39592",
   "file_name": "ANLA_39592.pdf",

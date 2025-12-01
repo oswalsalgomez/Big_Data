@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01541",
   "fecha_resolución": "2022-07-15",
-  "nombre_proyecto": "Proyecto de",
-  "ubicación": "departamento de la Guajira; e impuso a la Sociedad la presentación de informes trimestrales sobre la puesta en marcha de las obras de manejo, análisis comparativo de impactos ambientales previstos y presentados, avance del proyecto y de la ejecución del Plan de Manejo Ambiental.",
-  "empresa": "el Instituto de Recursos Naturales - INDERENA, aceptó el Estudio de Efecto Ambiental presentado por CARBOCOL e INTERCOR CZN S.A.",
+  "nombre_proyecto": "de optimización Acceso temprano a terceros\", en el área del Cerrejón Norte, localizado en jurisdicción de los municipios",
+  "nombre_proyecto_normalizada": "de optimizacion acceso temprano a terceros\", en el area del cerrejon norte, localizado en jurisdiccion de los municipios",
+  "ubicación": "los municipios de Albania, Manaure, Maicao y Uribia, en el departamento de la Guajira, de conformidad con lo expuesto en la parte motiva del presente acto administrativo, así: (…)”",
+  "ubicacion_normalizada": "los municipios de albania, manaure, maicao y uribia, en el departamento de la guajira, de conformidad con lo expuesto en la parte motiva del presente acto administrativo, asi: (...)\"",
+  "empresa": "la presentación de informes trimestrales sobre la puesta en marcha de las obras de manejo",
+  "empresa_normalizada": "la presentacion de informes trimestrales sobre la puesta en marcha de las obras de manejo",
   "numero_expediente": "LAM0577",
   "radicados": [
     "2022041123",
@@ -19,6 +22,13 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "emisiones atmosfericas",
+    "residuos solidos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "39846",
   "file_name": "ANLA_39846.pdf",

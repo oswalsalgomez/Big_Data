@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2475",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto denominado “Bloque de",
-  "ubicación": "Departamento de Cundinamarca, y los Municipios de Honda y La Dorada en los Departamentos de Tolima y Caldas, respectivamente.",
-  "empresa": "otorgó a la sociedad HARKEN DE COLOMBIA LTD",
+  "nombre_proyecto": "denominado “Bloque de exploración Bocachico”, localizado entre los Municipios de Puerto Salgar, Caparrapí y Guaduas en e",
+  "nombre_proyecto_normalizada": "denominado \"bloque de exploracion bocachico\", localizado entre los municipios de puerto salgar, caparrapi y guaduas en e",
+  "ubicación": "la vereda Reinés, en jurisdicción del Municipio de Puerto salgar Departamento de Cundinamarca, y estableció Plan de Manejo para la ejecución de la perforación exploratoria de los Pozo Torcaz 3 y Torcaz 4",
+  "ubicacion_normalizada": "la vereda reines, en jurisdiccion del municipio de puerto salgar departamento de cundinamarca, y establecio plan de manejo para la ejecucion de la perforacion exploratoria de los pozo torcaz 3 y torcaz 4",
+  "empresa": "HARKEN DE COLOMBIA LTD",
+  "empresa_normalizada": "harken de colombia ltd",
   "numero_expediente": "LAM0347",
   "radicados": [
     "20236200511532",
@@ -15,6 +18,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Vertimientos"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos"
   ],
   "pdf_id": "44382",
   "file_name": "ANLA_44382.pdf",

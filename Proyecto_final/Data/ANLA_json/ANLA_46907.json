@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001291",
   "fecha_resolución": "2024-02-28",
-  "nombre_proyecto": "proyecto de expansión del Gaseoducto desde Cusiana Fases 1 y II, la compra de predios en áreas",
-  "ubicación": "departamento de Casanare, Páez, Miraflores, Zetaquirá, Ramiriquí, Jenesano, Boyacá, Samacá, Villa de Leyva, Sáchica, Sutamarchán, Santa Sofía y Moniquirá en el departamento de Boyacá, Puente Nacional, Jesús María, Florián y Albania en el departamento de Santander.",
-  "empresa": "PMA a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "de expansión del Gaseoducto desde Cusiana Fases 1 y II, la compra de predios en áreas estratégicas, entre otras determin",
+  "nombre_proyecto_normalizada": "de expansion del gaseoducto desde cusiana fases 1 y ii, la compra de predios en areas estrategicas, entre otras determin",
+  "ubicación": "la vereda Guamal jurisdicción del municipio de Miraflores en el departamento de Boyacá",
+  "ubicacion_normalizada": "la vereda guamal jurisdiccion del municipio de miraflores en el departamento de boyaca",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM0054",
   "radicados": [
     "2020225100",
@@ -22,6 +25,14 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "residuos solidos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46907",
   "file_name": "ANLA_46907.pdf",

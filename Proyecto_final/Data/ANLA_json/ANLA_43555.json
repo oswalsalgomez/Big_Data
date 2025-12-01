@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1772",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto \"Campo de Producción Aullador\", localizado en",
-  "ubicación": "Departamento de Santander.",
-  "empresa": "otorgó Licencia Ambiental Global a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "\"Campo de Producción Aullador\", localizado en jurisdicción del Municipio de Sabana de Torres en el Departamento de Santa",
+  "nombre_proyecto_normalizada": "\"campo de produccion aullador\", localizado en jurisdiccion del municipio de sabana de torres en el departamento de santa",
+  "ubicación": "jurisdicción del Municipio de Sabana de Torres en el Departamento de Santander",
+  "ubicacion_normalizada": "jurisdiccion del municipio de sabana de torres en el departamento de santander",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "No",
   "radicados": [
     "2022154219",
@@ -17,6 +20,11 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43555",
   "file_name": "ANLA_43555.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001153",
   "fecha_resolución": "2021-11-05",
-  "nombre_proyecto": "proyecto “Área de Interés para el",
-  "ubicación": "departamento de Boyacá.",
-  "empresa": "adjunto al escrito de reposición. Igualmente, se verifica la expresión de los motivos de inconformidad y puntos de desacuerdo que sustentan las pretensiones del recurrente, así como las direcciones electrónicas para surtir la notificación de la decisión que se adopte. Así las cosas",
+  "nombre_proyecto": "“Área de Interés para el Desarrollo del Campo Buenavista”, localizado en jurisdicción de los municipios de Nobsa, Flores",
+  "nombre_proyecto_normalizada": "\"area de interes para el desarrollo del campo buenavista\", localizado en jurisdiccion de los municipios de nobsa, flores",
+  "ubicación": "jurisdicción de los municipios de Nobsa, Floresta, Corrales, Tópaga, Gámeza, Sogamoso, Monguí y Mongua en el departamento de Boyacá",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de nobsa, floresta, corrales, topaga, gameza, sogamoso, mongui y mongua en el departamento de boyaca",
+  "empresa": "UNIÓN TEMPORAL OMEGA ENERGY",
+  "empresa_normalizada": "union temporal omega energy",
   "numero_expediente": "LAM3520",
   "radicados": [
     "2021106279",
@@ -15,6 +18,11 @@
     "Emisiones atmosféricas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "emisiones atmosfericas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46742",
   "file_name": "ANLA_46742.pdf",

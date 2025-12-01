@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002051",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Campo Rancho Hermoso” localizado en el corregimiento de",
-  "ubicación": "Departamento de Casanare.",
-  "empresa": "otorgó Licencia Ambiental Global a ECOPETROL S.A.",
+  "nombre_proyecto": "“Campo Rancho Hermoso” localizado en el corregimiento de Tilodirán, en jurisdicción del Municipio de Yopal en el Departa",
+  "nombre_proyecto_normalizada": "\"campo rancho hermoso\" localizado en el corregimiento de tilodiran, en jurisdiccion del municipio de yopal en el departa",
+  "ubicación": "el corregimiento de Tilodirán, en jurisdicción del Municipio de Yopal en el Departamento de Casanare",
+  "ubicacion_normalizada": "el corregimiento de tilodiran, en jurisdiccion del municipio de yopal en el departamento de casanare",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "no",
   "radicados": [
     "2019183098"
@@ -16,6 +19,13 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "47984",
   "file_name": "ANLA_47984.pdf",

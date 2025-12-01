@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1142",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto denominado “Explotación",
-  "ubicación": "Departamento de Casanare.",
-  "empresa": "Así las cosas",
+  "nombre_proyecto": "denominado “Explotación de Hidrocarburos en el Campo Vikingo del Bloque Lla-47”, localizado en jurisdicción del Municipi",
+  "nombre_proyecto_normalizada": "denominado \"explotacion de hidrocarburos en el campo vikingo del bloque lla-47\", localizado en jurisdiccion del municipi",
+  "ubicación": "jurisdicción del Municipio de Orocué, en el Departamento de Casanare",
+  "ubicacion_normalizada": "jurisdiccion del municipio de orocue, en el departamento de casanare",
+  "empresa": "INTEROIL COLOMBIA EXPLORATION AND PRODUCTION",
+  "empresa_normalizada": "interoil colombia exploration and production",
   "numero_expediente": "LAV0078-00-2021",
   "radicados": [
     "2022270980",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "42791",
   "file_name": "ANLA_42791.pdf",

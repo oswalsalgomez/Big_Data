@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002073",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Área de interés Perforación Exploratoria",
-  "ubicación": "departamento del Casanare.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad HOCOL S.A.",
+  "nombre_proyecto": "“Área de interés Perforación Exploratoria Tángara Norte”, ubicado en las veredas La Capilla, Las Camelias, El Banco de B",
+  "nombre_proyecto_normalizada": "\"area de interes perforacion exploratoria tangara norte\", ubicado en las veredas la capilla, las camelias, el banco de b",
+  "ubicación": "departamento del Casanare",
+  "ubicacion_normalizada": "departamento del casanare",
+  "empresa": "HOCOL S.A",
+  "empresa_normalizada": "hocol s.a",
   "numero_expediente": "exploratorio",
   "radicados": [
     "2023038544",
@@ -18,6 +21,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "48025",
   "file_name": "ANLA_48025.pdf",

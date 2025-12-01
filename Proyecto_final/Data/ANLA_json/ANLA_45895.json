@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000558",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Perforación de los pozos de desarrollo denominados Pozos múltiples Buenos",
-  "ubicación": "Departamento del Casanare.",
-  "empresa": "de la sociedad EQUION ENERGIA LIMITED, a favor de la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "“Perforación de los pozos de desarrollo denominados Pozos múltiples Buenos Aires W",
+  "nombre_proyecto_normalizada": "\"perforacion de los pozos de desarrollo denominados pozos multiples buenos aires w",
+  "ubicación": "el Municipio de Tauramena, Departamento del Casanare",
+  "ubicacion_normalizada": "el municipio de tauramena, departamento del casanare",
+  "empresa": "BP EXPLORATION COMPANY (COLOMBIA)LIMITED",
+  "empresa_normalizada": "bp exploration company (colombia)limited",
   "numero_expediente": "con",
   "radicados": [
     "2019179595"
@@ -12,6 +15,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento del pma"
   ],
   "pdf_id": "45895",
   "file_name": "ANLA_45895.pdf",

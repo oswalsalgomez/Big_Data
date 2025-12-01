@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000684",
   "fecha_resolución": "2015-07-30",
-  "nombre_proyecto": "proyecto \"CAMPO DE EXPLOTACIÓN",
-  "ubicación": "departamento del Cesar.",
-  "empresa": "MIDAS, a favor de la sociedad GRAN TIERRA ENERGY COLOMBIA LTD",
+  "nombre_proyecto": "\"CAMPO DE EXPLOTACIÓN DE HIDROCARBUROS ACORDIONERO\", localizado en jurisdicción del municipio de San Martín en el depart",
+  "nombre_proyecto_normalizada": "\"campo de explotacion de hidrocarburos acordionero\", localizado en jurisdiccion del municipio de san martin en el depart",
+  "ubicación": "jurisdicción del municipio de San Martín en el departamento del Cesar",
+  "ubicacion_normalizada": "jurisdiccion del municipio de san martin en el departamento del cesar",
+  "empresa": "GRAN TIERRA ENERGY COLOMBIA",
+  "empresa_normalizada": "gran tierra energy colombia",
   "numero_expediente": "de",
   "radicados": [
     "20236200590522"
@@ -12,6 +15,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento del pma"
   ],
   "pdf_id": "46026",
   "file_name": "ANLA_46026.pdf",

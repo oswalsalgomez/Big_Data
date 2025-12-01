@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1620",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Explotación Minería de Carbón, mina El Hatillo”, localizado",
-  "ubicación": "Departamento del Cesar.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad CARBONES DEL CESAR Y LA GUAJIRA EMCARBON S.A.",
+  "nombre_proyecto": "“Explotación Minería de Carbón, mina El Hatillo”, localizado en jurisdicción de los Municipios de El Paso (Corregimiento",
+  "nombre_proyecto_normalizada": "\"explotacion mineria de carbon, mina el hatillo\", localizado en jurisdiccion de los municipios de el paso (corregimiento",
+  "ubicación": "jurisdicción de los Municipios de El Paso (Corregimiento La Loma), Chiriguaná y La Jagua de Ibirico del Departamento del Cesar",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de el paso (corregimiento la loma), chiriguana y la jagua de ibirico del departamento del cesar",
+  "empresa": "DRUMMOND LTD",
+  "empresa_normalizada": "drummond ltd",
   "numero_expediente": "de",
   "radicados": [
     "2022268978",
@@ -17,6 +20,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43338",
   "file_name": "ANLA_43338.pdf",

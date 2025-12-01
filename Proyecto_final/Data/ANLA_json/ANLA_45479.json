@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000220",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Desarrollo",
-  "ubicación": "departamento del Huila.",
-  "empresa": "el entonces Ministerio de Medio Ambiente, hoy Ministerio de Ambiente y Desarrollo Sostenible, en adelante el Ministerio, estableció medidas ambientales a la Sociedad Ecopetrol S.A.",
+  "nombre_proyecto": "“Desarrollo de los campos Brisas, Dina Terciarios Pijao, Cebú, Palo grande, Dina Cretáceos, Tenay y Santa Clara”, igualm",
+  "nombre_proyecto_normalizada": "\"desarrollo de los campos brisas, dina terciarios pijao, cebu, palo grande, dina cretaceos, tenay y santa clara\", igualm",
+  "ubicación": "jurisdicción de los municipios de Aipe, Neiva, Palermo, Tello y Villa Vieja del departamento del Huila",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de aipe, neiva, palermo, tello y villa vieja del departamento del huila",
+  "empresa": "Ecopetrol S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM2307",
   "radicados": [
     "2021216768",
@@ -18,6 +21,11 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "45479",
   "file_name": "ANLA_45479.pdf",

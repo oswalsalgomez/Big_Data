@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001401",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto El Cerrejón Zona Norte.",
-  "ubicación": "Departamento de la Guajira; e impuso a la Sociedad la presentación de informes trimestrales sobre la puesta en marcha de las obras de manejo, análisis comparativo de impactos ambientales previstos y presentados, avance del proyecto y de la ejecución del Plan de Manejo Ambiental.",
-  "empresa": "aceptó el Estudio de Efecto Ambiental presentado por CARBOCOL e INTERCOR CZN S.A.",
+  "nombre_proyecto": "El Cerrejón Zona Norte",
+  "nombre_proyecto_normalizada": "el cerrejon zona norte",
+  "ubicación": "jurisdicción de los Municipios de Albania, Hato Nuevo, Maicao, Uribía y Barrancas en el Departamento de la Guajira, desarrollado por la sociedad, hasta la realización del trámite consultivo con la comunidad Media Luna Dos",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de albania, hato nuevo, maicao, uribia y barrancas en el departamento de la guajira, desarrollado por la sociedad, hasta la realizacion del tramite consultivo con la comunidad media luna dos",
+  "empresa": "INTERCOR y CARBONES DEL Resolución No",
+  "empresa_normalizada": "intercor y carbones del resolucion no",
   "numero_expediente": "LAM1110",
   "radicados": [
     "2022241185",
@@ -19,6 +22,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "emisiones atmosfericas",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "47073",
   "file_name": "ANLA_47073.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2406",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Desarrollo de los Campos Quinde, Cohembí y Quillacinga”, localizado en jurisdicción",
-  "ubicación": "departamento del Putumayo.",
-  "empresa": "en el sentido de aclarar que la Sociedad podrá entregar los residuos domésticos orgánicos tanto a rellenos sanitarios como a empresas",
+  "nombre_proyecto": "“Desarrollo de los Campos Quinde, Cohembí y Quillacinga”, localizado en jurisdicción del municipio de Puerto Asís depart",
+  "nombre_proyecto_normalizada": "\"desarrollo de los campos quinde, cohembi y quillacinga\", localizado en jurisdiccion del municipio de puerto asis depart",
+  "ubicación": "jurisdicción del municipio de Puerto Asís departamento del Putumayo",
+  "ubicacion_normalizada": "jurisdiccion del municipio de puerto asis departamento del putumayo",
+  "empresa": "y realizó otros requerimientos",
+  "empresa_normalizada": "y realizo otros requerimientos",
   "numero_expediente": "No",
   "radicados": [
     "2022181864",
@@ -16,6 +19,12 @@
     "Emisiones atmosféricas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "44310",
   "file_name": "ANLA_44310.pdf",

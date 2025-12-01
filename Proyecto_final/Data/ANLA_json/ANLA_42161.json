@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00651",
   "fecha_resolución": "2023-04-03",
-  "nombre_proyecto": "proyecto de",
-  "ubicación": "departamento de Casanare, a favor de ECOPETROL S.A.",
-  "empresa": "INDERENA, otorgó Licencia Ambiental a la Sociedad BP EXPLORATION COMPANY Ltd",
+  "nombre_proyecto": "de Perforación de los Pozos ubicados en los siguientes bloques: Bloque Santiago de las Atalayas, Pozos Cusiana 2A, Cusia",
+  "nombre_proyecto_normalizada": "de perforacion de los pozos ubicados en los siguientes bloques: bloque santiago de las atalayas, pozos cusiana 2a, cusia",
+  "ubicación": "jurisdicción de los Municipio de Aguazul, Tauramena y Paz de Ariporo, en el departamento de Casanare, a favor de ECOPETROL S",
+  "ubicacion_normalizada": "jurisdiccion de los municipio de aguazul, tauramena y paz de ariporo, en el departamento de casanare, a favor de ecopetrol s",
+  "empresa": "BP EXPLORATION COMPANY Ltda",
+  "empresa_normalizada": "bp exploration company ltda",
   "numero_expediente": "No",
   "radicados": [
     "2023020016"
@@ -14,6 +17,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "42161",
   "file_name": "ANLA_42161.pdf",

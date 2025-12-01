@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001157",
   "fecha_resolución": "1997-07-04",
-  "nombre_proyecto": "proyecto \"Explotación y Desarrollo del Bloque de Asociación Tolima",
-  "ubicación": "departamento del Tolima.",
-  "empresa": "el Ministerio de Ambiente, Vivienda y Desarrollo Territorial estableció a la sociedad HOCOL S.A.",
+  "nombre_proyecto": "\"Explotación y Desarrollo del Bloque de Asociación Tolima B\", ubicado en el municipio de Chaparral en el departamento de",
+  "nombre_proyecto_normalizada": "\"explotacion y desarrollo del bloque de asociacion tolima b\", ubicado en el municipio de chaparral en el departamento de",
+  "ubicación": "el municipio de Chaparral en el departamento del Tolima, en cuya área se encuentra el proyecto \"Campos Río Saldaña y Oliní”",
+  "ubicacion_normalizada": "el municipio de chaparral en el departamento del tolima, en cuya area se encuentra el proyecto \"campos rio saldana y olini\"",
+  "empresa": "HOCOL S.A",
+  "empresa_normalizada": "hocol s.a",
   "numero_expediente": "No",
   "radicados": [
     "20246200356662"
@@ -15,6 +18,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46743",
   "file_name": "ANLA_46743.pdf",

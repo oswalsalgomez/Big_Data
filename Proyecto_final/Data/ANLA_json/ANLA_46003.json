@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000670",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Instalación de la línea de 37 kilómetros de 16\", denominado “Oleoducto",
-  "ubicación": "Departamento del Casanare; asimismo en el artículo décimo primero se estableció la obligación de inversión forzosa de no menos del 1% en el marco de lo establecido en el Artículo 43 de la Ley 99 de 1993.",
-  "empresa": "otorgó a la sociedad OLEODUCTO CENTRAL S.A.",
+  "nombre_proyecto": "“Instalación de la línea de 37 kilómetros de 16\", denominado “Oleoducto Cupiagua – Cusiana”, localizado en jurisdicción",
+  "nombre_proyecto_normalizada": "\"instalacion de la linea de 37 kilometros de 16\", denominado \"oleoducto cupiagua – cusiana\", localizado en jurisdiccion",
+  "ubicación": "jurisdicción de los Municipios de Aguazul y Tauramena en el Departamento del Casanare",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de aguazul y tauramena en el departamento del casanare",
+  "empresa": "OLEODUCTO CENTRAL S",
+  "empresa_normalizada": "oleoducto central s",
   "numero_expediente": "LAM1226",
   "radicados": [
     "2022229297",
@@ -15,6 +18,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "46003",
   "file_name": "ANLA_46003.pdf",

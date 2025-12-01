@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02779",
   "fecha_resolución": "2022-11-23",
-  "nombre_proyecto": "proyecto denominado \"Operación y Mantenimiento del Combustoleoducto Ayacucho - Retiro -",
-  "ubicación": "Departamento de Santander; La Esperanza en el Departamento de Norte de Santander; San Alberto, San Martín, Río de Oro, Aguachica, Gamarra, La Gloria, Pelaya y Tamalameque en el Departamento del Cesar; El Banco, Guamal, San Sebastián de Buenavista y San Zenón en el Departamento del Magdalena; Mompós, Talaigua Nuevo, Cicuco, Magangué, María La Baja, Arjona, Turbana y Cartagena en el Departamento de Bolívar y Buenavista, Galeras, Sincé, San Juan de Betulia, Corozal, Morroa, Sincelejo, Palmito, San Onofre, Coveñas y Santiago de Tolú en el Departamento de Sucre.",
-  "empresa": "estableció el Plan de Manejo Ambiental a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "denominado \"Operación y Mantenimiento del Combustoleoducto Ayacucho - Retiro - Coveñas\" donde se incluyen las actividade",
+  "nombre_proyecto_normalizada": "denominado \"operacion y mantenimiento del combustoleoducto ayacucho - retiro - covenas\" donde se incluyen las actividade",
+  "ubicación": "Departamento de Bolívar y Buenavista, Galeras, Sincé, San Juan de Betulia, Corozal, Morroa, Sincelejo, Palmito, San Onofre, Coveñas y Santiago de Tolú en el Departamento de Sucre",
+  "ubicacion_normalizada": "departamento de bolivar y buenavista, galeras, since, san juan de betulia, corozal, morroa, sincelejo, palmito, san onofre, covenas y santiago de tolu en el departamento de sucre",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM0862",
   "radicados": [
     "2022221804",
@@ -15,6 +18,11 @@
     "Emisiones atmosféricas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "emisiones atmosfericas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "41066",
   "file_name": "ANLA_41066.pdf",

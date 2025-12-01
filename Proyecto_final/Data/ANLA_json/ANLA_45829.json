@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000492",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto \"Soporte de Presión Cusiana\", localizado en",
-  "ubicación": "departamento del Casanare.",
-  "empresa": "ECOPETROL S.A.",
+  "nombre_proyecto": "\"Soporte de Presión Cusiana\", localizado en jurisdicción del municipio de Aguazul del departamento del Casanare",
+  "nombre_proyecto_normalizada": "\"soporte de presion cusiana\", localizado en jurisdiccion del municipio de aguazul del departamento del casanare",
+  "ubicación": "jurisdicción del municipio de Aguazul del departamento del Casanare",
+  "ubicacion_normalizada": "jurisdiccion del municipio de aguazul del departamento del casanare",
+  "empresa": "BP EXPLORATION COMPANY (COLOMBIA) LTD",
+  "empresa_normalizada": "bp exploration company (colombia) ltd",
   "numero_expediente": "D-7946",
   "radicados": [
     "20236200170412",
@@ -15,6 +18,11 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "45829",
   "file_name": "ANLA_45829.pdf",

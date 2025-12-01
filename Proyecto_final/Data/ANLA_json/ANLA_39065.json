@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00921",
   "fecha_resolución": "2022-05-06",
-  "nombre_proyecto": "proyecto Campos Petroleros Cantagallo y Aledaños ( conformado por los Campos",
-  "ubicación": "departamento de Bolívar en los municipios Cantagallo y San Pablo, departamento de Santander, municipios Puerto Wilches, Sabana de Torres y Rionegro, departamento de Cesar, municipio de Aguachica y departamento de Norte de Santander, municipio La Esperanza.",
-  "empresa": "Por la cual se declaró la cesación del proceso sancionatorio ambiental a favor de ECOPETROL S.A.",
+  "nombre_proyecto": "Campos Petroleros Cantagallo y Aledaños ( conformado por los Campos Yariguí – Cantagallo, Campo Cristalina, Campo Sogamo",
+  "nombre_proyecto_normalizada": "campos petroleros cantagallo y aledanos ( conformado por los campos yarigui – cantagallo, campo cristalina, campo sogamo",
+  "ubicación": "departamento de Santander, municipios Puerto Wilches, Sabana de Torres y Rionegro, departamento de Cesar, municipio de Aguachica y departamento de Norte de Santander, municipio La Esperanza",
+  "ubicacion_normalizada": "departamento de santander, municipios puerto wilches, sabana de torres y rionegro, departamento de cesar, municipio de aguachica y departamento de norte de santander, municipio la esperanza",
+  "empresa": "ECOPETROL una compensación por los días que no se ha podido realizar las actividades de pesca",
+  "empresa_normalizada": "ecopetrol una compensacion por los dias que no se ha podido realizar las actividades de pesca",
   "numero_expediente": "SAN0160-00-2018",
   "radicados": [
     "2020051895"
@@ -13,6 +16,10 @@
   "tipos_infraccion": [
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "39065",
   "file_name": "ANLA_39065.pdf",

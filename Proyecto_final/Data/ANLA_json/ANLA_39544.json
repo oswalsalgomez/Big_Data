@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01339",
   "fecha_resolución": "2022-06-17",
-  "nombre_proyecto": "proyecto denominado “Área",
-  "ubicación": "Departamento de Arauca.",
-  "empresa": "Así las cosas",
+  "nombre_proyecto": "denominado “Área de Interés de Perforación Exploratoria Cosecha”, ubicado en jurisdicción del Municipio de Arauquita del",
+  "nombre_proyecto_normalizada": "denominado \"area de interes de perforacion exploratoria cosecha\", ubicado en jurisdiccion del municipio de arauquita del",
+  "ubicación": "jurisdicción del Municipio de Arauquita del Departamento de Arauca",
+  "ubicacion_normalizada": "jurisdiccion del municipio de arauquita del departamento de arauca",
+  "empresa": "SIERRACOL ENERGY ARAUCA LLC la liquidación parcial actualizada de la inversión forzosa de no menos del 1%",
+  "empresa_normalizada": "sierracol energy arauca llc la liquidacion parcial actualizada de la inversion forzosa de no menos del 1%",
   "numero_expediente": "LAM2821",
   "radicados": [
     "2019203778",
@@ -19,6 +22,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "39544",
   "file_name": "ANLA_39544.pdf",

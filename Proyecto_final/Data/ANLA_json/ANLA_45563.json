@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000259",
   "fecha_resolución": "2023-09-18",
-  "nombre_proyecto": "proyecto de hidrocarburos denominado “Campo de",
-  "ubicación": "departamento de Boyacá.",
-  "empresa": "el entonces Ministerio de Ambiente, Vivienda y Desarrollo Territorial, hoy Ministerio de Ambiente y Desarrollo Sostenible -MADS, en adelante el Ministerio, estableció el Plan de Manejo Ambiental a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "de hidrocarburos denominado “Campo de Producción Palagua”, localizado en jurisdicción del municipio de Puerto Boyacá en",
+  "nombre_proyecto_normalizada": "de hidrocarburos denominado \"campo de produccion palagua\", localizado en jurisdiccion del municipio de puerto boyaca en",
+  "ubicación": "jurisdicción del municipio de Puerto Boyacá en el departamento de Boyacá",
+  "ubicacion_normalizada": "jurisdiccion del municipio de puerto boyaca en el departamento de boyaca",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM0332",
   "radicados": [
     "2017006904",
@@ -15,6 +18,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "incumplimiento del pma"
   ],
   "pdf_id": "45563",
   "file_name": "ANLA_45563.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00852",
   "fecha_resolución": "2022-04-29",
-  "nombre_proyecto": "proyecto campos Huila Norte.",
+  "nombre_proyecto": "campos Huila Norte",
+  "nombre_proyecto_normalizada": "campos huila norte",
   "ubicación": null,
-  "empresa": "estableció medidas ambientales a la Empresa Colombiana de Petróleos hoy ECOPETROL S.A para el desarrollo de los campos Brisas",
+  "ubicacion_normalizada": null,
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM2307",
   "radicados": [
     "2021216768"
@@ -12,6 +15,9 @@
   "descripcion": "Por la cual se resuelve un recurso de reposición interpuesto contra la Resolución 1673 de 22 de septiembre de 2021",
   "tipos_infraccion": [
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento del pma"
   ],
   "pdf_id": "38948",
   "file_name": "ANLA_38948.pdf",

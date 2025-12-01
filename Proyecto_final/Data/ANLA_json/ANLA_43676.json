@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1859",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Área de Perforación Exploratoria Lince – Leopardo”, ubicado en jurisdicción",
-  "ubicación": "departamento del Casanare.",
-  "empresa": "el entonces Ministerio de Ambiente, Vivienda y Desarrollo Territorial, hoy Ministerio de Ambiente y Desarrollo Sostenible, en adelante el Ministerio, otorgó Licencia Ambiental a la Sociedad HOCOL S.A.",
+  "nombre_proyecto": "“Área de Perforación Exploratoria Lince – Leopardo”, ubicado en jurisdicción del municipio de Orocué en el departamento",
+  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria lince – leopardo\", ubicado en jurisdiccion del municipio de orocue en el departamento",
+  "ubicación": "jurisdicción del municipio de Orocué en el departamento del Casanare",
+  "ubicacion_normalizada": "jurisdiccion del municipio de orocue en el departamento del casanare",
+  "empresa": "HOCOL S.A",
+  "empresa_normalizada": "hocol s.a",
   "numero_expediente": "LAM3657",
   "radicados": [
     "20236200254082",
@@ -13,6 +16,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "43676",
   "file_name": "ANLA_43676.pdf",

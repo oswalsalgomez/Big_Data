@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000068",
   "fecha_resolución": "2023-08-29",
-  "nombre_proyecto": "proyecto operación integrada de",
-  "ubicación": "Departamento de Cesar, en particular de los Municipios de la Jagua Resolución No.",
-  "empresa": "se procede a resolver el recurso de reposición interpuesto por el doctor Iván Andrés Páez Páez, obrando como apoderado principal de las sociedades CARBONES DE LA JAGUA S.A.",
+  "nombre_proyecto": "operación integrada de los contratos mineros 285/95 (CDJ), 132/92 (CET), 109/90 (CMU), DKP-141 (CDJ) y HKT- 08031 (CDJ)",
+  "nombre_proyecto_normalizada": "operacion integrada de los contratos mineros 285/95 (cdj), 132/92 (cet), 109/90 (cmu), dkp-141 (cdj) y hkt- 08031 (cdj)",
+  "ubicación": "las cercanías del proyecto, la cual cuenta con el menor número de datos faltantes entre las estaciones presentes",
+  "ubicacion_normalizada": "las cercanias del proyecto, la cual cuenta con el menor numero de datos faltantes entre las estaciones presentes",
+  "empresa": "CARBONES DE LA JAGUA S",
+  "empresa_normalizada": "carbones de la jagua s",
   "numero_expediente": "administrativo",
   "radicados": [
     "2016078193",
@@ -18,6 +21,11 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "45346",
   "file_name": "ANLA_45346.pdf",

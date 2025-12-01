@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00252",
   "fecha_resolución": "2023-02-14",
-  "nombre_proyecto": "proyecto “Área de Perforación Exploratoria Llanos 40”, ubicado en la Vereda Chaparral",
-  "ubicación": "Departamento de Casanare.",
-  "empresa": "a cargo de la Sociedad RAMSHORN INTERNACIONAL LIMITED, en favor de la Sociedad PAREX RESOURCES COLOMBIA LTD",
+  "nombre_proyecto": "“Área de Perforación Exploratoria Llanos 40”, ubicado en la Vereda Chaparral jurisdicción de los Municipios de Paz de Ar",
+  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria llanos 40\", ubicado en la vereda chaparral jurisdiccion de los municipios de paz de ar",
+  "ubicación": "la Vereda Chaparral jurisdicción de los Municipios de Paz de Ariporo y Hato Corozal del Departamento de Casanare",
+  "ubicacion_normalizada": "la vereda chaparral jurisdiccion de los municipios de paz de ariporo y hato corozal del departamento de casanare",
+  "empresa": "RAMSHORN INTERNACIONAL LIMITED",
+  "empresa_normalizada": "ramshorn internacional limited",
   "numero_expediente": "de",
   "radicados": [
     "2022290928",
@@ -15,6 +18,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "41604",
   "file_name": "ANLA_41604.pdf",

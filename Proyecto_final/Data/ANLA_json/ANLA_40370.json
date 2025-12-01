@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01910",
   "fecha_resolución": "2022-09-08",
-  "nombre_proyecto": "proyecto denominado “Explotación de Hidrocarburos en el Campo Vikingo del Bloque Lla-47”, localizado en",
-  "ubicación": "departamento del Casanare, con un área de 6,03 hectáreas.",
-  "empresa": "El recurso de reposición fue interpuesto por quién cuenta con la capacidad legal para adelantar la actuación, a su vez, el escrito contiene los motivos de inconformidad y el lugar de notificación, por lo tanto, se considera que reúne los requisitos de ley para que el mismo sea resuelto por esta Autoridad. De otro lado, es preciso señalar que dentro del escrito del recurso de reposición no se solicitó práctica de pruebas ni se decretaron de oficio por parte de la Autoridad. Así las cosas",
+  "nombre_proyecto": "denominado “Explotación de Hidrocarburos en el Campo Vikingo del Bloque Lla-47”, localizado en jurisdicción del municipi",
+  "nombre_proyecto_normalizada": "denominado \"explotacion de hidrocarburos en el campo vikingo del bloque lla-47\", localizado en jurisdiccion del municipi",
+  "ubicación": "jurisdicción del municipio de Orocué en el departamento del Casanare, con un área de 6,03 hectáreas",
+  "ubicacion_normalizada": "jurisdiccion del municipio de orocue en el departamento del casanare, con un area de 6,03 hectareas",
+  "empresa": "INTEROIL COLOMBIA EXPLORATION AND PRODUCTION",
+  "empresa_normalizada": "interoil colombia exploration and production",
   "numero_expediente": "LAV0078-00-2021",
   "radicados": [
     "2022140398",
@@ -17,6 +20,12 @@
     "Emisiones atmosféricas",
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "40370",
   "file_name": "ANLA_40370.pdf",

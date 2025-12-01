@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2140",
   "fecha_resolución": "2023-06-22",
-  "nombre_proyecto": "proyecto “Bloque",
-  "ubicación": "departamento del Casanare, además establece el Plan de Manejo Ambiental para la perforación del “Pozo Caporal-1”, ubicado dentro del Bloque Tapir, en la vereda San José de Güirripa, del municipio de Orocué y el Plan de Manejo Ambiental para el programa sísmico A, B y C, a realizarse dentro del Bloque Exploratorio Tapir.",
-  "empresa": "a la sociedad HERITAGE COLOMBIA a favor de la empresa HERITAGE MINERALS LTD",
+  "nombre_proyecto": "“Bloque Exploratorio Tapir” localizado en jurisdicción de los municipios de San Luis de Palenque, Yopal y Orocué en el d",
+  "nombre_proyecto_normalizada": "\"bloque exploratorio tapir\" localizado en jurisdiccion de los municipios de san luis de palenque, yopal y orocue en el d",
+  "ubicación": "jurisdicción de los municipios de San Luis de Palenque y Orocué en el departamento de Casanare Resolución No",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de san luis de palenque y orocue en el departamento de casanare resolucion no",
+  "empresa": "HERITAGE COLOMBIA",
+  "empresa_normalizada": "heritage colombia",
   "numero_expediente": "LAM1437",
   "radicados": [
     "2022249346",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43957",
   "file_name": "ANLA_43957.pdf",

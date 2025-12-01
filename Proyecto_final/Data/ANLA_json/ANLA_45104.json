@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 003101",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Área de Pozos de Desarrollo Cupiagua YW” localizado en el Municipio de",
-  "ubicación": "Departamento del Casanare; además impuso a la Sociedad la obligación de Inversión Forzosa de no menos del 1%.",
-  "empresa": "otorgó Licencia Ambiental a la Sociedad BRITISH PETROLEUM EXPLORATION COMPANY COLOMBIA LTD",
+  "nombre_proyecto": "“Área de Pozos de Desarrollo Cupiagua YW” localizado en el Municipio de Aguazul, en el Departamento del Casanare",
+  "nombre_proyecto_normalizada": "\"area de pozos de desarrollo cupiagua yw\" localizado en el municipio de aguazul, en el departamento del casanare",
+  "ubicación": "el Municipio de Aguazul, en el Departamento del Casanare; además impuso a la Sociedad la obligación de Inversión Forzosa de no menos del 1%",
+  "ubicacion_normalizada": "el municipio de aguazul, en el departamento del casanare; ademas impuso a la sociedad la obligacion de inversion forzosa de no menos del 1%",
+  "empresa": "BRITISH PETROLEUM EXPLORATION COMPANY COLOMBIA LTD",
+  "empresa_normalizada": "british petroleum exploration company colombia ltd",
   "numero_expediente": "LAM2512",
   "radicados": [
     "20236200757272",
@@ -16,6 +19,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "45104",
   "file_name": "ANLA_45104.pdf",

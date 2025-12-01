@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1674",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto denominado “Perforación Exploratoria",
-  "ubicación": "departamento del Meta.",
-  "empresa": "Así las cosas",
+  "nombre_proyecto": "denominado “Perforación Exploratoria del Bloque CPO-5”, localizado en jurisdicción de los municipios de Puerto López, Ca",
+  "nombre_proyecto_normalizada": "denominado \"perforacion exploratoria del bloque cpo-5\", localizado en jurisdiccion de los municipios de puerto lopez, ca",
+  "ubicación": "jurisdicción de los municipios de Puerto López, Cabuyaro y Barranca de Upía en el departamento del Meta",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de puerto lopez, cabuyaro y barranca de upia en el departamento del meta",
+  "empresa": "ONGC VIDESH LIMITED SUCURSAL COLOMBIANA",
+  "empresa_normalizada": "ongc videsh limited sucursal colombiana",
   "numero_expediente": "No",
   "radicados": [
     "2023046129"
@@ -14,6 +17,11 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43449",
   "file_name": "ANLA_43449.pdf",

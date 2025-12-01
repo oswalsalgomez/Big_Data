@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000265",
   "fecha_resolución": "2023-06-08",
-  "nombre_proyecto": "proyecto “Área de Perforación Exploratoria Bloque Cachicamo”, ubicado en",
-  "ubicación": "departamento de Casanare y se tomaron otras determinaciones.",
-  "empresa": "dispone, además, que la preservación y manejo de los recursos naturales renovables también son de utilidad pública e interés social. Así las cosas",
+  "nombre_proyecto": "“Área de Perforación Exploratoria Bloque Cachicamo”, ubicado en jurisdicción del municipio de Orocué en el departamento",
+  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria bloque cachicamo\", ubicado en jurisdiccion del municipio de orocue en el departamento",
+  "ubicación": "jurisdicción del municipio de Orocué en el departamento de Casanare y se tomaron otras determinaciones",
+  "ubicacion_normalizada": "jurisdiccion del municipio de orocue en el departamento de casanare y se tomaron otras determinaciones",
+  "empresa": "RAMSHORN INTERNATIONAL LIMITED",
+  "empresa_normalizada": "ramshorn international limited",
   "numero_expediente": "LAM3585",
   "radicados": [
     "2018082786",
@@ -17,6 +20,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "incumplimiento del pma"
   ],
   "pdf_id": "45576",
   "file_name": "ANLA_45576.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000042",
   "fecha_resolución": "2023-08-14",
-  "nombre_proyecto": "proyecto Construcción y Operación de la",
-  "ubicación": "departamento del Meta hasta las facilidades del CPF Cusiana ubicado en el municipio de Tauramena departamento de Casanare.",
-  "empresa": "MAVDT, hoy Ministerio de Ambiente y Desarrollo Sostenible - MADS en adelante Ministerio otorgó Licencia Ambiental a la sociedad Meta Petroleum LTD",
+  "nombre_proyecto": "Construcción y Operación de la Línea de Conducción de Hidrocarburos desde el Campo Rubiales ubicado en el municipio de P",
+  "nombre_proyecto_normalizada": "construccion y operacion de la linea de conduccion de hidrocarburos desde el campo rubiales ubicado en el municipio de p",
+  "ubicación": "el municipio de Puerto Gaitán en el departamento del Meta hasta las facilidades del CPF Cusiana ubicado en el municipio de Tauramena departamento de Casanare",
+  "ubicacion_normalizada": "el municipio de puerto gaitan en el departamento del meta hasta las facilidades del cpf cusiana ubicado en el municipio de tauramena departamento de casanare",
+  "empresa": "Meta Petroleum LTD",
+  "empresa_normalizada": "meta petroleum ltd",
   "numero_expediente": "LAM2965",
   "radicados": [
     "20236200538812"
@@ -16,6 +19,13 @@
     "Residuos sólidos",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "residuos solidos",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "45178",
   "file_name": "ANLA_45178.pdf",

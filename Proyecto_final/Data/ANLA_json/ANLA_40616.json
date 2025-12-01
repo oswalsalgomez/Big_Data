@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02375",
   "fecha_resolución": "2022-09-29",
-  "nombre_proyecto": "proyecto \"Perforación de siete (7) Pozos de Desarrollo",
-  "ubicación": "Departamento de Santander.",
-  "empresa": "y le estableció Plan de Manejo Ambiental a la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "\"Perforación de siete (7) Pozos de Desarrollo denominados Mosqueteros, sus líneas de flujo y vías de acceso\", localizado",
+  "nombre_proyecto_normalizada": "\"perforacion de siete (7) pozos de desarrollo denominados mosqueteros, sus lineas de flujo y vias de acceso\", localizado",
+  "ubicación": "jurisdicción del Municipio de Barrancabermeja, Corregimiento El Centro, vereda Oponcito, de titularidad de la Sociedad, cuyas actuaciones se han adelantado en el expediente LAM2249",
+  "ubicacion_normalizada": "jurisdiccion del municipio de barrancabermeja, corregimiento el centro, vereda oponcito, de titularidad de la sociedad, cuyas actuaciones se han adelantado en el expediente lam2249",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM1705",
   "radicados": [
     "2020146594",
@@ -19,6 +22,11 @@
     "Emisiones atmosféricas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "emisiones atmosfericas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "40616",
   "file_name": "ANLA_40616.pdf",

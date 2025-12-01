@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000197",
   "fecha_resolución": "2011-09-27",
-  "nombre_proyecto": "proyecto “Bloque de Perforación",
-  "ubicación": "Departamento del Cesar.",
-  "empresa": "el entonces Ministerio del Medio Ambiente, otorgó licencia ambiental a la sociedad HARKEN de COLOMBIA LTD",
+  "nombre_proyecto": "“Bloque de Perforación Exploratoria Buturama”, localizado en jurisdicción de los municipios de Aguachica y Gamarra del D",
+  "nombre_proyecto_normalizada": "\"bloque de perforacion exploratoria buturama\", localizado en jurisdiccion de los municipios de aguachica y gamarra del d",
+  "ubicación": "jurisdicción de los municipios de Aguachica y Gamarra del Departamento del Cesar",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de aguachica y gamarra del departamento del cesar",
+  "empresa": "HARKEN de COLOMBIA LTD",
+  "empresa_normalizada": "harken de colombia ltd",
   "numero_expediente": "No",
   "radicados": [
     "2022177546",
@@ -15,6 +18,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento del pma"
   ],
   "pdf_id": "45466",
   "file_name": "ANLA_45466.pdf",

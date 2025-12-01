@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000469",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Bloque de Perforación Exploratoria El Algarrobo”",
-  "ubicación": "Departamento de Casanare.",
-  "empresa": "otorgó Licencia Ambiental, a la sociedad RANCHO HERMOSO S.A.",
+  "nombre_proyecto": "“Bloque de Perforación Exploratoria El Algarrobo” ubicado en el Municipio de San Luis de Palenque y Orocué en el Departa",
+  "nombre_proyecto_normalizada": "\"bloque de perforacion exploratoria el algarrobo\" ubicado en el municipio de san luis de palenque y orocue en el departa",
+  "ubicación": "el Municipio de San Luis de Palenque y Orocué en el Departamento de Casanare",
+  "ubicacion_normalizada": "el municipio de san luis de palenque y orocue en el departamento de casanare",
+  "empresa": "RANCHO HERMOSO S",
+  "empresa_normalizada": "rancho hermoso s",
   "numero_expediente": "LAV0034-00-2015",
   "radicados": [
     "20236200967222",
@@ -16,6 +19,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "45809",
   "file_name": "ANLA_45809.pdf",

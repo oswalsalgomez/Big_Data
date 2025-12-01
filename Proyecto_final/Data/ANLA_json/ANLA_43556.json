@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1763",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto para el proyecto “Campo Toqui Toqui”, localizado en el municipio de",
-  "ubicación": "Departamento del Tolima.",
-  "empresa": "para el desarrollo del Campo Toqui Toqui, en beneficio de la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "para el proyecto “Campo Toqui Toqui”, localizado en el municipio de Piedras en el Departamento del Tolima, encaminadas a",
+  "nombre_proyecto_normalizada": "para el proyecto \"campo toqui toqui\", localizado en el municipio de piedras en el departamento del tolima, encaminadas a",
+  "ubicación": "jurisdicción de los Municipios de Piedras, Alvarado, y Venadillo en el Departamento del Tolima",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de piedras, alvarado, y venadillo en el departamento del tolima",
+  "empresa": "AMERICAN INTERNATIONAL PETROLEUM CORPORATION OF COLOMBIA identificada con NIT 860",
+  "empresa_normalizada": "american international petroleum corporation of colombia identificada con nit 860",
   "numero_expediente": "LAM0203",
   "radicados": [
     "20236200223602"
@@ -14,6 +17,11 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43556",
   "file_name": "ANLA_43556.pdf",

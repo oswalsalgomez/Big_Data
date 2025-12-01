@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1882",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Perforación de los pozos de",
-  "ubicación": "departamento de Casanare.",
-  "empresa": "el entonces Ministerio de Ambiente, Vivienda y Desarrollo Territorial, hoy Ministerio de Ambiente y Desarrollo Sostenible, en adelante el Ministerio, otorgó Licencia Ambiental Ordinaria a la empresa KELT COLOMBIA S.A.",
+  "nombre_proyecto": "“Perforación de los pozos de Desarrollo Trinidad 8 y 9 de la Concesión Yalea”, localizado en el municipio de Trinidad, e",
+  "nombre_proyecto_normalizada": "\"perforacion de los pozos de desarrollo trinidad 8 y 9 de la concesion yalea\", localizado en el municipio de trinidad, e",
+  "ubicación": "el municipio de Trinidad, en el departamento de Casanare",
+  "ubicacion_normalizada": "el municipio de trinidad, en el departamento de casanare",
+  "empresa": "una medida adicional para el manejo y disposición final de residuos sólidos domésticos",
+  "empresa_normalizada": "una medida adicional para el manejo y disposicion final de residuos solidos domesticos",
   "numero_expediente": "LAM0395",
   "radicados": [
     "2020123545",
@@ -25,6 +28,10 @@
   "tipos_infraccion": [
     "Incumplimiento de norma",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento de norma",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43697",
   "file_name": "ANLA_43697.pdf",

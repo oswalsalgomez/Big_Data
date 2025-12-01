@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001322",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Líneas de Flujo Campo Cusiana Etapa III” ubicado en jurisdicción de los",
-  "ubicación": "departamento del Casanare.",
-  "empresa": "departamento de Casanare, de EQUION ENERGIA LIMITED, a favor de la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "“Líneas de Flujo Campo Cusiana Etapa III” ubicado en jurisdicción de los municipios de Aguazul y Tauramena en el departa",
+  "nombre_proyecto_normalizada": "\"lineas de flujo campo cusiana etapa iii\" ubicado en jurisdiccion de los municipios de aguazul y tauramena en el departa",
+  "ubicación": "jurisdicción de los municipios de Aguazul y Tauramena en el departamento del Casanare",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de aguazul y tauramena en el departamento del casanare",
+  "empresa": "BP EXPLORATION COMPANY (Colombia) Ltd",
+  "empresa_normalizada": "bp exploration company (colombia) ltd",
   "numero_expediente": "No",
   "radicados": [
     "2020005054"
@@ -13,6 +16,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46919",
   "file_name": "ANLA_46919.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2138",
   "fecha_resolución": "2023-03-24",
-  "nombre_proyecto": "proyecto denominado: “Área de perforación exploratoria marina Rubí en el",
-  "ubicación": "departamento de La Guajira, a la Dirección General Marítima – DIMAR, las Capitanías de Puerto de Cartagena, Barranquilla, Riohacha y Santa Marta y a la Agencia Nacional de Hidrocarburos – ANH.",
-  "empresa": "la Autoridad Nacional de Licencias Ambientales ANLA, en adelante esta Autoridad Nacional, otorgó Licencia Ambiental a la sociedad Ecopetrol S.A.",
+  "nombre_proyecto": "denominado: “Área de perforación exploratoria marina Rubí en el Bloque GUA OFF 10”, localizado a una lámina de agua que",
+  "nombre_proyecto_normalizada": "denominado: \"area de perforacion exploratoria marina rubi en el bloque gua off 10\", localizado a una lamina de agua que",
+  "ubicación": "aguas territoriales colombianas a una distancia de la costa que varía entre los 35,02 kilómetros (18,90 millas náuticas) y 37,79 kilómetros (20,40 millas náuticas)",
+  "ubicacion_normalizada": "aguas territoriales colombianas a una distancia de la costa que varia entre los 35,02 kilometros (18,90 millas nauticas) y 37,79 kilometros (20,40 millas nauticas)",
+  "empresa": "Ecopetrol S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "LAM0724",
   "radicados": [
     "2023075600",
@@ -24,6 +27,14 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "emisiones atmosfericas",
+    "residuos solidos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43964",
   "file_name": "ANLA_43964.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00903",
   "fecha_resolución": "2022-05-05",
-  "nombre_proyecto": "proyecto denominado “Desarrollo de la",
-  "ubicación": "departamento del Tolima.",
-  "empresa": "el entonces Ministerio de Ambiente, Vivienda y Desarrollo Territorial hoy Ministerio de Ambiente y Desarrollo Sostenible, otorgó Licencia Ambiental a la Sociedad VETRA EXPLORACIÓN Y PRODUCCIÓN COLOMBIA S.A.",
+  "nombre_proyecto": "denominado “Desarrollo de la Explotación Petrolera en el Bloque San Luis”, ubicado en jurisdicción del municipio de San",
+  "nombre_proyecto_normalizada": "denominado \"desarrollo de la explotacion petrolera en el bloque san luis\", ubicado en jurisdiccion del municipio de san",
+  "ubicación": "jurisdicción del municipio de San Luis en el departamento del Tolima",
+  "ubicacion_normalizada": "jurisdiccion del municipio de san luis en el departamento del tolima",
+  "empresa": "VETRA EXPLORACIÓN Y PRODUCCIÓN COLOMBIA S",
+  "empresa_normalizada": "vetra exploracion y produccion colombia s",
   "numero_expediente": "durante",
   "radicados": [
     "2021180298",
@@ -14,6 +17,9 @@
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
   "tipos_infraccion": [
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "39031",
   "file_name": "ANLA_39031.pdf",

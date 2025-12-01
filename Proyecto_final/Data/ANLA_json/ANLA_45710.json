@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000373",
   "fecha_resolución": "2023-08-01",
-  "nombre_proyecto": "proyecto “Perforación Exploratoria, Bloque Palo Blanco”, localizado en",
-  "ubicación": "departamento de Casanare.",
-  "empresa": "otorgó Licencia Ambiental a la Sociedad HARKEN DE COLOMBIA LTD",
+  "nombre_proyecto": "“Perforación Exploratoria, Bloque Palo Blanco”, localizado en jurisdicción del municipio de Maní, departamento de Casana",
+  "nombre_proyecto_normalizada": "\"perforacion exploratoria, bloque palo blanco\", localizado en jurisdiccion del municipio de mani, departamento de casana",
+  "ubicación": "jurisdicción del municipio de Maní, departamento de Casanare",
+  "ubicacion_normalizada": "jurisdiccion del municipio de mani, departamento de casanare",
+  "empresa": "HARKEN DE COLOMBIA LTDA",
+  "empresa_normalizada": "harken de colombia ltda",
   "numero_expediente": "LAM1309",
   "radicados": [
     "2021040226",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Vertimientos",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "incumplimiento del pma"
   ],
   "pdf_id": "45710",
   "file_name": "ANLA_45710.pdf",

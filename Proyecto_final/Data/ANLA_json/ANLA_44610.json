@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2675",
   "fecha_resolución": "2023-08-23",
-  "nombre_proyecto": "proyecto “Bloque de Perforación Exploratoria",
-  "ubicación": "departamento de Casanare.",
-  "empresa": "otorgó Licencia Ambiental a la sociedad Integral de Servicios Técnicos S.A.",
+  "nombre_proyecto": "“Bloque de Perforación Exploratoria Cravo Viejo”, localizado en jurisdicción del municipio de Orocué, en el departamento",
+  "nombre_proyecto_normalizada": "\"bloque de perforacion exploratoria cravo viejo\", localizado en jurisdiccion del municipio de orocue, en el departamento",
+  "ubicación": "jurisdicción del municipio de Orocué, en el departamento de Casanare",
+  "ubicacion_normalizada": "jurisdiccion del municipio de orocue, en el departamento de casanare",
+  "empresa": "Integral de Servicios Técnicos S",
+  "empresa_normalizada": "integral de servicios tecnicos s",
   "numero_expediente": "SAN0774-00-2019",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE EL RECURSO DE REPOSICIÓN INTERPUESTO CONTRA LA RESOLUCIÓN nro. 1848 DEL 23 DE AGOSTO DE 2023 Y SE TOMAN OTRAS DETERMINACIONES",
@@ -12,6 +15,11 @@
     "Vertimientos",
     "Incumplimiento de norma",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "incumplimiento de norma",
+    "incumplimiento del pma"
   ],
   "pdf_id": "44610",
   "file_name": "ANLA_44610.pdf",

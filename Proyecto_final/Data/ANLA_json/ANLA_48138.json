@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002149",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto ÁREA DE POZOS CUPIAGUA YZ, vías de acceso y líneas de flujo, localizado en",
-  "ubicación": "departamento de Casanare.",
-  "empresa": "de la Sociedad EQUION ENERGÍA LIMITED a favor de la Sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "ÁREA DE POZOS CUPIAGUA YZ, vías de acceso y líneas de flujo, localizado en las veredas Volcán Blanco en jurisdicción del",
+  "nombre_proyecto_normalizada": "area de pozos cupiagua yz, vias de acceso y lineas de flujo, localizado en las veredas volcan blanco en jurisdiccion del",
+  "ubicación": "las veredas Volcán Blanco en jurisdicción del municipio de Aguazul y en la vereda Chagüi Charte en jurisdicción del municipio de Yopal en el departamento de Casanare",
+  "ubicacion_normalizada": "las veredas volcan blanco en jurisdiccion del municipio de aguazul y en la vereda chagui charte en jurisdiccion del municipio de yopal en el departamento de casanare",
+  "empresa": "BP EXPLORATION COMPANY COLOMBIA LIMITED (BPXC",
+  "empresa_normalizada": "bp exploration company colombia limited (bpxc",
   "numero_expediente": "LAM0222",
   "radicados": [
     "20236200170372"
@@ -13,6 +16,10 @@
   "tipos_infraccion": [
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "48138",
   "file_name": "ANLA_48138.pdf",

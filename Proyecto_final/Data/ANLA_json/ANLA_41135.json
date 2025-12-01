@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02927",
   "fecha_resolución": "2022-12-09",
-  "nombre_proyecto": "proyecto de “Explotación de",
-  "ubicación": "departamento de Casanare.",
-  "empresa": "la sociedad RAMSHORN HOLDING LTD",
+  "nombre_proyecto": "de “Explotación de Hidrocarburos en el Bloque Cachicamo”, localizado en jurisdicción del municipio de Orocué, departamen",
+  "nombre_proyecto_normalizada": "de \"explotacion de hidrocarburos en el bloque cachicamo\", localizado en jurisdiccion del municipio de orocue, departamen",
+  "ubicación": "jurisdicción del municipio de Orocué, departamento de Casanare",
+  "ubicacion_normalizada": "jurisdiccion del municipio de orocue, departamento de casanare",
+  "empresa": "RAMSHORN INTERNATIONAL LIMITED",
+  "empresa_normalizada": "ramshorn international limited",
   "numero_expediente": "de",
   "radicados": [
     "2018078037",
@@ -16,6 +19,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "41135",
   "file_name": "ANLA_41135.pdf",

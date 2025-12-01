@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02527",
   "fecha_resolución": "2022-10-19",
-  "nombre_proyecto": "proyecto \"Explotación de hidrocarburos en el",
-  "ubicación": "Departamento del Meta.",
-  "empresa": "en calidad de cedente, y la Sociedad OLEODUCTO DE LOS LLANOS S.A.",
+  "nombre_proyecto": "\"Explotación de hidrocarburos en el Campo Rubiales\", ubicado en jurisdicción del Municipio de Puerto Gaitán del Departam",
+  "nombre_proyecto_normalizada": "\"explotacion de hidrocarburos en el campo rubiales\", ubicado en jurisdiccion del municipio de puerto gaitan del departam",
+  "ubicación": "jurisdicción del Municipio de Puerto Gaitán del Departamento del Meta",
+  "ubicacion_normalizada": "jurisdiccion del municipio de puerto gaitan del departamento del meta",
+  "empresa": "COPLEX COLOMBIA LIMITED",
+  "empresa_normalizada": "coplex colombia limited",
   "numero_expediente": "LAM0019",
   "radicados": [
     "2021133759"
@@ -13,6 +16,10 @@
   "tipos_infraccion": [
     "Vertimientos",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "incumplimiento del pma"
   ],
   "pdf_id": "40761",
   "file_name": "ANLA_40761.pdf",

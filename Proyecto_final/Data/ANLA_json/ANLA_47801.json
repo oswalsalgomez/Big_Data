@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001869",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto denominado “Perforación",
-  "ubicación": "departamento del Putumayo e impuso la obligación de inversión de no menos del 1%.",
-  "empresa": "al correo autorizado por parte de la sociedad AMERISUR EXPLORACIÓN COLOMBIA LIMITADA., situación que se evidencia en la constancia de entrega que reposa en las bases de datos de la Entidad. Así las cosas",
+  "nombre_proyecto": "denominado “Perforación Exploratoria para un Área de Interés Localizada dentro del Bloque Coatí” localizada en jurisdicc",
+  "nombre_proyecto_normalizada": "denominado \"perforacion exploratoria para un area de interes localizada dentro del bloque coati\" localizada en jurisdicc",
+  "ubicación": "jurisdicción de los municipios de San Miguel y Valle del Guamuez en el departamento del Putumayo e impuso la obligación de inversión de no menos del 1%",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de san miguel y valle del guamuez en el departamento del putumayo e impuso la obligacion de inversion de no menos del 1%",
+  "empresa": "Platino Energy (Barbados) Corp Sucursal Colombia",
+  "empresa_normalizada": "platino energy (barbados) corp sucursal colombia",
   "numero_expediente": "No",
   "radicados": [
     "20246200693132",
@@ -13,6 +16,9 @@
   "descripcion": "Por la cual se delegan unas funciones y se dictan otras disposiciones",
   "tipos_infraccion": [
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "incumplimiento del pma"
   ],
   "pdf_id": "47801",
   "file_name": "ANLA_47801.pdf",

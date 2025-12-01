@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001041",
   "fecha_resolución": "2023-08-23",
-  "nombre_proyecto": "proyecto “Área de Perforación Exploratoria Vigía — Pozo Vigía 1”, ubicado en jurisdicción de",
-  "ubicación": "Departamento del Casanare.",
-  "empresa": "ANLA en su calidad de entidad encargada de que los proyectos sujetos a licenciamiento, permiso o trámite ambiental cumplan con la normativa ambiental, de tal manera que contribuyan al desarrollo sostenible ambiental del país. Así las cosas",
+  "nombre_proyecto": "“Área de Perforación Exploratoria Vigía — Pozo Vigía 1”, ubicado en jurisdicción de los Municipios de Maní, Yopal y Oroc",
+  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria vigia — pozo vigia 1\", ubicado en jurisdiccion de los municipios de mani, yopal y oroc",
+  "ubicación": "jurisdicción de los Municipios de Maní, Yopal y Orocué, en el Departamento del Casanare",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de mani, yopal y orocue, en el departamento del casanare",
+  "empresa": "EMERALD ENERGY PLC SUCURSAL COLOMBIA",
+  "empresa_normalizada": "emerald energy plc sucursal colombia",
   "numero_expediente": "LAM3465",
   "radicados": [
     "20236200521632"
@@ -15,6 +18,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "46753",
   "file_name": "ANLA_46753.pdf",

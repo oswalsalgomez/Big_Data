@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00253",
   "fecha_resolución": "2023-02-14",
-  "nombre_proyecto": "proyecto Plan de Manejo Ambiental Unificado para la totalidad del proyecto",
-  "ubicación": "departamento de Santander.",
-  "empresa": "el entonces Ministerio del Medio Ambiente, hoy Ministerio de Ambiente y Desarrollo Sostenible, en adelante el Ministerio, otorgó una Licencia Ambiental a la Empresa Colombiana de Petróleos ECOPETROL, actual ECOPETROL S.A., en adelante la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "Plan de Manejo Ambiental Unificado para la totalidad del proyecto Resolución No",
+  "nombre_proyecto_normalizada": "plan de manejo ambiental unificado para la totalidad del proyecto resolucion no",
+  "ubicación": "los municipios de Barrancabermeja, San Vicente de Chucurí y Simacota, departamento de Santander",
+  "ubicacion_normalizada": "los municipios de barrancabermeja, san vicente de chucuri y simacota, departamento de santander",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "2249",
   "radicados": [
     "2019122249",
@@ -16,6 +19,12 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "emisiones atmosfericas",
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "41601",
   "file_name": "ANLA_41601.pdf",

@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1804",
   "fecha_resolución": "2023-02-08",
-  "nombre_proyecto": "proyecto Pruebas Largas de Producción como última fase de exploración de los",
-  "ubicación": "departamento de Santander.",
-  "empresa": "INC a favor de la sociedad ECOPETROL S.A.",
+  "nombre_proyecto": "Pruebas Largas de Producción como última fase de exploración de los pozos Liebre-1 y Liebre, ubicados en el Municipio de",
+  "nombre_proyecto_normalizada": "pruebas largas de produccion como ultima fase de exploracion de los pozos liebre-1 y liebre, ubicados en el municipio de",
+  "ubicación": "jurisdicción del municipio de Sabana de Torres en el departamento de Santander",
+  "ubicacion_normalizada": "jurisdiccion del municipio de sabana de torres en el departamento de santander",
+  "empresa": "TRITÓN RESOURCES COLOMBIA INC",
+  "empresa_normalizada": "triton resources colombia inc",
   "numero_expediente": "LAM1227",
   "radicados": [
     "2023034495",
@@ -14,6 +17,10 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "43594",
   "file_name": "ANLA_43594.pdf",

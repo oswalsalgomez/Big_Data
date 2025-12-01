@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001695",
   "fecha_resolución": "2024-03-07",
-  "nombre_proyecto": "proyecto “Construcción y Operación del",
-  "ubicación": "departamento de Casanare; y Tame, Fortul y Saravena en el departamento de Arauca (en adelante “Oleoducto Araguaney – Banadía”).",
-  "empresa": "en calidad de apoderada general de ECOPETROL S.A.",
+  "nombre_proyecto": "“Construcción y Operación del Oleoducto Araguaney – Banadía”, localizado en jurisdicción de los municipios de Yopal, Nun",
+  "nombre_proyecto_normalizada": "\"construccion y operacion del oleoducto araguaney – banadia\", localizado en jurisdiccion de los municipios de yopal, nun",
+  "ubicación": "jurisdicción de los municipios de Yopal, Nunchía, Pore, Paz de Ariporo y Hato de Corozal en el departamento de Casanare; y Tame, Fortul y Saravena en el departamento de Arauca (en adelante “Oleoducto Araguaney – Banadía”)",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de yopal, nunchia, pore, paz de ariporo y hato de corozal en el departamento de casanare; y tame, fortul y saravena en el departamento de arauca (en adelante \"oleoducto araguaney – banadia\")",
+  "empresa": "ECOPETROL S",
+  "empresa_normalizada": "ecopetrol s",
   "numero_expediente": "SAN1052-",
   "radicados": [
     "2018133563",
@@ -16,6 +19,11 @@
     "Manejo de aguas",
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
+  ],
+  "tipos_infraccion_normalizada": [
+    "manejo de aguas",
+    "tala o afectacion de bosques",
+    "incumplimiento del pma"
   ],
   "pdf_id": "47594",
   "file_name": "ANLA_47594.pdf",

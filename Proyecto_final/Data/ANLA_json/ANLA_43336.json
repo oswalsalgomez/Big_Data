@@ -2,9 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1613",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "proyecto “Perforación Exploratoria Bloque Altair–Zona 1”, localizado en jurisdicción de",
-  "ubicación": "departamento de Casanare.",
-  "empresa": "Así las cosas",
+  "nombre_proyecto": "“Perforación Exploratoria Bloque Altair–Zona 1”, localizado en jurisdicción de los municipios de Orocué y San Luís de Pa",
+  "nombre_proyecto_normalizada": "\"perforacion exploratoria bloque altair–zona 1\", localizado en jurisdiccion de los municipios de orocue y san luis de pa",
+  "ubicación": "jurisdicción de los municipios de Orocué y San Luís de Palenque en el departamento de Casanare",
+  "ubicacion_normalizada": "jurisdiccion de los municipios de orocue y san luis de palenque en el departamento de casanare",
+  "empresa": "INTEROIL COLOMBIA EXPLORATION AND PRODUCTION",
+  "empresa_normalizada": "interoil colombia exploration and production",
   "numero_expediente": "EXP",
   "radicados": [
     "2022270980"
@@ -14,6 +17,11 @@
     "Vertimientos",
     "Manejo de aguas",
     "Tala o afectación de bosques"
+  ],
+  "tipos_infraccion_normalizada": [
+    "vertimientos",
+    "manejo de aguas",
+    "tala o afectacion de bosques"
   ],
   "pdf_id": "43336",
   "file_name": "ANLA_43336.pdf",
