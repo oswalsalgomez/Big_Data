@@ -72,44 +72,113 @@ def about():
 def buscador():
     """
     Página de búsqueda pública.
-    Si viene ?texto=... en la URL, hace la búsqueda en Elastic y
-    pasa los resultados al template.
+    Filtros disponibles (GET):
+    - texto: búsqueda general
+    - empresa: filtro exacto por empresa
+    - anio: año de la resolución
+    - num_resolucion: número de la resolución
+    - num_expediente: número de expediente
+    - proyecto: nombre del proyecto / campo
     """
     texto = (request.args.get('texto') or '').strip()
+    empresa = (request.args.get('empresa') or '').strip()
+    anio = (request.args.get('anio') or '').strip()
+    num_resolucion = (request.args.get('num_resolucion') or '').strip()
+    num_expediente = (request.args.get('num_expediente') or '').strip()
+    proyecto = (request.args.get('proyecto') or '').strip()
+
     resultados = None
     total = None
     error = None
 
-    if texto:
-        try:
-            # ====== QUERY PRINCIPAL (igual que en /buscar-elastic) ======
-            campo = '_all'  # por ahora siempre buscamos en varios campos
+    # ¿hay algo para buscar?
+    hay_filtros = any([
+        texto, empresa, anio, num_resolucion, num_expediente, proyecto
+    ])
 
-            if campo == '_all':
-                query_base = {
-                    "query": {
-                        "multi_match": {
-                            "query": texto,
-                            "fields": [
-                                "texto_completo",
-                                "numero_resolución^3",
-                                "nombre_proyecto^2",
-                                "empresa^2",
-                                "descripcion^2",
-                                "numero_expediente",
-                                "radicados"
-                            ]
-                        }
+    if hay_filtros:
+        try:
+            must_clauses = []
+            filters = []
+
+            # ====== QUERY PRINCIPAL (texto libre) ======
+            if texto:
+                must_clauses.append({
+                    "multi_match": {
+                        "query": texto,
+                        "fields": [
+                            "texto_completo",
+                            "numero_resolución^3",
+                            "nombre_proyecto^2",
+                            "empresa^2",
+                            "descripcion^2",
+                            "numero_expediente",
+                            "radicados"
+                        ]
                     }
-                }
+                })
+
+            # ====== FILTRO EMPRESA (keyword) ======
+            if empresa:
+                filters.append({"term": {"empresa.keyword": empresa}})
+
+            # ====== FILTRO AÑO (fecha_resolución) ======
+            if anio:
+                try:
+                    year_int = int(anio)
+                    filters.append({
+                        "range": {
+                            "fecha_resolución": {
+                                "gte": f"{year_int}-01-01",
+                                "lte": f"{year_int}-12-31"
+                            }
+                        }
+                    })
+                except ValueError:
+                    error = "El año debe ser un número (por ejemplo 2023)."
+
+            # ====== FILTRO NÚMERO DE RESOLUCIÓN ======
+            if num_resolucion:
+                # campo tipo text → usamos match_phrase
+                filters.append({
+                    "match_phrase": {
+                        "numero_resolución": num_resolucion
+                    }
+                })
+
+            # ====== FILTRO NÚMERO DE EXPEDIENTE ======
+            if num_expediente:
+                # este campo lo definimos como keyword
+                filters.append({
+                    "term": {
+                        "numero_expediente": num_expediente
+                    }
+                })
+
+            # ====== FILTRO PROYECTO / CAMPO ======
+            if proyecto:
+                filters.append({
+                    "match_phrase": {
+                        "nombre_proyecto": proyecto
+                    }
+                })
+
+            # ====== CONSTRUIR QUERY BOOL ======
+            if must_clauses or filters:
+                bool_query = {}
+                if must_clauses:
+                    bool_query["must"] = must_clauses
+                else:
+                    # si no hay texto, hacemos match_all y solo aplicamos filtros
+                    bool_query["must"] = [{"match_all": {}}]
+
+                if filters:
+                    bool_query["filter"] = filters
+
+                query_base = {"query": {"bool": bool_query}}
             else:
-                query_base = {
-                    "query": {
-                        "match": {
-                            campo: texto
-                        }
-                    }
-                }
+                # nada de nada → match_all (caso raro)
+                query_base = {"query": {"match_all": {}}}
 
             # ====== AGGREGATIONS (opcional, por ahora no las mostramos) ======
             aggs = {
@@ -154,6 +223,11 @@ def buscador():
         version=VERSION_APP,
         creador=CREATOR_APP,
         texto=texto,
+        empresa_filtro=empresa,
+        anio_filtro=anio,
+        num_resolucion_filtro=num_resolucion,
+        num_expediente_filtro=num_expediente,
+        proyecto_filtro=proyecto,
         resultados=resultados,
         total=total,
         error=error
