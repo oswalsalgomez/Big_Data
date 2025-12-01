@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01566",
   "fecha_resolución": "2022-07-21",
-  "nombre_proyecto": "denominado Oleoducto Apiay — El Porvenir, localizado en jurisdicción del municipio de Monterrey, departamento de Casanar",
-  "nombre_proyecto_normalizada": "denominado oleoducto apiay — el porvenir, localizado en jurisdiccion del municipio de monterrey, departamento de casanar",
-  "ubicación": "jurisdicción del municipio de Monterrey, departamento de Casanare",
-  "ubicacion_normalizada": "jurisdiccion del municipio de monterrey, departamento de casanare",
-  "empresa": "CHEVRON PETROLEUM COMPANY OF COLOMBIA",
-  "empresa_normalizada": "chevron petroleum company of colombia",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Cuando se presente cambios de gobierno local, en las cuales se informe la",
+  "nombre_proyecto_normalizado": "CUANDO SE PRESENTE CAMBIOS DE GOBIERNO LOCAL EN LAS CUALES SE INFORME LA",
+  "ubicación": "departamento de Casanare",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0522",
   "radicados": [
     "2020235678"
@@ -19,11 +19,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "emisiones atmosfericas",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "EMISIONES ATMOSFERICAS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "39808",
   "file_name": "ANLA_39808.pdf",

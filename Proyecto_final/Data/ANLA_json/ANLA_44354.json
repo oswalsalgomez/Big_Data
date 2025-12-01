@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2439",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "Campos de la Superintendencia Provincia (Campos Provincia, Bonanza, San Roque y Tisquirama)",
-  "nombre_proyecto_normalizada": "campos de la superintendencia provincia (campos provincia, bonanza, san roque y tisquirama)",
-  "ubicación": "Departamento de Santander y San Roque y Tisquirama ubicados en el Departamento del Cesar",
-  "ubicacion_normalizada": "departamento de santander y san roque y tisquirama ubicados en el departamento del cesar",
-  "empresa": "ECOPETROL: S",
-  "empresa_normalizada": "ecopetrol: s",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Campos de la Superintendencia Provincia (Campos Provincia, Bonanza, San Roque y",
+  "nombre_proyecto_normalizado": "CAMPOS DE LA SUPERINTENDENCIA PROVINCIA CAMPOS PROVINCIA BONANZA SAN ROQUE Y",
+  "ubicación": "Departamento de Santander y San Roque y Tisquirama ubicados en el Departamento del",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM1009",
   "radicados": [
     "2023008177",
@@ -18,9 +18,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "44354",
   "file_name": "ANLA_44354.pdf",

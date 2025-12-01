@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2651",
   "fecha_resolución": "2023-08-25",
-  "nombre_proyecto": "“Área de Explotación de Hidrocarburos Quifa”, localizado en jurisdicción del Municipio de Puerto Gaitán en el Departamen",
-  "nombre_proyecto_normalizada": "\"area de explotacion de hidrocarburos quifa\", localizado en jurisdiccion del municipio de puerto gaitan en el departamen",
-  "ubicación": "jurisdicción del Municipio de Puerto Gaitán en el Departamento del Meta, para lo cual conformó el expediente LAM4795",
-  "ubicacion_normalizada": "jurisdiccion del municipio de puerto gaitan en el departamento del meta, para lo cual conformo el expediente lam4795",
-  "empresa": "Meta Petroleum Corp Sucursal Colombia",
-  "empresa_normalizada": "meta petroleum corp sucursal colombia",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Área de Explotación de",
+  "nombre_proyecto_normalizado": "AREA DE EXPLOTACION DE",
+  "ubicación": "departamento de Meta, con el fin de aumentar la producción y flujo",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM4795",
   "radicados": [
     "2020050695",
@@ -26,14 +26,14 @@
     "Incumplimiento del PMA",
     "Cierre de pozos"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma",
-    "cierre de pozos"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA",
+    "CIERRE DE POZOS"
   ],
   "pdf_id": "44586",
   "file_name": "ANLA_44586.pdf",

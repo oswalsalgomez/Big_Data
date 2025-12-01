@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2767",
   "fecha_resolución": "2023-05-30",
-  "nombre_proyecto": "“Reactivación de las actividades que incluye el reentry a los Pozos Hato Nuevo 1, Hato Nuevo 2, Hato Nuevo 3 y Polonia 1",
-  "nombre_proyecto_normalizada": "\"reactivacion de las actividades que incluye el reentry a los pozos hato nuevo 1, hato nuevo 2, hato nuevo 3 y polonia 1",
-  "ubicación": "el municipio de Villavieja, departamento del Huila",
-  "ubicacion_normalizada": "el municipio de villavieja, departamento del huila",
-  "empresa": null,
-  "empresa_normalizada": null,
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Reactivación de las actividades que incluye el reentry a los Pozos Hato",
+  "nombre_proyecto_normalizado": "REACTIVACION DE LAS ACTIVIDADES QUE INCLUYE EL REENTRY A LOS POZOS HATO",
+  "ubicación": "municipio de Villavieja, departamento del Huila",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM3756",
   "radicados": [
     "2021083178",
@@ -21,9 +21,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "44825",
   "file_name": "ANLA_44825.pdf",

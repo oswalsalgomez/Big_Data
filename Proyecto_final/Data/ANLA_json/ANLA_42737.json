@@ -2,20 +2,20 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1135",
   "fecha_resolución": "2023-02-23",
-  "nombre_proyecto": "“Área de Interés de Explotación del Campo Jazmín (Nare - Norte)”, localizada en jurisdicción del municipio de Puerto Boy",
-  "nombre_proyecto_normalizada": "\"area de interes de explotacion del campo jazmin (nare - norte)\", localizada en jurisdiccion del municipio de puerto boy",
-  "ubicación": "jurisdicción del municipio de Puerto Boyacá, en el departamento de Boyacá, cuyo instrumento ambiental fue otorgado mediante Resolución No",
-  "ubicacion_normalizada": "jurisdiccion del municipio de puerto boyaca, en el departamento de boyaca, cuyo instrumento ambiental fue otorgado mediante resolucion no",
-  "empresa": "MANSAROVAR electrónicamente el 24 de febrero de 2023",
-  "empresa_normalizada": "mansarovar electronicamente el 24 de febrero de 2023",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Área de Interés de Explotación del Campo Jazmín",
+  "nombre_proyecto_normalizado": "AREA DE INTERES DE EXPLOTACION DEL CAMPO JAZMIN",
+  "ubicación": "departamento de Boyacá, cuyo instrumento",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM1913",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE RECURSO DE REPOSICIÓN EN CONTRA DE LA RESOLUCIÓN No. 326 DEL 23 DE FEBRERO DE 2023 Y SE TOMAN OTRAS DETERMINACIONES",
   "tipos_infraccion": [
     "Residuos sólidos"
   ],
-  "tipos_infraccion_normalizada": [
-    "residuos solidos"
+  "tipos_infraccion_normalizados": [
+    "RESIDUOS SOLIDOS"
   ],
   "pdf_id": "42737",
   "file_name": "ANLA_42737.pdf",

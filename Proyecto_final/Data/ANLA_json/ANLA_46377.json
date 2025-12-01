@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000926",
   "fecha_resolución": "1993-09-30",
-  "nombre_proyecto": "“Campo de Producción Velásquez”, ubicado en jurisdicción del municipio de Puerto Boyacá del departamento de Boyacá",
-  "nombre_proyecto_normalizada": "\"campo de produccion velasquez\", ubicado en jurisdiccion del municipio de puerto boyaca del departamento de boyaca",
-  "ubicación": "jurisdicción del municipio de Puerto Boyacá del departamento de Boyacá",
-  "ubicacion_normalizada": "jurisdiccion del municipio de puerto boyaca del departamento de boyaca",
-  "empresa": "ECOPETROL y MANSAROVAR; en donde MANSAROVAR realizará el monitoreo semestral en los meses de junio y diciembre",
-  "empresa_normalizada": "ecopetrol y mansarovar; en donde mansarovar realizara el monitoreo semestral en los meses de junio y diciembre",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "diagnóstico,",
+  "nombre_proyecto_normalizado": "DIAGNOSTICO",
+  "ubicación": "departamento de Boyacá",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0232",
   "radicados": [
     "20236200786262",
@@ -19,10 +19,10 @@
     "Manejo de aguas",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "46377",
   "file_name": "ANLA_46377.pdf",

@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 003142",
   "fecha_resolución": "2023-09-18",
-  "nombre_proyecto": "Bloque Casanare A1a, localizado en jurisdicción de los municipios de Yopal, Maní y Aguazul, en el departamento de Casana",
-  "nombre_proyecto_normalizada": "bloque casanare a1a, localizado en jurisdiccion de los municipios de yopal, mani y aguazul, en el departamento de casana",
-  "ubicación": "jurisdicción de los municipios de Yopal, Maní y Aguazul, en el departamento de Casanare",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de yopal, mani y aguazul, en el departamento de casanare",
-  "empresa": "PERENCO COLOMBIA LIMITED",
-  "empresa_normalizada": "perenco colombia limited",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Bloque Casanare A1a, localizado en jurisdicción de los municipios de Yopal, Maní",
+  "nombre_proyecto_normalizado": "BLOQUE CASANARE A1A LOCALIZADO EN JURISDICCION DE LOS MUNICIPIOS DE YOPAL MANI",
+  "ubicación": "departamento de Casanare",
+  "empresa": "PERENCO",
+  "empresa_normalizada": "PERENCO",
   "numero_expediente": "LAM0715",
   "radicados": [
     "20236200692062",
@@ -32,8 +32,8 @@
   "tipos_infraccion": [
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45113",
   "file_name": "ANLA_45113.pdf",

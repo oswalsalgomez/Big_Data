@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000750",
   "fecha_resolución": "2023-12-28",
-  "nombre_proyecto": "denominado \"ÁREA DE PERFORACIÓN EXPLORATORIA AMANECER\", localizado en jurisdicción de los municipios del Carmen de Apica",
-  "nombre_proyecto_normalizada": "denominado \"area de perforacion exploratoria amanecer\", localizado en jurisdiccion de los municipios del carmen de apica",
-  "ubicación": "jurisdicción de los municipios del Carmen de Apicalá, Melgar y Suárez, en el departamento del Tolima",
-  "ubicacion_normalizada": "jurisdiccion de los municipios del carmen de apicala, melgar y suarez, en el departamento del tolima",
-  "empresa": "EXPLOTACIONES CMS OIL AND GAS COMPANY",
-  "empresa_normalizada": "explotaciones cms oil and gas company",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "ÁREA DE PERFORACIÓN EXPLORATORIA AMANECER",
+  "nombre_proyecto_normalizado": "AREA DE PERFORACION EXPLORATORIA AMANECER",
+  "ubicación": "Municipio de Apicalá invitando a la población",
+  "empresa": "A LA SOCIEDAD CEPSA COLOMBIA S.A.",
+  "empresa_normalizada": "A LA CEPSA COLOMBIA",
   "numero_expediente": "LAM2694",
   "radicados": [
     "20246200046542",
@@ -20,10 +20,10 @@
     "Manejo de aguas",
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "46150",
   "file_name": "ANLA_46150.pdf",

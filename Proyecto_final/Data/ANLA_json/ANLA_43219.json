@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1560",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "Oleoducto Castilla - Apiay Línea 30”",
-  "nombre_proyecto_normalizada": "oleoducto castilla - apiay linea 30\"",
-  "ubicación": "el Municipio de San Martín de los Llanos en el Departamento del Meta, así",
-  "ubicacion_normalizada": "el municipio de san martin de los llanos en el departamento del meta, asi",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Oleoducto Castilla - Apiay",
+  "nombre_proyecto_normalizado": "OLEODUCTO CASTILLA APIAY",
+  "ubicación": "Municipio de San Martín de los Llanos en el Departamento del Meta, así",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM2947",
   "radicados": [
     "2022237705",
@@ -20,9 +20,9 @@
     "Manejo de aguas",
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "43219",
   "file_name": "ANLA_43219.pdf",

@@ -2,20 +2,20 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000977",
   "fecha_resolución": "2023-12-15",
-  "nombre_proyecto": "“Reentry del pozo Nancy – 1”, ubicado en jurisdicción del departamento de Putumayo (en adelante proyecto)",
-  "nombre_proyecto_normalizada": "\"reentry del pozo nancy – 1\", ubicado en jurisdiccion del departamento de putumayo (en adelante proyecto)",
-  "ubicación": "jurisdicción del departamento de Putumayo (en adelante proyecto)",
-  "ubicacion_normalizada": "jurisdiccion del departamento de putumayo (en adelante proyecto)",
-  "empresa": "Gran Tierra Energy LLC Sucursal y TERMOTÉCNICA COINDUSTRIAL S",
-  "empresa_normalizada": "gran tierra energy llc sucursal y termotecnica coindustrial s",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Reentry del pozo Nancy – 1”, ubicado en jurisdicción del departamento de",
+  "nombre_proyecto_normalizado": "REENTRY DEL POZO NANCY 1 UBICADO EN JURISDICCION DEL DEPARTAMENTO DE",
+  "ubicación": "departamento de Putumayo (en adelante proyecto)",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "SAN0192-00-2016",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RECHAZA UNA SOLICITUD DE REVOCATORIA DIRECTA, SE RESUELVE EL RECURSO DE REPOSICIÓN INTERPUESTO CONTRA LA RESOLUCIÓN No. 2966 DEL 15 DE DICIEMBRE DE 2023 Y SE ADOPTAN OTRAS DETERMINACIONES",
   "tipos_infraccion": [
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "46489",
   "file_name": "ANLA_46489.pdf",

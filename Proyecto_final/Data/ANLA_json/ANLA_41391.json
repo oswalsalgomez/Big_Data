@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 03040",
   "fecha_resolución": "2022-12-23",
+  "anio_resolucion": "2022",
   "nombre_proyecto": "Explotación Bloque Cabrestero",
-  "nombre_proyecto_normalizada": "explotacion bloque cabrestero",
-  "ubicación": "departamento de Casanare, a la Corporación Autónoma Regional de la Orinoquia – CORPORINOQUIA, y a la Procuraduría Delegada para Asuntos Ambientales y Agrarios",
-  "ubicacion_normalizada": "departamento de casanare, a la corporacion autonoma regional de la orinoquia – corporinoquia, y a la procuraduria delegada para asuntos ambientales y agrarios",
-  "empresa": "PAREX RESORUCES COLOMBIA LTD",
-  "empresa_normalizada": "parex resoruces colombia ltd",
+  "nombre_proyecto_normalizado": "EXPLOTACION BLOQUE CABRESTERO",
+  "ubicación": "departamento de Casanare, a la Corporación Autónoma Regional de la Orinoquia –",
+  "empresa": "PAREX",
+  "empresa_normalizada": "PAREX",
   "numero_expediente": "LAV0084-00-2014",
   "radicados": [
     "2021092418",
@@ -20,9 +20,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "41391",
   "file_name": "ANLA_41391.pdf",

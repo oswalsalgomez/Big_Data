@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00253",
   "fecha_resolución": "2023-02-14",
-  "nombre_proyecto": "Plan de Manejo Ambiental Unificado para la totalidad del proyecto Resolución No",
-  "nombre_proyecto_normalizada": "plan de manejo ambiental unificado para la totalidad del proyecto resolucion no",
-  "ubicación": "los municipios de Barrancabermeja, San Vicente de Chucurí y Simacota, departamento de Santander",
-  "ubicacion_normalizada": "los municipios de barrancabermeja, san vicente de chucuri y simacota, departamento de santander",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Plan de Manejo Ambiental Unificado para la totalidad del proyecto",
+  "nombre_proyecto_normalizado": "PLAN DE MANEJO AMBIENTAL UNIFICADO PARA LA TOTALIDAD DEL PROYECTO",
+  "ubicación": "departamento de Santander",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "2249",
   "radicados": [
     "2019122249",
@@ -20,11 +20,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "emisiones atmosfericas",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "EMISIONES ATMOSFERICAS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "41601",
   "file_name": "ANLA_41601.pdf",

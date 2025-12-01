@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 03001",
   "fecha_resolución": "2022-12-19",
-  "nombre_proyecto": "denominado “Área de Interés Exploratoria Llanos 32, localizado en jurisdicción de los municipios de Tauramena y Maní, en",
-  "nombre_proyecto_normalizada": "denominado \"area de interes exploratoria llanos 32, localizado en jurisdiccion de los municipios de tauramena y mani, en",
-  "ubicación": "jurisdicción de los municipios de Tauramena y Maní, en el departamento de Casanare",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de tauramena y mani, en el departamento de casanare",
-  "empresa": "TC OIL S.A",
-  "empresa_normalizada": "tc oil s.a",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Área de Interés Exploratoria",
+  "nombre_proyecto_normalizado": "AREA DE INTERES EXPLORATORIA",
+  "ubicación": "departamento de Casanare",
+  "empresa": "PAREX",
+  "empresa_normalizada": "PAREX",
   "numero_expediente": "No",
   "radicados": [
     "2019157243",
@@ -21,10 +21,10 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "41263",
   "file_name": "ANLA_41263.pdf",

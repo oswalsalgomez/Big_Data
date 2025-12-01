@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00701",
   "fecha_resolución": "2023-04-10",
-  "nombre_proyecto": "denominado “Campo de Producción Cumanday”, localizado en jurisdicción del municipio de Puerto Gaitán en el departamento",
-  "nombre_proyecto_normalizada": "denominado \"campo de produccion cumanday\", localizado en jurisdiccion del municipio de puerto gaitan en el departamento",
-  "ubicación": "jurisdicción del municipio de Puerto Gaitán en el departamento del Meta",
-  "ubicacion_normalizada": "jurisdiccion del municipio de puerto gaitan en el departamento del meta",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Campo de Producción Cumanday”, localizado en",
+  "nombre_proyecto_normalizado": "CAMPO DE PRODUCCION CUMANDAY LOCALIZADO EN",
+  "ubicación": "municipio de Puerto Gaitán en el departamento del Meta",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "ATV-00791",
   "radicados": [
     "2023000555",
@@ -22,9 +22,9 @@
     "Manejo de aguas",
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "42239",
   "file_name": "ANLA_42239.pdf",

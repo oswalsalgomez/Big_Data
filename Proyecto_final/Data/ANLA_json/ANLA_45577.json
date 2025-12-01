@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000267",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Construcción y operación del Oleoducto Cusiana-Porvenir”, localizado en jurisdicción de los Municipios de Tauramena y M",
-  "nombre_proyecto_normalizada": "\"construccion y operacion del oleoducto cusiana-porvenir\", localizado en jurisdiccion de los municipios de tauramena y m",
-  "ubicación": "jurisdicción de los Municipios de Tauramena y Monterrey en el Departamento de Casanare",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de tauramena y monterrey en el departamento de casanare",
-  "empresa": "BP EXPLORATION COMPANY COLOMBIA LIMITED identificada con NIT 860002426 -3",
-  "empresa_normalizada": "bp exploration company colombia limited identificada con nit 860002426 -3",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Construcción y operación del Oleoducto Cusiana-Porvenir”,",
+  "nombre_proyecto_normalizado": "CONSTRUCCION Y OPERACION DEL OLEODUCTO CUSIANA PORVENIR",
+  "ubicación": "Departamento de Casanare",
+  "empresa": "TGI S.A.",
+  "empresa_normalizada": "TGI",
   "numero_expediente": "LAM0278",
   "radicados": [
     "2023024738"
@@ -17,9 +17,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45577",
   "file_name": "ANLA_45577.pdf",

@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000670",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Instalación de la línea de 37 kilómetros de 16\", denominado “Oleoducto Cupiagua – Cusiana”, localizado en jurisdicción",
-  "nombre_proyecto_normalizada": "\"instalacion de la linea de 37 kilometros de 16\", denominado \"oleoducto cupiagua – cusiana\", localizado en jurisdiccion",
-  "ubicación": "jurisdicción de los Municipios de Aguazul y Tauramena en el Departamento del Casanare",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de aguazul y tauramena en el departamento del casanare",
-  "empresa": "OLEODUCTO CENTRAL S",
-  "empresa_normalizada": "oleoducto central s",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Instalación de la línea de 37 kilómetros de 16\", denominado “Oleoducto",
+  "nombre_proyecto_normalizado": "INSTALACION DE LA LINEA DE 37 KILOMETROS DE 16 DENOMINADO OLEODUCTO",
+  "ubicación": "localizado en jurisdicción de los Municipios de Aguazul y Tauramena",
+  "empresa": "OCENSA",
+  "empresa_normalizada": "OCENSA",
   "numero_expediente": "LAM1226",
   "radicados": [
     "2022229297",
@@ -19,8 +19,8 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "46003",
   "file_name": "ANLA_46003.pdf",

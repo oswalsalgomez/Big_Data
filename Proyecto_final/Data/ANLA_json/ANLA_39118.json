@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01015",
   "fecha_resolución": "2022-05-16",
-  "nombre_proyecto": "“Área de Perforación Exploratoria Cóndor”, localizado en jurisdicción de los municipios de Paratebueno y San Luis de Gac",
-  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria condor\", localizado en jurisdiccion de los municipios de paratebueno y san luis de gac",
-  "ubicación": "jurisdicción de los municipios de Paratebueno y San Luis de Gaceno, en jurisdicción de los departamentos de Cundinamarca y Boyacá",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de paratebueno y san luis de gaceno, en jurisdiccion de los departamentos de cundinamarca y boyaca",
-  "empresa": "LUKOIL OVERSEAS COLOMBIA LTD",
-  "empresa_normalizada": "lukoil overseas colombia ltd",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Diseño y construcción de una red",
+  "nombre_proyecto_normalizado": "DISENO Y CONSTRUCCION DE UNA RED",
+  "ubicación": "departamento de Boyacá, Sabanalarga en el departamento de",
+  "empresa": "COLOMBIA LTD",
+  "empresa_normalizada": "COLOMBIA",
   "numero_expediente": "LAM2981",
   "radicados": [
     "2022044932"
@@ -19,11 +19,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "39118",
   "file_name": "ANLA_39118.pdf",

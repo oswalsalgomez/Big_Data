@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1168",
   "fecha_resolución": "2023-01-20",
-  "nombre_proyecto": "denominado “Puerto El Cayao”, (construcción de una terminal de importación, regasificación y potencial exportación de ga",
-  "nombre_proyecto_normalizada": "denominado \"puerto el cayao\", (construccion de una terminal de importacion, regasificacion y potencial exportacion de ga",
-  "ubicación": "la jurisdicción del Distrito Turístico y Cultural de Cartagena de Indias, departamento de Bolívar",
-  "ubicacion_normalizada": "la jurisdiccion del distrito turistico y cultural de cartagena de indias, departamento de bolivar",
-  "empresa": "Portuaria El Cayao S",
-  "empresa_normalizada": "portuaria el cayao s",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Puerto El Cayao”, (construcción de una",
+  "nombre_proyecto_normalizado": "PUERTO EL CAYAO CONSTRUCCION DE UNA",
+  "ubicación": "departamento de Bolívar",
+  "empresa": "PORTUARIA EL CAYAO S.A.",
+  "empresa_normalizada": "PORTUARIA EL CAYAO",
   "numero_expediente": "No",
   "radicados": [
     "2023021081"
@@ -18,10 +18,10 @@
     "Manejo de aguas",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "42821",
   "file_name": "ANLA_42821.pdf",

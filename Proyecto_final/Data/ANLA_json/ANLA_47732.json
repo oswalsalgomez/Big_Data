@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001893",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Perforación Exploratoria del Prospecto Brillante Sureste”, localizado en los Municipios de Ariguaní (El Difícil), Santa",
-  "nombre_proyecto_normalizada": "\"perforacion exploratoria del prospecto brillante sureste\", localizado en los municipios de ariguani (el dificil), santa",
-  "ubicación": "los Municipios de Ariguaní (El Difícil), Santa Ana y El Pijiño del Carmen, en el Departamento de Magdalena",
-  "ubicacion_normalizada": "los municipios de ariguani (el dificil), santa ana y el pijino del carmen, en el departamento de magdalena",
-  "empresa": "PETROLÍFERA PETROLEUM COLOMBIA LIMITED",
-  "empresa_normalizada": "petrolifera petroleum colombia limited",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Perforación Exploratoria del Prospecto Brillante Sureste",
+  "nombre_proyecto_normalizado": "PERFORACION EXPLORATORIA DEL PROSPECTO BRILLANTE SURESTE",
+  "ubicación": "Departamento de Magdalena",
+  "empresa": "FÁCTICAS Y JURÍDICAS IMPRECISAS",
+  "empresa_normalizada": "FACTICAS Y JURIDICAS IMPRECISAS",
   "numero_expediente": "LAM4155",
   "radicados": [
     "2019189191",
@@ -22,10 +22,10 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "47732",
   "file_name": "ANLA_47732.pdf",

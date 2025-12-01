@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01910",
   "fecha_resolución": "2022-09-08",
-  "nombre_proyecto": "denominado “Explotación de Hidrocarburos en el Campo Vikingo del Bloque Lla-47”, localizado en jurisdicción del municipi",
-  "nombre_proyecto_normalizada": "denominado \"explotacion de hidrocarburos en el campo vikingo del bloque lla-47\", localizado en jurisdiccion del municipi",
-  "ubicación": "jurisdicción del municipio de Orocué en el departamento del Casanare, con un área de 6,03 hectáreas",
-  "ubicacion_normalizada": "jurisdiccion del municipio de orocue en el departamento del casanare, con un area de 6,03 hectareas",
-  "empresa": "INTEROIL COLOMBIA EXPLORATION AND PRODUCTION",
-  "empresa_normalizada": "interoil colombia exploration and production",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Explotación de Hidrocarburos en el Campo Vikingo del Bloque Lla-47”, es procedente el recurso de",
+  "nombre_proyecto_normalizado": "EXPLOTACION DE HIDROCARBUROS EN EL CAMPO VIKINGO DEL BLOQUE LLA 47 ES PROCEDENTE EL RECURSO DE",
+  "ubicación": "departamento de Casanare, con un área de 6,03 hectáreas, ubicado en las",
+  "empresa": "ASÍ LAS COSAS",
+  "empresa_normalizada": "ASI LAS COSAS",
   "numero_expediente": "LAV0078-00-2021",
   "radicados": [
     "2022140398",
@@ -21,11 +21,11 @@
     "Manejo de aguas",
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "manejo de aguas",
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "40370",
   "file_name": "ANLA_40370.pdf",

@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002195",
   "fecha_resolución": "2024-06-18",
-  "nombre_proyecto": "“Campo Rubiales”, en lo referente a los siguientes aspectos: área, Resolución No",
-  "nombre_proyecto_normalizada": "\"campo rubiales\", en lo referente a los siguientes aspectos: area, resolucion no",
-  "ubicación": "el municipio de Puerto Gaitán, departamento del Meta",
-  "ubicacion_normalizada": "el municipio de puerto gaitan, departamento del meta",
-  "empresa": "Meta Petroleum Limited",
-  "empresa_normalizada": "meta petroleum limited",
+  "anio_resolucion": "2024",
+  "nombre_proyecto": "Campo Rubiales”, en lo referente a los siguientes aspectos: área,",
+  "nombre_proyecto_normalizado": "CAMPO RUBIALES EN LO REFERENTE A LOS SIGUIENTES ASPECTOS AREA",
+  "ubicación": "municipio de Puerto Gaitán, departamento del Meta",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0019",
   "radicados": [
     "20246200745942"
@@ -17,9 +17,9 @@
     "Vertimientos",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "48378",
   "file_name": "ANLA_48378.pdf",

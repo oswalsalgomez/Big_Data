@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002151",
   "fecha_resolución": "2024-06-18",
-  "nombre_proyecto": "denominado “Campo de Explotación de Hidrocarburos Acordionero”, localizado en el municipio de San Martín, departamento d",
-  "nombre_proyecto_normalizada": "denominado \"campo de explotacion de hidrocarburos acordionero\", localizado en el municipio de san martin, departamento d",
-  "ubicación": "el municipio de San Martín, departamento del Cesar",
-  "ubicacion_normalizada": "el municipio de san martin, departamento del cesar",
-  "empresa": "UNION TEMPORAL MIDAS para el proyecto denominado “Campo de Explotación de Hidrocarburos Acordionero”",
-  "empresa_normalizada": "union temporal midas para el proyecto denominado \"campo de explotacion de hidrocarburos acordionero\"",
+  "anio_resolucion": "2024",
+  "nombre_proyecto": "Campo de",
+  "nombre_proyecto_normalizado": "CAMPO DE",
+  "ubicación": "municipio de San Martín,",
+  "empresa": "GRAN TIERRA",
+  "empresa_normalizada": "GRAN TIERRA",
   "numero_expediente": "LAV0105-00-2014",
   "radicados": [
     "20200389631000",
@@ -23,9 +23,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "48137",
   "file_name": "ANLA_48137.pdf",

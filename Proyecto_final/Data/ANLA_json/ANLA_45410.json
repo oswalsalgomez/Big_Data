@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000147",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Área de Perforación Exploratoria Sector Sur del Bloque Piedemonte”, localizado en los Municipios de Yopal, vereda El Pa",
-  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria sector sur del bloque piedemonte\", localizado en los municipios de yopal, vereda el pa",
-  "ubicación": "los Municipios de Yopal, vereda El Palmar, corregimiento El Morro, en el Departamento de Casanare",
-  "ubicacion_normalizada": "los municipios de yopal, vereda el palmar, corregimiento el morro, en el departamento de casanare",
-  "empresa": "BRITISH PETROLEUM EXPLORATION COMPANY COLOMBIA LTD",
-  "empresa_normalizada": "british petroleum exploration company colombia ltd",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "y la Fundación Natura, realizaron monitoreos mensuales de las áreas objeto",
+  "nombre_proyecto_normalizado": "Y LA FUNDACION NATURA REALIZARON MONITOREOS MENSUALES DE LAS AREAS OBJETO",
+  "ubicación": "Departamento de Casanare",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM4021",
   "radicados": [
     "2023012374",
@@ -19,9 +19,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45410",
   "file_name": "ANLA_45410.pdf",

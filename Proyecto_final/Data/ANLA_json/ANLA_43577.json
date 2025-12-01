@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1788",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Campos Petroleros Casabe y Peñas Blancas”, ubicado en jurisdicción del Municipio Yondó en el Departamento de Antioquia",
-  "nombre_proyecto_normalizada": "\"campos petroleros casabe y penas blancas\", ubicado en jurisdiccion del municipio yondo en el departamento de antioquia",
-  "ubicación": "jurisdicción del Municipio Yondó en el Departamento de Antioquia",
-  "ubicacion_normalizada": "jurisdiccion del municipio yondo en el departamento de antioquia",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Campos Petroleros",
+  "nombre_proyecto_normalizado": "CAMPOS PETROLEROS",
+  "ubicación": "Departamento de Antioquia",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0855",
   "radicados": [
     "2022218625",
@@ -24,11 +24,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "43577",
   "file_name": "ANLA_43577.pdf",

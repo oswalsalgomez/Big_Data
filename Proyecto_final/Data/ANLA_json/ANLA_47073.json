@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001401",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "El Cerrejón Zona Norte",
-  "nombre_proyecto_normalizada": "el cerrejon zona norte",
-  "ubicación": "jurisdicción de los Municipios de Albania, Hato Nuevo, Maicao, Uribía y Barrancas en el Departamento de la Guajira, desarrollado por la sociedad, hasta la realización del trámite consultivo con la comunidad Media Luna Dos",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de albania, hato nuevo, maicao, uribia y barrancas en el departamento de la guajira, desarrollado por la sociedad, hasta la realizacion del tramite consultivo con la comunidad media luna dos",
-  "empresa": "INTERCOR y CARBONES DEL Resolución No",
-  "empresa_normalizada": "intercor y carbones del resolucion no",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Explotación de Carbón",
+  "nombre_proyecto_normalizado": "EXPLOTACION DE CARBON",
+  "ubicación": "Departamento de la Guajira; e impuso a la Sociedad la presentación",
+  "empresa": "PRESENTADO POR CARBOCOL E INTERCOR CZN S.A.",
+  "empresa_normalizada": "PRESENTADO POR CARBOCOL E INTERCOR CZN",
   "numero_expediente": "LAM1110",
   "radicados": [
     "2022241185",
@@ -23,11 +23,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "emisiones atmosfericas",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "EMISIONES ATMOSFERICAS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "47073",
   "file_name": "ANLA_47073.pdf",

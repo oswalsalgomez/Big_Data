@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00799",
   "fecha_resolución": "2022-04-21",
-  "nombre_proyecto": "“Campos Petroleros Cantagallo y Aledaños” y que modificó la Resolución 211 del 21 de febrero de 2003, modificada mediant",
-  "nombre_proyecto_normalizada": "\"campos petroleros cantagallo y aledanos\" y que modifico la resolucion 211 del 21 de febrero de 2003, modificada mediant",
-  "ubicación": "departamento de Bolívar; Puerto Wilches y Sabana de Torres, en el departamento de Santander, y Aguachica, en el departamento de Cesar",
-  "ubicacion_normalizada": "departamento de bolivar; puerto wilches y sabana de torres, en el departamento de santander, y aguachica, en el departamento de cesar",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Campos Petroleros Cantagallo y Aledaños” y que modificó la Resolución",
+  "nombre_proyecto_normalizado": "CAMPOS PETROLEROS CANTAGALLO Y ALEDANOS Y QUE MODIFICO LA RESOLUCION",
+  "ubicación": "departamento de Bolívar; Puerto Wilches y Sabana de Torres, en el departamento",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "No",
   "radicados": [
     "2021246336"
@@ -18,10 +18,10 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "39130",
   "file_name": "ANLA_39130.pdf",

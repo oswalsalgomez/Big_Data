@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000558",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Perforación de los pozos de desarrollo denominados Pozos múltiples Buenos Aires W",
-  "nombre_proyecto_normalizada": "\"perforacion de los pozos de desarrollo denominados pozos multiples buenos aires w",
-  "ubicación": "el Municipio de Tauramena, Departamento del Casanare",
-  "ubicacion_normalizada": "el municipio de tauramena, departamento del casanare",
-  "empresa": "BP EXPLORATION COMPANY (COLOMBIA)LIMITED",
-  "empresa_normalizada": "bp exploration company (colombia)limited",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Perforación de los pozos de desarrollo denominados Pozos múltiples Buenos",
+  "nombre_proyecto_normalizado": "PERFORACION DE LOS POZOS DE DESARROLLO DENOMINADOS POZOS MULTIPLES BUENOS",
+  "ubicación": "departamento de Casanare, para el desarrollo del proyecto “Proyecto productivo de uso",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "con",
   "radicados": [
     "2019179595"
@@ -16,8 +16,8 @@
   "tipos_infraccion": [
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45895",
   "file_name": "ANLA_45895.pdf",

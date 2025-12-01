@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02779",
   "fecha_resolución": "2022-11-23",
-  "nombre_proyecto": "denominado \"Operación y Mantenimiento del Combustoleoducto Ayacucho - Retiro - Coveñas\" donde se incluyen las actividade",
-  "nombre_proyecto_normalizada": "denominado \"operacion y mantenimiento del combustoleoducto ayacucho - retiro - covenas\" donde se incluyen las actividade",
-  "ubicación": "Departamento de Bolívar y Buenavista, Galeras, Sincé, San Juan de Betulia, Corozal, Morroa, Sincelejo, Palmito, San Onofre, Coveñas y Santiago de Tolú en el Departamento de Sucre",
-  "ubicacion_normalizada": "departamento de bolivar y buenavista, galeras, since, san juan de betulia, corozal, morroa, sincelejo, palmito, san onofre, covenas y santiago de tolu en el departamento de sucre",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Operación y Mantenimiento del Combustoleoducto Ayacucho - Retiro - Coveñas",
+  "nombre_proyecto_normalizado": "OPERACION Y MANTENIMIENTO DEL COMBUSTOLEODUCTO AYACUCHO RETIRO COVENAS",
+  "ubicación": "Departamento de Santander; La",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0862",
   "radicados": [
     "2022221804",
@@ -19,10 +19,10 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "emisiones atmosfericas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "EMISIONES ATMOSFERICAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "41066",
   "file_name": "ANLA_41066.pdf",

@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001630",
   "fecha_resolución": "2023-09-11",
-  "nombre_proyecto": "denominado \"Perforación Exploratoria Bloque CP0-6”, ubicado en jurisdicción de los municipios de Puerto Gaitán y Puerto",
-  "nombre_proyecto_normalizada": "denominado \"perforacion exploratoria bloque cp0-6\", ubicado en jurisdiccion de los municipios de puerto gaitan y puerto",
-  "ubicación": "jurisdicción de los municipios de Puerto Gaitán y Puerto López, en el departamento del Meta",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de puerto gaitan y puerto lopez, en el departamento del meta",
-  "empresa": "TECPECOL S",
-  "empresa_normalizada": "tecpecol s",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Perforación Exploratoria Bloque CP0-6”, ubicado en jurisdicción de los municipios de Puerto Gaitán y Puerto López, en el departamento del Meta. Que por medio de la Resolución 0137 del 1 de marzo de 2012 aclarada por la Resolución 0192 del 22 de marzo de 2012, la Autoridad Nacional de Licencias Ambientales -ANLA aceptó el cambio de razón social del titular de la Licencia Ambiental otorgada al proyecto denominado",
+  "nombre_proyecto_normalizado": "PERFORACION EXPLORATORIA BLOQUE CP0 6 UBICADO EN JURISDICCION DE LOS MUNICIPIOS DE PUERTO GAITAN Y PUERTO LOPEZ EN EL DEPARTAMENTO DEL META QUE POR MEDIO DE LA RESOLUCION 0137 DEL 1 DE MARZO DE 2012 ACLARADA POR LA RESOLUCION 0192 DEL 22 DE MARZO DE 2012 LA AUTORIDAD NACIONAL DE LICENCIAS AMBIENTALES ANLA ACEPTO EL CAMBIO DE RAZON SOCIAL DEL TITULAR DE LA LICENCIA AMBIENTAL OTORGADA AL PROYECTO DENOMINADO",
+  "ubicación": "departamento de Meta, a la Corporación para el Desarrollo Sostenible del Área de Manejo Especial",
+  "empresa": "OTORGÓ LICENCIA AMBIENTAL A LA SOCIEDAD TECPECOL S.A.",
+  "empresa_normalizada": "OTORGO LICENCIA AMBIENTAL A LA TECPECOL",
   "numero_expediente": "LAM5131",
   "radicados": [
     "20236200654152",
@@ -17,8 +17,8 @@
   "tipos_infraccion": [
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "47382",
   "file_name": "ANLA_47382.pdf",

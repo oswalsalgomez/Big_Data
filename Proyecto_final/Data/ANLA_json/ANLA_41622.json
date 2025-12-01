@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00273",
   "fecha_resolución": "2023-02-16",
-  "nombre_proyecto": "Construcción y Operación del Área de Pozos Múltiples denominados Cusiana R y Cusiana V",
-  "nombre_proyecto_normalizada": "construccion y operacion del area de pozos multiples denominados cusiana r y cusiana v",
-  "ubicación": "la jurisdicción del municipio de Aguazul en el departamento de Casanare",
-  "ubicacion_normalizada": "la jurisdiccion del municipio de aguazul en el departamento de casanare",
-  "empresa": "BP EXPLORATION COMPANY (COLOMBIA) LTDA",
-  "empresa_normalizada": "bp exploration company (colombia) ltda",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "CONSTRUCCIÓN Y OPERACIÓN DE LOS",
+  "nombre_proyecto_normalizado": "CONSTRUCCION Y OPERACION DE LOS",
+  "ubicación": "departamento de Casanare, se interpuso recurso de reposición por parte de la apoderada general",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0017",
   "radicados": [
     "2022283973",
@@ -20,11 +20,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "41622",
   "file_name": "ANLA_41622.pdf",

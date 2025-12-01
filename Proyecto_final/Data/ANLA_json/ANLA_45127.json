@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 003125",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Explotación y Desarrollo del Campo Río Verde”, ubicado en los municipios de Yopal y San Luis de Palenque del departamen",
-  "nombre_proyecto_normalizada": "\"explotacion y desarrollo del campo rio verde\", ubicado en los municipios de yopal y san luis de palenque del departamen",
-  "ubicación": "los municipios de Yopal y San Luis de Palenque del departamento de Casanare",
-  "ubicacion_normalizada": "los municipios de yopal y san luis de palenque del departamento de casanare",
-  "empresa": "HARKEN DE COLOMBIA LIMITED identificada con NIT 800",
-  "empresa_normalizada": "harken de colombia limited identificada con nit 800",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Explotación y Desarrollo del",
+  "nombre_proyecto_normalizado": "EXPLOTACION Y DESARROLLO DEL",
+  "ubicación": "departamento de Casanare",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "No",
   "radicados": [
     "2022022824",
@@ -19,8 +19,8 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "45127",
   "file_name": "ANLA_45127.pdf",

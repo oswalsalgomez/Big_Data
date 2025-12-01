@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000684",
   "fecha_resolución": "2015-07-30",
-  "nombre_proyecto": "\"CAMPO DE EXPLOTACIÓN DE HIDROCARBUROS ACORDIONERO\", localizado en jurisdicción del municipio de San Martín en el depart",
-  "nombre_proyecto_normalizada": "\"campo de explotacion de hidrocarburos acordionero\", localizado en jurisdiccion del municipio de san martin en el depart",
-  "ubicación": "jurisdicción del municipio de San Martín en el departamento del Cesar",
-  "ubicacion_normalizada": "jurisdiccion del municipio de san martin en el departamento del cesar",
-  "empresa": "GRAN TIERRA ENERGY COLOMBIA",
-  "empresa_normalizada": "gran tierra energy colombia",
+  "anio_resolucion": "2015",
+  "nombre_proyecto": "CAMPO DE EXPLOTACIÓN",
+  "nombre_proyecto_normalizado": "CAMPO DE EXPLOTACION",
+  "ubicación": "departamento de Cesar; asimismo,",
+  "empresa": "GRAN TIERRA",
+  "empresa_normalizada": "GRAN TIERRA",
   "numero_expediente": "de",
   "radicados": [
     "20236200590522"
@@ -16,8 +16,8 @@
   "tipos_infraccion": [
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "46026",
   "file_name": "ANLA_46026.pdf",

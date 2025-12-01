@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02603",
   "fecha_resolución": "2022-10-27",
-  "nombre_proyecto": "“Área Exploratoria Campo Rico A”, localizado en jurisdicción del municipio de Maní, departamento del Casanare",
-  "nombre_proyecto_normalizada": "\"area exploratoria campo rico a\", localizado en jurisdiccion del municipio de mani, departamento del casanare",
-  "ubicación": "jurisdicción del municipio de Maní, departamento del Casanare",
-  "ubicacion_normalizada": "jurisdiccion del municipio de mani, departamento del casanare",
-  "empresa": "EMERALD ENERGY PLC",
-  "empresa_normalizada": "emerald energy plc",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Área Exploratoria Campo",
+  "nombre_proyecto_normalizado": "AREA EXPLORATORIA CAMPO",
+  "ubicación": "departamento de Casanare",
+  "empresa": "ASÍ LAS COSAS",
+  "empresa_normalizada": "ASI LAS COSAS",
   "numero_expediente": "LAM2825",
   "radicados": [
     "2022003670",
@@ -20,11 +20,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "40957",
   "file_name": "ANLA_40957.pdf",

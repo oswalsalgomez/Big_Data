@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000221",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Campo de Desarrollo Caricare” cuya infraestructura comprende 95 pozos, localizado en jurisdicción del Municipio de Arau",
-  "nombre_proyecto_normalizada": "\"campo de desarrollo caricare\" cuya infraestructura comprende 95 pozos, localizado en jurisdiccion del municipio de arau",
-  "ubicación": "jurisdicción del Municipio de Arauquita en el Departamento de Arauca",
-  "ubicacion_normalizada": "jurisdiccion del municipio de arauquita en el departamento de arauca",
-  "empresa": "OCCIDENTAL DE COLOMBIA INC",
-  "empresa_normalizada": "occidental de colombia inc",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Campo de Desarrollo Caricare” cuya infraestructura comprende 95",
+  "nombre_proyecto_normalizado": "CAMPO DE DESARROLLO CARICARE CUYA INFRAESTRUCTURA COMPRENDE 95",
+  "ubicación": "Departamento de Arauca",
+  "empresa": "ENTRE OTRAS COSAS",
+  "empresa_normalizada": "ENTRE OTRAS COSAS",
   "numero_expediente": "LAM3368",
   "radicados": [
     "2020116833",
@@ -21,11 +21,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45484",
   "file_name": "ANLA_45484.pdf",

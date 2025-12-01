@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 00921",
   "fecha_resolución": "2022-05-06",
-  "nombre_proyecto": "Campos Petroleros Cantagallo y Aledaños ( conformado por los Campos Yariguí – Cantagallo, Campo Cristalina, Campo Sogamo",
-  "nombre_proyecto_normalizada": "campos petroleros cantagallo y aledanos ( conformado por los campos yarigui – cantagallo, campo cristalina, campo sogamo",
-  "ubicación": "departamento de Santander, municipios Puerto Wilches, Sabana de Torres y Rionegro, departamento de Cesar, municipio de Aguachica y departamento de Norte de Santander, municipio La Esperanza",
-  "ubicacion_normalizada": "departamento de santander, municipios puerto wilches, sabana de torres y rionegro, departamento de cesar, municipio de aguachica y departamento de norte de santander, municipio la esperanza",
-  "empresa": "ECOPETROL una compensación por los días que no se ha podido realizar las actividades de pesca",
-  "empresa_normalizada": "ecopetrol una compensacion por los dias que no se ha podido realizar las actividades de pesca",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Campos Petroleros Cantagallo y Aledaños ( conformado por los Campos",
+  "nombre_proyecto_normalizado": "CAMPOS PETROLEROS CANTAGALLO Y ALEDANOS CONFORMADO POR LOS CAMPOS",
+  "ubicación": "departamento de Bolívar en los",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "SAN0160-00-2018",
   "radicados": [
     "2020051895"
@@ -17,9 +17,9 @@
     "Manejo de aguas",
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "39065",
   "file_name": "ANLA_39065.pdf",

@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2655",
   "fecha_resolución": "2023-03-27",
-  "nombre_proyecto": "Oleoducto Velásquez Galán localizado en los municipios de Bolívar, Cimitarra, Puerto Parra, Simacota y Barrancabermeja",
-  "nombre_proyecto_normalizada": "oleoducto velasquez galan localizado en los municipios de bolivar, cimitarra, puerto parra, simacota y barrancabermeja",
-  "ubicación": "los municipios de Bolívar, Cimitarra, Puerto Parra, Simacota y Barrancabermeja, en el departamento de Santander y Puerto Boyacá, en el departamento de Boyacá",
-  "ubicacion_normalizada": "los municipios de bolivar, cimitarra, puerto parra, simacota y barrancabermeja, en el departamento de santander y puerto boyaca, en el departamento de boyaca",
-  "empresa": "Texas Petroleum Company multa por incumplimiento al programa de remoción de tarulla de la Ciénaga de Palagua",
-  "empresa_normalizada": "texas petroleum company multa por incumplimiento al programa de remocion de tarulla de la cienaga de palagua",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Oleoducto Velásquez Galán localizado en",
+  "nombre_proyecto_normalizado": "OLEODUCTO VELASQUEZ GALAN LOCALIZADO EN",
+  "ubicación": "departamento de Santander y Puerto Boyacá, en el departamento de Boyacá",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0332",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE RECURSO DE REPOSICIÓN EN CONTRA DE LA RESOLUCIÓN No. 600 DEL 27 DE MARZO DE 2023 Y SE TOMA OTRAS DETERMINACIONES",
@@ -18,12 +18,12 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "44604",
   "file_name": "ANLA_44604.pdf",

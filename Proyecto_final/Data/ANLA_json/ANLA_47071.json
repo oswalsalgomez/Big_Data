@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001458",
   "fecha_resolución": "2023-12-19",
-  "nombre_proyecto": "denominado “Campo Toqui Toqui”, localizado en jurisdicción del departamento del Tolima",
-  "nombre_proyecto_normalizada": "denominado \"campo toqui toqui\", localizado en jurisdiccion del departamento del tolima",
-  "ubicación": "jurisdicción del departamento del Tolima",
-  "ubicacion_normalizada": "jurisdiccion del departamento del tolima",
-  "empresa": "Interoil Colombia Exploration and Production con NIT",
-  "empresa_normalizada": "interoil colombia exploration and production con nit",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Campo Toqui Toqui”, localizado en jurisdicción del",
+  "nombre_proyecto_normalizado": "CAMPO TOQUI TOQUI LOCALIZADO EN JURISDICCION DEL",
+  "ubicación": "departamento de Tolima, donde se presentó un derrame de crudo de",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "SAN0155-00-2018",
   "radicados": [
     "2022194982",
@@ -17,8 +17,8 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "47071",
   "file_name": "ANLA_47071.pdf",

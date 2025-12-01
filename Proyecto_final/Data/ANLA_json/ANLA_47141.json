@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001517",
   "fecha_resolución": "2024-01-17",
-  "nombre_proyecto": "Bloque Santana B, localizado en el municipio de Piamonte, departamento del Cauca, entre otros aspectos",
-  "nombre_proyecto_normalizada": "bloque santana b, localizado en el municipio de piamonte, departamento del cauca, entre otros aspectos",
-  "ubicación": "el municipio de Piamonte, departamento del Cauca, entre otros aspectos",
-  "ubicacion_normalizada": "el municipio de piamonte, departamento del cauca, entre otros aspectos",
-  "empresa": "Argosy Energy International",
-  "empresa_normalizada": "argosy energy international",
+  "anio_resolucion": "2024",
+  "nombre_proyecto": "Bloque Santana B o bloque Santana & Guayuyaco; y que se ACLARE",
+  "nombre_proyecto_normalizado": "BLOQUE SANTANA B O BLOQUE SANTANA GUAYUYACO Y QUE SE ACLARE",
+  "ubicación": "departamento de Putumayo, a la Corporación",
+  "empresa": "GRAN TIERRA",
+  "empresa_normalizada": "GRAN TIERRA",
   "numero_expediente": "LAM0199",
   "radicados": [
     "20246200119562",
@@ -20,11 +20,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "47141",
   "file_name": "ANLA_47141.pdf",

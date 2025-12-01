@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002871",
   "fecha_resolución": "2023-03-08",
-  "nombre_proyecto": "Bloque Exploratorio CPO4 ubicado en el municipio de Paratebueno en el departamento del Meta y en los municipios Cabuyaro",
-  "nombre_proyecto_normalizada": "bloque exploratorio cpo4 ubicado en el municipio de paratebueno en el departamento del meta y en los municipios cabuyaro",
-  "ubicación": "el municipio de Paratebueno en el departamento del Meta y en los municipios Cabuyaro, Cumaral, Restrepo, Puerto López y Villavicencio en el departamento del Meta",
-  "ubicacion_normalizada": "el municipio de paratebueno en el departamento del meta y en los municipios cabuyaro, cumaral, restrepo, puerto lopez y villavicencio en el departamento del meta",
-  "empresa": "SK INNOVATION CO LTDA",
-  "empresa_normalizada": "sk innovation co ltda",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Resolución No. 002871 Del 13 DIC. 2023 Hoja No. 13 de 67",
+  "nombre_proyecto_normalizado": "RESOLUCION NO 002871 DEL 13 DIC 2023 HOJA NO 13 DE 67",
+  "ubicación": "departamento de Meta, a la",
+  "empresa": "PAREX",
+  "empresa_normalizada": "PAREX",
   "numero_expediente": "D-8019",
   "radicados": [
     "2023058644",
@@ -22,11 +22,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "44885",
   "file_name": "ANLA_44885.pdf",

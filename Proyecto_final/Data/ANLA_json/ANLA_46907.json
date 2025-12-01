@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001291",
   "fecha_resolución": "2024-02-28",
-  "nombre_proyecto": "de expansión del Gaseoducto desde Cusiana Fases 1 y II, la compra de predios en áreas estratégicas, entre otras determin",
-  "nombre_proyecto_normalizada": "de expansion del gaseoducto desde cusiana fases 1 y ii, la compra de predios en areas estrategicas, entre otras determin",
-  "ubicación": "la vereda Guamal jurisdicción del municipio de Miraflores en el departamento de Boyacá",
-  "ubicacion_normalizada": "la vereda guamal jurisdiccion del municipio de miraflores en el departamento de boyaca",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2024",
+  "nombre_proyecto": "Gasoducto Porvenir - La Belleza",
+  "nombre_proyecto_normalizado": "GASODUCTO PORVENIR LA BELLEZA",
+  "ubicación": "departamento de Casanare, Páez, Miraflores, Zetaquirá, Ramiriquí,",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0054",
   "radicados": [
     "2020225100",
@@ -26,13 +26,13 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "46907",
   "file_name": "ANLA_46907.pdf",

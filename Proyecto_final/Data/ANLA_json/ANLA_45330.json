@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000104",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Bloque de Perforación Exploratoria Mapuiro”, localizado en jurisdicción de los municipios de Pore, San Luis de Palenque",
-  "nombre_proyecto_normalizada": "\"bloque de perforacion exploratoria mapuiro\", localizado en jurisdiccion de los municipios de pore, san luis de palenque",
-  "ubicación": "jurisdicción de los municipios de Pore, San Luis de Palenque, Trinidad y Nunchía en el Departamento de Casanare",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de pore, san luis de palenque, trinidad y nunchia en el departamento de casanare",
-  "empresa": "GAS PETRÓLEO Y DERIVADOS DE COLOMBIA S",
-  "empresa_normalizada": "gas petroleo y derivados de colombia s",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Bloque de Perforación",
+  "nombre_proyecto_normalizado": "BLOQUE DE PERFORACION",
+  "ubicación": "Departamento de Casanare",
+  "empresa": "GAS PETRÓLEO Y DERIVADOS DE COLOMBIA S.A.",
+  "empresa_normalizada": "GAS PETROLEO Y DERIVADOS DE COLOMBIA",
   "numero_expediente": "LAM3095",
   "radicados": [
     "20236200477612"
@@ -18,10 +18,10 @@
     "Manejo de aguas",
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "45330",
   "file_name": "ANLA_45330.pdf",

@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02528",
   "fecha_resolución": "2022-10-19",
-  "nombre_proyecto": "Plan de Manejo Ambiental Integral de Mares, el cual deberá estar disponible para consulta de la ciudadanía y debe ser ac",
-  "nombre_proyecto_normalizada": "plan de manejo ambiental integral de mares, el cual debera estar disponible para consulta de la ciudadania y debe ser ac",
-  "ubicación": "jurisdicción de los municipios de Barrancabermeja, Betulia, Carmen de Chucurí, San Vicente de Chucurí, Simacota y Resolución No",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de barrancabermeja, betulia, carmen de chucuri, san vicente de chucuri, simacota y resolucion no",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "(…)",
+  "nombre_proyecto_normalizado": null,
+  "ubicación": "departamento de Santander",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "2249",
   "radicados": [
     "2022178390",
@@ -29,13 +29,13 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "40821",
   "file_name": "ANLA_40821.pdf",

@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1201",
   "fecha_resolución": "2022-10-24",
-  "nombre_proyecto": "denominado “Campo de producción 50K, perteneciente al Bloque CPO9 Llanos Orientales”, localizado en jurisdicción de los",
-  "nombre_proyecto_normalizada": "denominado \"campo de produccion 50k, perteneciente al bloque cpo9 llanos orientales\", localizado en jurisdiccion de los",
-  "ubicación": "jurisdicción de los municipios de Acacías y Guamal en el departamento del Meta",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de acacias y guamal en el departamento del meta",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Campo de producción 50K, perteneciente al Bloque CPO9 Llanos Orientales”,",
+  "nombre_proyecto_normalizado": "CAMPO DE PRODUCCION 50K PERTENECIENTE AL BLOQUE CPO9 LLANOS ORIENTALES",
+  "ubicación": "departamento de Meta y a la Procuraduría Delegada para asuntos Ambientales y Agrarios de la Procuraduría General",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAV0089-",
   "radicados": [
     "2021134433",
@@ -22,11 +22,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "42826",
   "file_name": "ANLA_42826.pdf",

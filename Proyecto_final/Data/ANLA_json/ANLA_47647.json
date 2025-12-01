@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001866",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Campos Petroleros Casabe y Peñas Blancas” ubicado en jurisdicción del Municipio de Yondó en el Departamento de Antioqui",
-  "nombre_proyecto_normalizada": "\"campos petroleros casabe y penas blancas\" ubicado en jurisdiccion del municipio de yondo en el departamento de antioqui",
-  "ubicación": "jurisdicción del Municipio de Yondó en el Departamento de Antioquia, y su Área de Influencia se extiende hasta el Municipio de Barrancabermeja en el Departamento de Santander",
-  "ubicacion_normalizada": "jurisdiccion del municipio de yondo en el departamento de antioquia, y su area de influencia se extiende hasta el municipio de barrancabermeja en el departamento de santander",
-  "empresa": "Ecopetrol S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Campos Petroleros Casabe y Peñas Blancas” ubicado en",
+  "nombre_proyecto_normalizado": "CAMPOS PETROLEROS CASABE Y PENAS BLANCAS UBICADO EN",
+  "ubicación": "Departamento de Antioquia, y su Área de",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "1184",
   "radicados": [
     "20236200868002",
@@ -18,9 +18,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "47647",
   "file_name": "ANLA_47647.pdf",

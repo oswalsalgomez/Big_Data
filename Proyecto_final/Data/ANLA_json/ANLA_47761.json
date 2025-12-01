@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001932",
   "fecha_resolución": "2024-06-21",
-  "nombre_proyecto": "de reinyección de agua asociada y previamente tratada en las formaciones productoras como sistema de recobro secundario",
-  "nombre_proyecto_normalizada": "de reinyeccion de agua asociada y previamente tratada en las formaciones productoras como sistema de recobro secundario",
-  "ubicación": "el municipio de Castilla La Nueva, departamento del Meta",
-  "ubicacion_normalizada": "el municipio de castilla la nueva, departamento del meta",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2024",
+  "nombre_proyecto": "Campos Castilla y Chichimene, la",
+  "nombre_proyecto_normalizado": "CAMPOS CASTILLA Y CHICHIMENE LA",
+  "ubicación": "municipio de Castilla La Nueva, departamento",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "97-0025",
   "radicados": [
     "20246200774022",
@@ -29,12 +29,12 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "47761",
   "file_name": "ANLA_47761.pdf",

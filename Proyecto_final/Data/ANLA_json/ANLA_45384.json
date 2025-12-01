@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000078",
   "fecha_resolución": "2023-08-11",
-  "nombre_proyecto": "denominado: “Área de Desarrollo - AD Bienparado, Bloque PUT 8”, localizado en jurisdicción del municipio de Puerto Asís",
-  "nombre_proyecto_normalizada": "denominado: \"area de desarrollo - ad bienparado, bloque put 8\", localizado en jurisdiccion del municipio de puerto asis",
-  "ubicación": "jurisdicción del municipio de Puerto Asís en el departamento del Putumayo",
-  "ubicacion_normalizada": "jurisdiccion del municipio de puerto asis en el departamento del putumayo",
-  "empresa": "humanas ribereñas, para la proposición de lineamientos de conservación y manejo”; cuyo término de ejecución dio inicio el día 12 de mayo de 2022 y tiene previsto como finalización el día 24 de agosto de 2024",
-  "empresa_normalizada": "humanas riberenas, para la proposicion de lineamientos de conservacion y manejo\"; cuyo termino de ejecucion dio inicio el dia 12 de mayo de 2022 y tiene previsto como finalizacion el dia 24 de agosto de 2024",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "de otra parte, dadas las",
+  "nombre_proyecto_normalizado": "DE OTRA PARTE DADAS LAS",
+  "ubicación": "departamento de Putumayo, identificado con cédula de ciudadanía",
+  "empresa": "FRONTERA",
+  "empresa_normalizada": "FRONTERA",
   "numero_expediente": "y",
   "radicados": [
     "20236200526422",
@@ -32,13 +32,13 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45384",
   "file_name": "ANLA_45384.pdf",

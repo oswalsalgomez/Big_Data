@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1859",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Área de Perforación Exploratoria Lince – Leopardo”, ubicado en jurisdicción del municipio de Orocué en el departamento",
-  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria lince – leopardo\", ubicado en jurisdiccion del municipio de orocue en el departamento",
-  "ubicación": "jurisdicción del municipio de Orocué en el departamento del Casanare",
-  "ubicacion_normalizada": "jurisdiccion del municipio de orocue en el departamento del casanare",
-  "empresa": "HOCOL S.A",
-  "empresa_normalizada": "hocol s.a",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Área de Perforación Exploratoria Lince – Leopardo”, ubicado en jurisdicción",
+  "nombre_proyecto_normalizado": "AREA DE PERFORACION EXPLORATORIA LINCE LEOPARDO UBICADO EN JURISDICCION",
+  "ubicación": "departamento de Casanare y reiteró el cumplimiento de obligaciones; la cual",
+  "empresa": "HOCOL",
+  "empresa_normalizada": "HOCOL",
   "numero_expediente": "LAM3657",
   "radicados": [
     "20236200254082",
@@ -17,8 +17,8 @@
   "tipos_infraccion": [
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "43676",
   "file_name": "ANLA_43676.pdf",

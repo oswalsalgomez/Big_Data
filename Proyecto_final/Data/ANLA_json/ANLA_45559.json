@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000255",
   "fecha_resolución": "2023-10-23",
-  "nombre_proyecto": "denominado \"CAMPO TOQUI - TOQUI\", localizado al norte del departamento del Tolima, aproximadamente siete (7) kilómetros",
-  "nombre_proyecto_normalizada": "denominado \"campo toqui - toqui\", localizado al norte del departamento del tolima, aproximadamente siete (7) kilometros",
-  "ubicación": "el municipio de Piedras en el departamento del Tolima",
-  "ubicacion_normalizada": "el municipio de piedras en el departamento del tolima",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "CAMPO TOQUI - TOQUI",
+  "nombre_proyecto_normalizado": "CAMPO TOQUI TOQUI",
+  "ubicación": "departamento de Cundinamarca",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "a",
   "radicados": [
     "20236200839492",
@@ -23,10 +23,10 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45559",
   "file_name": "ANLA_45559.pdf",

@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000265",
   "fecha_resolución": "2023-06-08",
-  "nombre_proyecto": "“Área de Perforación Exploratoria Bloque Cachicamo”, ubicado en jurisdicción del municipio de Orocué en el departamento",
-  "nombre_proyecto_normalizada": "\"area de perforacion exploratoria bloque cachicamo\", ubicado en jurisdiccion del municipio de orocue en el departamento",
-  "ubicación": "jurisdicción del municipio de Orocué en el departamento de Casanare y se tomaron otras determinaciones",
-  "ubicacion_normalizada": "jurisdiccion del municipio de orocue en el departamento de casanare y se tomaron otras determinaciones",
-  "empresa": "RAMSHORN INTERNATIONAL LIMITED",
-  "empresa_normalizada": "ramshorn international limited",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Área de Perforación Exploratoria Bloque Cachicamo”, de la sociedad RAMSHORN INTERNATIONAL LIMITED, con Nit. 830.132.875 – 5, a favor de la sociedad RAMSHORN HOLDINGS LIMITED, con NIT. 830.126.302-2. Resolución No. 000265 Del 21 FEB. 2024 Hoja No. 3 de 26 “Por la cual se resuelve recurso de reposición interpuesto en contra de la Resolución 1182 del 08 de junio de 2023” Página 3 de 26 Que a través del Auto 3672 del 5 de julio de 2018, la Autoridad Nacional de Licencias Ambientales – ANLA, en adelante la Autoridad Nacional, aceptó el cambio de razón social de la sociedad RAMSHORN HOLDINGS LIMITED por el de la sociedad FRONTERA ENERGY COLOMBIA CORP. SUCURSAL COLOMBIA, respecto a los diferentes actos administrativos surtidos dentro del expediente LAM3585, correspondientes al proyecto denominado",
+  "nombre_proyecto_normalizado": "AREA DE PERFORACION EXPLORATORIA BLOQUE CACHICAMO DE LA SOCIEDAD RAMSHORN INTERNATIONAL LIMITED CON NIT 830 132 875 5 A FAVOR DE LA SOCIEDAD RAMSHORN HOLDINGS LIMITED CON NIT 830 126 302 2 RESOLUCION NO 000265 DEL 21 FEB 2024 HOJA NO 3 DE 26 POR LA CUAL SE RESUELVE RECURSO DE REPOSICION INTERPUESTO EN CONTRA DE LA RESOLUCION 1182 DEL 08 DE JUNIO DE 2023 PAGINA 3 DE 26 QUE A TRAVES DEL AUTO 3672 DEL 5 DE JULIO DE 2018 LA AUTORIDAD NACIONAL DE LICENCIAS AMBIENTALES ANLA EN ADELANTE LA AUTORIDAD NACIONAL ACEPTO EL CAMBIO DE RAZON SOCIAL DE LA SOCIEDAD RAMSHORN HOLDINGS LIMITED POR EL DE LA SOCIEDAD FRONTERA ENERGY COLOMBIA CORP SUCURSAL COLOMBIA RESPECTO A LOS DIFERENTES ACTOS ADMINISTRATIVOS SURTIDOS DENTRO DEL EXPEDIENTE LAM3585 CORRESPONDIENTES AL PROYECTO DENOMINADO",
+  "ubicación": "departamento de Casanare y se",
+  "empresa": "FRONTERA",
+  "empresa_normalizada": "FRONTERA",
   "numero_expediente": "LAM3585",
   "radicados": [
     "2018082786",
@@ -21,10 +21,10 @@
     "Manejo de aguas",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45576",
   "file_name": "ANLA_45576.pdf",

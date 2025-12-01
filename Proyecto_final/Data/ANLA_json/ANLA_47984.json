@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002051",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Campo Rancho Hermoso” localizado en el corregimiento de Tilodirán, en jurisdicción del Municipio de Yopal en el Departa",
-  "nombre_proyecto_normalizada": "\"campo rancho hermoso\" localizado en el corregimiento de tilodiran, en jurisdiccion del municipio de yopal en el departa",
-  "ubicación": "el corregimiento de Tilodirán, en jurisdicción del Municipio de Yopal en el Departamento de Casanare",
-  "ubicacion_normalizada": "el corregimiento de tilodiran, en jurisdiccion del municipio de yopal en el departamento de casanare",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Campo Rancho Hermoso” localizado en el corregimiento de",
+  "nombre_proyecto_normalizado": "CAMPO RANCHO HERMOSO LOCALIZADO EN EL CORREGIMIENTO DE",
+  "ubicación": "Departamento de Casanare",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "no",
   "radicados": [
     "2019183098"
@@ -20,12 +20,12 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "47984",
   "file_name": "ANLA_47984.pdf",

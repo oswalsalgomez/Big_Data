@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000802",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "“Ampliación Poliducto Pozos Colorados- Ayacucho\" ubicado en jurisdicción de los Municipios de Santa Marta, Ciénaga, Zona",
-  "nombre_proyecto_normalizada": "\"ampliacion poliducto pozos colorados- ayacucho\" ubicado en jurisdiccion de los municipios de santa marta, cienaga, zona",
-  "ubicación": "el Municipio de Valledupar del Departamento del Cesar, entre otras disposiciones",
-  "ubicacion_normalizada": "el municipio de valledupar del departamento del cesar, entre otras disposiciones",
-  "empresa": "Colombiana de Petróleos ECOPETROL viabilidad ambiental para el proyecto “Ampliación Poliducto Pozos Colorados- Ayacucho\" ubicado en jurisdicción de los Municipios de Santa Marta",
-  "empresa_normalizada": "colombiana de petroleos ecopetrol viabilidad ambiental para el proyecto \"ampliacion poliducto pozos colorados- ayacucho\" ubicado en jurisdiccion de los municipios de santa marta",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Extracción",
+  "nombre_proyecto_normalizado": "EXTRACCION",
+  "ubicación": "Departamento de Magdalena, Sociedad TERRASOS S",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0832",
   "radicados": [
     "20236201061902",
@@ -25,9 +25,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "46259",
   "file_name": "ANLA_46259.pdf",

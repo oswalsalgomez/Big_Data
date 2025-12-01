@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 1364",
   "fecha_resolución": "1993-12-22",
+  "anio_resolucion": "1993",
   "nombre_proyecto": "en mención",
-  "nombre_proyecto_normalizada": "en mencion",
-  "ubicación": "departamento de Bolívar; Puerto Wilches y Sabana de Torres en el departamento de Santander y Aguachica en el departamento del Cesar",
-  "ubicacion_normalizada": "departamento de bolivar; puerto wilches y sabana de torres en el departamento de santander y aguachica en el departamento del cesar",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "nombre_proyecto_normalizado": "EN MENCION",
+  "ubicación": "departamento de Bolívar; Puerto Wilches y Sabana",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "con",
   "radicados": [
     "2021238407",
@@ -27,10 +27,10 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "42998",
   "file_name": "ANLA_42998.pdf",

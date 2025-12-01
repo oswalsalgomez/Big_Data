@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 000473",
   "fecha_resolución": "2023-11-28",
-  "nombre_proyecto": "denominado “Campo de Producción Medina”, localizado en jurisdicción de los departamentos de Boyacá, Casanare, Cundinamar",
-  "nombre_proyecto_normalizada": "denominado \"campo de produccion medina\", localizado en jurisdiccion de los departamentos de boyaca, casanare, cundinamar",
-  "ubicación": "jurisdicción de los departamentos de Boyacá, Casanare, Cundinamarca y Meta",
-  "ubicacion_normalizada": "jurisdiccion de los departamentos de boyaca, casanare, cundinamarca y meta",
-  "empresa": "Lukoil Overseas Colombia Ltd",
-  "empresa_normalizada": "lukoil overseas colombia ltd",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Campo de Producción Medina”, localizado en jurisdicción de los departamentos de",
+  "nombre_proyecto_normalizado": "CAMPO DE PRODUCCION MEDINA LOCALIZADO EN JURISDICCION DE LOS DEPARTAMENTOS DE",
+  "ubicación": "departamento de Boyacá, Sabanalarga en el departamento del Casanare, Paratebueno en el",
+  "empresa": "GLOBAL A LA SOCIEDAD LUKOIL OVERSEAS COLOMBIA LTD",
+  "empresa_normalizada": "GLOBAL A LA LUKOIL OVERSEAS COLOMBIA",
   "numero_expediente": "SAN0168-00-2020",
   "radicados": [
     "2020186894",
@@ -21,11 +21,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "45805",
   "file_name": "ANLA_45805.pdf",

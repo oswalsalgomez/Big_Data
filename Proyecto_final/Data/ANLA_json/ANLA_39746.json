@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01509",
   "fecha_resolución": "2022-07-13",
+  "anio_resolucion": "2022",
   "nombre_proyecto": "Campo Moriche",
-  "nombre_proyecto_normalizada": "campo moriche",
-  "ubicación": "jurisdicción del municipio de Puerto Boyacá, en el departamento de Boyacá",
-  "ubicacion_normalizada": "jurisdiccion del municipio de puerto boyaca, en el departamento de boyaca",
-  "empresa": "MANSAROVAR ENERGY COLOMBIA LTD",
-  "empresa_normalizada": "mansarovar energy colombia ltd",
+  "nombre_proyecto_normalizado": "CAMPO MORICHE",
+  "ubicación": "departamento de Boyacá",
+  "empresa": "OMIMEX",
+  "empresa_normalizada": "OMIMEX",
   "numero_expediente": "LAM1994",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE RECURSO DE REPOSICIÓN INTERPUESTO CONTRA LA RESOLUCIÓN NO. 2130 DEL 26 DE NOVIEMBRE DE 2021 Y SE ADOPTAN OTRAS DETERMINACIONES",
@@ -16,10 +16,10 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "39746",
   "file_name": "ANLA_39746.pdf",

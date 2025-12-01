@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 03115",
   "fecha_resolución": "2022-12-30",
-  "nombre_proyecto": "de desarrollo del Campo Yaguará, a favor de la sociedad PETROBRAS INTERNATIONAL BRASPETRO B",
-  "nombre_proyecto_normalizada": "de desarrollo del campo yaguara, a favor de la sociedad petrobras international braspetro b",
-  "ubicación": "jurisdicción del municipio de Yaguará en el departamento del Huila",
-  "ubicacion_normalizada": "jurisdiccion del municipio de yaguara en el departamento del huila",
-  "empresa": "PETROBRAS INTERNACIONAL S",
-  "empresa_normalizada": "petrobras internacional s",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Campo de Producción Yaguará”,",
+  "nombre_proyecto_normalizado": "CAMPO DE PRODUCCION YAGUARA",
+  "ubicación": "municipio de Yaguará en",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "No",
   "radicados": [
     "2022247986",
@@ -22,13 +22,13 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "41308",
   "file_name": "ANLA_41308.pdf",

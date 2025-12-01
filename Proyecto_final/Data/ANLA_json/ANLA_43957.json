@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 2140",
   "fecha_resolución": "2023-06-22",
-  "nombre_proyecto": "“Bloque Exploratorio Tapir” localizado en jurisdicción de los municipios de San Luis de Palenque, Yopal y Orocué en el d",
-  "nombre_proyecto_normalizada": "\"bloque exploratorio tapir\" localizado en jurisdiccion de los municipios de san luis de palenque, yopal y orocue en el d",
-  "ubicación": "jurisdicción de los municipios de San Luis de Palenque y Orocué en el departamento de Casanare Resolución No",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de san luis de palenque y orocue en el departamento de casanare resolucion no",
-  "empresa": "HERITAGE COLOMBIA",
-  "empresa_normalizada": "heritage colombia",
+  "anio_resolucion": "2023",
+  "nombre_proyecto": "Bloque",
+  "nombre_proyecto_normalizado": "BLOQUE",
+  "ubicación": "departamento de Casanare",
+  "empresa": "MINERALS LTD",
+  "empresa_normalizada": "MINERALS",
   "numero_expediente": "LAM1437",
   "radicados": [
     "2022249346",
@@ -18,9 +18,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "43957",
   "file_name": "ANLA_43957.pdf",

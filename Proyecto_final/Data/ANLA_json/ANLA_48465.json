@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002305",
   "fecha_resolución": "2024-06-28",
-  "nombre_proyecto": "uso sostenible del sistema silvopastoril y ajuste de las especies definidas para los dos tipos de arreglo (agroforestal",
-  "nombre_proyecto_normalizada": "uso sostenible del sistema silvopastoril y ajuste de las especies definidas para los dos tipos de arreglo (agroforestal",
-  "ubicación": "los municipios de Villavicencio y Acacias en el departamento del Meta",
-  "ubicacion_normalizada": "los municipios de villavicencio y acacias en el departamento del meta",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2024",
+  "nombre_proyecto": "uso",
+  "nombre_proyecto_normalizado": "USO",
+  "ubicación": "municipio de Acacías, Santa Rosa, Peralonso, La Llanerita y Puerto Tembleque",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM2965",
   "radicados": [
     "20236200677722",
@@ -24,11 +24,11 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "48465",
   "file_name": "ANLA_48465.pdf",

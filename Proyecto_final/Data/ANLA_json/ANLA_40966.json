@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 02711",
   "fecha_resolución": "2022-11-15",
-  "nombre_proyecto": "Pozos de Desarrollo Apiay A y Suria A y B y Libertad",
-  "nombre_proyecto_normalizada": "pozos de desarrollo apiay a y suria a y b y libertad",
-  "ubicación": "los municipios de Acacias, San Carlos de Guaroa y Villavicencio, en el departamento del Meta",
-  "ubicacion_normalizada": "los municipios de acacias, san carlos de guaroa y villavicencio, en el departamento del meta",
-  "empresa": "ECOPETROL S",
-  "empresa_normalizada": "ecopetrol s",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Bloque Apiay”, localizado en",
+  "nombre_proyecto_normalizado": "BLOQUE APIAY LOCALIZADO EN",
+  "ubicación": "municipio de San Carlos deGuaroa, ronda de 100 m",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0198",
   "radicados": [
     "2018186892",
@@ -23,13 +23,13 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "vertimientos",
-    "emisiones atmosfericas",
-    "residuos solidos",
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "VERTIMIENTOS",
+    "EMISIONES ATMOSFERICAS",
+    "RESIDUOS SOLIDOS",
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "40966",
   "file_name": "ANLA_40966.pdf",

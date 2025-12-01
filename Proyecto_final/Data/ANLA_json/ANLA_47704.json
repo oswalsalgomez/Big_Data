@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 001887",
   "fecha_resolución": "2024-06-19",
-  "nombre_proyecto": "“Bloque de Perforación Exploratoria Buturama” localizado en jurisdicción de los municipios de Aguachica y Gamarra en el",
-  "nombre_proyecto_normalizada": "\"bloque de perforacion exploratoria buturama\" localizado en jurisdiccion de los municipios de aguachica y gamarra en el",
-  "ubicación": "jurisdicción de los municipios de Aguachica y Gamarra en el departamento de Cesar",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de aguachica y gamarra en el departamento de cesar",
-  "empresa": "HARKEN de COLOMBIA LTD",
-  "empresa_normalizada": "harken de colombia ltd",
+  "anio_resolucion": "2024",
+  "nombre_proyecto": "Bloque de Perforación Exploratoria Buturama” localizado en",
+  "nombre_proyecto_normalizado": "BLOQUE DE PERFORACION EXPLORATORIA BUTURAMA LOCALIZADO EN",
+  "ubicación": "departamento de Cesar",
+  "empresa": "LICENCIA AMBIENTAL A LA SOCIEDAD HARKEN DE COLOMBIA LTD",
+  "empresa_normalizada": "LICENCIA AMBIENTAL A LA HARKEN DE COLOMBIA",
   "numero_expediente": "LAM1277",
   "radicados": [
     "20246200760572",
@@ -18,9 +18,9 @@
     "Emisiones atmosféricas",
     "Tala o afectación de bosques"
   ],
-  "tipos_infraccion_normalizada": [
-    "emisiones atmosfericas",
-    "tala o afectacion de bosques"
+  "tipos_infraccion_normalizados": [
+    "EMISIONES ATMOSFERICAS",
+    "TALA O AFECTACION DE BOSQUES"
   ],
   "pdf_id": "47704",
   "file_name": "ANLA_47704.pdf",

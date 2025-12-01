@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 002335",
   "fecha_resolución": "1993-12-22",
-  "nombre_proyecto": "denominado “Área de Interés de Perforación Exploratoria Bloque LLA-21”, localizado en jurisdicción de los Municipios de",
-  "nombre_proyecto_normalizada": "denominado \"area de interes de perforacion exploratoria bloque lla-21\", localizado en jurisdiccion de los municipios de",
-  "ubicación": "jurisdicción de los Municipios de Trinidad y Paz de Ariporo del Departamento de Casanare",
-  "ubicacion_normalizada": "jurisdiccion de los municipios de trinidad y paz de ariporo del departamento de casanare",
-  "empresa": "OMEGA ENERGY COLOMBIA",
-  "empresa_normalizada": "omega energy colombia",
+  "anio_resolucion": "1993",
+  "nombre_proyecto": "Área de Interés de Perforación Exploratoria Bloque LLA-21\", ha sido formulado",
+  "nombre_proyecto_normalizado": "AREA DE INTERES DE PERFORACION EXPLORATORIA BLOQUE LLA 21 HA SIDO FORMULADO",
+  "ubicación": "Departamento de Casanare",
+  "empresa": "CON HIERBAS DENSAS",
+  "empresa_normalizada": "CON HIERBAS DENSAS",
   "numero_expediente": "obedece",
   "radicados": [
     "20246200223292",
@@ -22,10 +22,10 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "manejo de aguas",
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "MANEJO DE AGUAS",
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "48518",
   "file_name": "ANLA_48518.pdf",

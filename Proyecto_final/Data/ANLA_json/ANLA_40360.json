@@ -2,12 +2,12 @@
   "fuente": "ANLA_GACETA",
   "numero_resolución": "RESOLUCIÓN N° 01895",
   "fecha_resolución": "2022-09-06",
-  "nombre_proyecto": "“Campos Nare, Teca y Cocorná Campo Teca”, en lo referente al área, infraestructura y operación del Campo Teca, en la que",
-  "nombre_proyecto_normalizada": "\"campos nare, teca y cocorna campo teca\", en lo referente al area, infraestructura y operacion del campo teca, en la que",
-  "ubicación": "jurisdicción del Municipio de Puerto Nare en el Departamento de Antioquia, referenciando las coordenadas; así mismo autorizó las actividades asociadas a la ampliación de 42 de los clústeres existentes; ampliación de 1",
-  "ubicacion_normalizada": "jurisdiccion del municipio de puerto nare en el departamento de antioquia, referenciando las coordenadas; asi mismo autorizo las actividades asociadas a la ampliacion de 42 de los clusteres existentes; ampliacion de 1",
-  "empresa": "OMIMEX DE COLOMBIA LTD",
-  "empresa_normalizada": "omimex de colombia ltd",
+  "anio_resolucion": "2022",
+  "nombre_proyecto": "Campos Nare, Teca y Cocorná",
+  "nombre_proyecto_normalizado": "CAMPOS NARE TECA Y COCORNA",
+  "ubicación": "departamento de Antioquía, así como la Declaración de Impacto",
+  "empresa": "ECOPETROL",
+  "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "LAM0242",
   "radicados": null,
   "descripcion": "POR LA CUAL SE RESUELVE UN RECURSO DE REPOSICIÓN",
@@ -15,9 +15,9 @@
     "Tala o afectación de bosques",
     "Incumplimiento del PMA"
   ],
-  "tipos_infraccion_normalizada": [
-    "tala o afectacion de bosques",
-    "incumplimiento del pma"
+  "tipos_infraccion_normalizados": [
+    "TALA O AFECTACION DE BOSQUES",
+    "INCUMPLIMIENTO DEL PMA"
   ],
   "pdf_id": "40360",
   "file_name": "ANLA_40360.pdf",
