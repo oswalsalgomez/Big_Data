@@ -6,25 +6,97 @@ from dotenv import load_dotenv
 
 # Cargar variables de entorno (.env en local, env vars en Render)
 load_dotenv()
-ELASTIC_CLOUD_URL = os.getenv("ELASTIC_CLOUD_URL")
+
+# ==== CONFIGURACIÓN ELASTIC CLOUD / LOCAL ====
+
+# Elastic Cloud (dos opciones: ID o URL)
+ELASTIC_CLOUD_ID = os.getenv("ELASTIC_CLOUD_ID")      # recomendado por Elastic
+ELASTIC_CLOUD_URL = os.getenv("ELASTIC_CLOUD_URL")    # tu variable actual (endpoint https://...)
+
 ELASTIC_API_KEY = os.getenv("ELASTIC_API_KEY")
+
+# Elastic local
+ELASTIC_HOST = os.getenv("ELASTIC_HOST")
+ELASTIC_USERNAME = os.getenv("ELASTIC_USERNAME")
+ELASTIC_PASSWORD = os.getenv("ELASTIC_PASSWORD")
+
+# Índice por defecto ANLA
 ELASTIC_INDEX_DEFAULT = os.getenv("ELASTIC_INDEX_DEFAULT", "anla_resoluciones")
 
 
-class ElasticSearch:
-    def __init__(self, cloud_url: str, api_key: str):
-        """
-        Inicializa conexión a ElasticSearch Cloud
-        
-        Args:
-            cloud_url: URL del cluster de Elastic Cloud
-            api_key: API Key para autenticación
-        """
-        self.client = Elasticsearch(
-            cloud_url,
-            api_key=api_key,
+def get_es_client() -> Elasticsearch:
+    """
+    Devuelve un cliente Elasticsearch válido:
+    - Si hay ELASTIC_CLOUD_ID y ELASTIC_API_KEY → conecta a Elastic Cloud (modo recomendado)
+    - Si hay ELASTIC_CLOUD_URL y ELASTIC_API_KEY → conecta a Elastic Cloud usando la URL
+    - Si hay ELASTIC_HOST / ELASTIC_USERNAME / ELASTIC_PASSWORD → conecta al Elasticsearch local
+    """
+
+    # ----- Elastic CLOUD con Cloud ID -----
+    if ELASTIC_CLOUD_ID and ELASTIC_API_KEY:
+        return Elasticsearch(
+            cloud_id=ELASTIC_CLOUD_ID,
+            api_key=ELASTIC_API_KEY
+        )
+
+    # ----- Elastic CLOUD con URL (tu caso actual en Render) -----
+    if ELASTIC_CLOUD_URL and ELASTIC_API_KEY:
+        # ELASTIC_CLOUD_URL debe ser algo tipo: https://xxxxxx.es.io:9243
+        return Elasticsearch(
+            ELASTIC_CLOUD_URL,
+            api_key=ELASTIC_API_KEY,
             verify_certs=True
         )
+
+    # ----- Elastic LOCAL -----
+    if ELASTIC_HOST and ELASTIC_USERNAME and ELASTIC_PASSWORD:
+        # Ejemplo ELASTIC_HOST=https://localhost:9200
+        return Elasticsearch(
+            hosts=[ELASTIC_HOST],
+            basic_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD),
+            verify_certs=False,    # certificado auto-generado
+            ssl_show_warn=False
+        )
+
+    # Si nada de lo anterior aplica:
+    raise RuntimeError(
+        "❌ No se encontraron variables de entorno válidas para Elastic.\n"
+        "Configura ELASTIC_CLOUD_ID/ELASTIC_API_KEY o ELASTIC_CLOUD_URL/ELASTIC_API_KEY "
+        "o ELASTIC_HOST/ELASTIC_USERNAME/ELASTIC_PASSWORD."
+    )
+
+
+# Cliente global reutilizable para TODO el módulo (incluyendo ANLA)
+es_client = get_es_client()
+
+
+# =======================================================
+# CLASE GENERICA ElasticSearch (la dejo, solo la adapto)
+# =======================================================
+
+class ElasticSearch:
+    def __init__(self, cloud_url: str = None, api_key: str = None,
+                 client: Optional[Elasticsearch] = None):
+        """
+        Inicializa conexión a ElasticSearch.
+
+        Prioridad:
+        1. Si se pasa un client explícito → lo usa.
+        2. Si se pasan cloud_url y api_key → crea cliente cloud.
+        3. Si no se pasan parámetros → usa get_es_client().
+        """
+        if client is not None:
+            self.client = client
+        elif cloud_url and api_key:
+            # Conexión directa a cloud (con URL)
+            self.client = Elasticsearch(
+                cloud_url,
+                api_key=api_key,
+                verify_certs=True
+            )
+        else:
+            # Usa la misma lógica que el helper global
+            self.client = get_es_client()
         
     def test_connection(self) -> bool:
         """Prueba la conexión a ElasticSearch"""
@@ -250,7 +322,6 @@ class ElasticSearch:
             Resultado de la búsqueda con hits y aggregations
         """
         try:
-            import json
             query = json.loads(query_json)
             
             # Si la query tiene 'index' específico, extraerlo
@@ -274,21 +345,12 @@ class ElasticSearch:
         """
         Ejecuta un comando DML (Data Manipulation Language) en ElasticSearch
         Permite ejecutar comandos como index, update, delete directamente
-        
-        Args:
-            comando_json: Comando DML en formato JSON string
-            
-        Returns:
-            Resultado de la ejecución
         """
         try:
-            import json
             comando = json.loads(comando_json)
-            
             operacion = comando.get('operacion')
             
-            if operacion == 'index' or operacion == 'create':
-                # Indexar documento
+            if operacion in ('index', 'create'):
                 index = comando.get('index')
                 documento = comando.get('documento', comando.get('body', {}))
                 doc_id = comando.get('id')
@@ -301,7 +363,6 @@ class ElasticSearch:
                 return {'success': True, 'data': response}
                 
             elif operacion == 'update':
-                # Actualizar documento
                 index = comando.get('index')
                 doc_id = comando.get('id')
                 doc = comando.get('doc', comando.get('documento', {}))
@@ -310,7 +371,6 @@ class ElasticSearch:
                 return {'success': True, 'data': response}
                 
             elif operacion == 'delete':
-                # Eliminar documento
                 index = comando.get('index')
                 doc_id = comando.get('id')
                 
@@ -318,7 +378,6 @@ class ElasticSearch:
                 return {'success': True, 'data': response}
                 
             elif operacion == 'delete_by_query':
-                # Eliminar por query
                 index = comando.get('index')
                 query = comando.get('query', {})
                 
@@ -336,12 +395,6 @@ class ElasticSearch:
     def buscar_texto(self, index: str, texto: str, campos: List[str] = None, size: int = 10) -> Dict:
         """
         Búsqueda simple de texto en campos específicos
-        
-        Args:
-            index: Nombre del índice
-            texto: Texto a buscar
-            campos: Lista de campos donde buscar (si es None, busca en todos)
-            size: Número de resultados
         """
         try:
             if campos:
@@ -400,14 +453,18 @@ class ElasticSearch:
     def close(self):
         """Cierra la conexión"""
         self.client.close()
-        
+
+
 # Instancia global que usaremos en app.py
-elastic = ElasticSearch(
-    cloud_url=ELASTIC_CLOUD_URL,
-    api_key=ELASTIC_API_KEY
-)
+# (envuelve al cliente genérico es_client, así sirve tanto en local como en cloud)
+elastic = ElasticSearch(client=es_client)
+
 
 from elasticsearch.helpers import bulk
+
+# ====================================
+# FUNCIONES ESPECÍFICAS PARA ANLA
+# ====================================
 
 def crear_indice_anla_si_no_existe(index_name: str = None):
     """
@@ -443,6 +500,7 @@ def crear_indice_anla_si_no_existe(index_name: str = None):
     }
 
     elastic.client.indices.create(index=index_name, body=body)
+
 
 def indexar_json_anla(json_dir: str, index_name: str = None) -> Dict:
     """
@@ -480,3 +538,31 @@ def indexar_json_anla(json_dir: str, index_name: str = None) -> Dict:
         "fallidos": len(errors) if errors else 0,
         "errores": errors or []
     }
+
+
+def buscar_resoluciones_anla(texto: str, size: int = 10, index_name: str = None) -> Dict:
+    """
+    Búsqueda de texto en el índice ANLA (para usar en app.py / vistas).
+    """
+    index_name = index_name or ELASTIC_INDEX_DEFAULT
+
+    query = {
+        "query": {
+            "multi_match": {
+                "query": texto,
+                "fields": [
+                    "texto_completo",
+                    "descripcion",
+                    "empresa",
+                    "nombre_proyecto",
+                    "ubicación",
+                    "numero_expediente",
+                    "numero_resolución"
+                ],
+                "type": "best_fields"
+            }
+        }
+    }
+
+    resp = elastic.client.search(index=index_name, body=query, size=size)
+    return resp
