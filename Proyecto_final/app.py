@@ -72,36 +72,38 @@ def about():
 def buscador():
     """
     Página de búsqueda pública.
-    Filtros disponibles (GET):
-    - texto: búsqueda general
-    - empresa: filtro exacto por empresa
-    - anio: año de la resolución
-    - num_resolucion: número de la resolución
-    - num_expediente: número de expediente
-    - proyecto: nombre del proyecto / campo
+    Permite filtrar por:
+      - texto libre
+      - empresa
+      - año de la resolución
+      - número de resolución
+      - número de expediente
     """
+    # Parámetros del formulario (GET)
     texto = (request.args.get('texto') or '').strip()
-    empresa = (request.args.get('empresa') or '').strip()
-    anio = (request.args.get('anio') or '').strip()
-    num_resolucion = (request.args.get('num_resolucion') or '').strip()
-    num_expediente = (request.args.get('num_expediente') or '').strip()
-    proyecto = (request.args.get('proyecto') or '').strip()
+    empresa_filtro = (request.args.get('empresa') or '').strip()
+    anio_filtro = (request.args.get('anio') or '').strip()
+    num_resolucion_filtro = (request.args.get('num_resolucion') or '').strip()
+    num_expediente_filtro = (request.args.get('num_expediente') or '').strip()
 
     resultados = None
     total = None
     error = None
 
-    # ¿hay algo para buscar?
+    # ¿Hay al menos un filtro activo?
     hay_filtros = any([
-        texto, empresa, anio, num_resolucion, num_expediente, proyecto
+        texto,
+        empresa_filtro,
+        anio_filtro,
+        num_resolucion_filtro,
+        num_expediente_filtro
     ])
 
     if hay_filtros:
         try:
             must_clauses = []
-            filters = []
 
-            # ====== QUERY PRINCIPAL (texto libre) ======
+            # ---- TEXTO GENERAL ----
             if texto:
                 must_clauses.append({
                     "multi_match": {
@@ -118,67 +120,62 @@ def buscador():
                     }
                 })
 
-            # ====== FILTRO EMPRESA (keyword) ======
-            if empresa:
-                filters.append({"term": {"empresa.keyword": empresa}})
-
-            # ====== FILTRO AÑO (fecha_resolución) ======
-            if anio:
-                try:
-                    year_int = int(anio)
-                    filters.append({
-                        "range": {
-                            "fecha_resolución": {
-                                "gte": f"{year_int}-01-01",
-                                "lte": f"{year_int}-12-31"
-                            }
+            # ---- EMPRESA ----
+            if empresa_filtro:
+                must_clauses.append({
+                    "match": {
+                        "empresa": {
+                            "query": empresa_filtro,
+                            "operator": "and"
                         }
-                    })
-                except ValueError:
-                    error = "El año debe ser un número (por ejemplo 2023)."
-
-            # ====== FILTRO NÚMERO DE RESOLUCIÓN ======
-            if num_resolucion:
-                # campo tipo text → usamos match_phrase
-                filters.append({
-                    "match_phrase": {
-                        "numero_resolución": num_resolucion
                     }
                 })
 
-            # ====== FILTRO NÚMERO DE EXPEDIENTE ======
-            if num_expediente:
-                # este campo lo definimos como keyword
-                filters.append({
-                    "term": {
-                        "numero_expediente": num_expediente
+            # ---- AÑO RESOLUCIÓN (rango de fechas) ----
+            if anio_filtro.isdigit():
+                anio_int = int(anio_filtro)
+                must_clauses.append({
+                    "range": {
+                        "fecha_resolución": {
+                            "gte": f"{anio_int}-01-01",
+                            "lte": f"{anio_int}-12-31"
+                        }
                     }
                 })
 
-            # ====== FILTRO PROYECTO / CAMPO ======
-            if proyecto:
-                filters.append({
-                    "match_phrase": {
-                        "nombre_proyecto": proyecto
+            # ---- NÚMERO DE RESOLUCIÓN ----
+            if num_resolucion_filtro:
+                # Usamos wildcard porque en el campo suele venir
+                # 'RESOLUCIÓN N° 0003', 'RESOLUCIÓN 01186', etc.
+                must_clauses.append({
+                    "wildcard": {
+                        "numero_resolución.keyword": f"*{num_resolucion_filtro}*"
                     }
                 })
 
-            # ====== CONSTRUIR QUERY BOOL ======
-            if must_clauses or filters:
-                bool_query = {}
-                if must_clauses:
-                    bool_query["must"] = must_clauses
-                else:
-                    # si no hay texto, hacemos match_all y solo aplicamos filtros
-                    bool_query["must"] = [{"match_all": {}}]
+            # ---- NÚMERO DE EXPEDIENTE ----
+            if num_expediente_filtro:
+                must_clauses.append({
+                    "wildcard": {
+                        "numero_expediente.keyword": f"*{num_expediente_filtro}*"
+                    }
+                })
 
-                if filters:
-                    bool_query["filter"] = filters
-
-                query_base = {"query": {"bool": bool_query}}
+            # Si por alguna razón no se construyó nada, hacemos match_all
+            if must_clauses:
+                query_base = {
+                    "query": {
+                        "bool": {
+                            "must": must_clauses
+                        }
+                    }
+                }
             else:
-                # nada de nada → match_all (caso raro)
-                query_base = {"query": {"match_all": {}}}
+                query_base = {
+                    "query": {
+                        "match_all": {}
+                    }
+                }
 
             # ====== AGGREGATIONS (opcional, por ahora no las mostramos) ======
             aggs = {
@@ -223,16 +220,14 @@ def buscador():
         version=VERSION_APP,
         creador=CREATOR_APP,
         texto=texto,
-        empresa_filtro=empresa,
-        anio_filtro=anio,
-        num_resolucion_filtro=num_resolucion,
-        num_expediente_filtro=num_expediente,
-        proyecto_filtro=proyecto,
+        empresa_filtro=empresa_filtro,
+        anio_filtro=anio_filtro,
+        num_resolucion_filtro=num_resolucion_filtro,
+        num_expediente_filtro=num_expediente_filtro,
         resultados=resultados,
         total=total,
         error=error
     )
-
 # ==================== AUTENTICACIÓN / USUARIOS (MONGO) ====================
 
 @app.route('/login', methods=['GET', 'POST'])
