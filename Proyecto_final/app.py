@@ -198,7 +198,8 @@ def buscador():
             filtros_activos["Tipo de infracción"] = tipo_infraccion
             must_clauses.append({
                 "term": {
-                    "tipos_infraccion_normalizados.keyword": tipo_infraccion
+                    # usamos el campo original del JSON
+                    "tipos_infraccion.keyword": tipo_infraccion
                 }
             })
 
@@ -218,7 +219,8 @@ def buscador():
             },
             "tipos_infraccion": {
                 "terms": {
-                    "field": "tipos_infraccion_normalizados.keyword",
+                    # de nuevo, usamos el campo del JSON
+                    "field": "tipos_infraccion.keyword",
                     "size": 200
                 }
             }
@@ -236,8 +238,8 @@ def buscador():
             resultados = resultado.get('resultados', [])
             total = resultado.get('total', 0)
 
-            # leer agregaciones (asumiendo que tu helper devuelve 'aggs')
-            aggs_result = resultado.get('aggs', {})
+            # leer agregaciones
+            aggs_result = resultado.get('aggs', {}) or {}
 
             empresas_opciones = [
                 b["key"] for b in aggs_result.get("empresas", {}).get("buckets", [])
@@ -246,13 +248,13 @@ def buscador():
                 b["key"] for b in aggs_result.get("tipos_infraccion", {}).get("buckets", [])
             ]
 
-            # ordenar alfabéticamente
+            # ordenar (queda más bonito)
             empresas_opciones = sorted(empresas_opciones)
             tipos_infraccion_opciones = sorted(tipos_infraccion_opciones)
 
-            # Fallback: si Elastic no devuelve tipos de infracción, usar constantes
+            # Fallback: si no hay tipos de infracción en aggs, usa la lista fija
             if not tipos_infraccion_opciones and TIPOS_INFRACCION_CATEGORIAS:
-                tipos_infraccion_opciones = TIPOS_INFRACCION_CATEGORIAS
+                tipos_infraccion_opciones = TIPOS_INFRACCION_CATEGORIAS[:]
 
         else:
             error = resultado.get('error', 'Error desconocido en Elastic')
