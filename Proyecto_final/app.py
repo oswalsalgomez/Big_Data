@@ -4,6 +4,8 @@ import os
 from datetime import datetime
 from werkzeug.utils import secure_filename
 from Helpers import MongoDB, ElasticSearch, Funciones, WebScraping
+import re
+import unicodedata
 
 # Cargar variables de entorno
 load_dotenv()
@@ -41,6 +43,19 @@ ELASTIC_INDEX_DEFAULT = os.getenv('ELASTIC_INDEX_DEFAULT', 'anla_resoluciones')
 VERSION_APP = "1.3.0"
 CREATOR_APP = "Oswaldo Salgado Gómez"
 
+# Categorías de tipos de infracción (deben coincidir con clasificar_infracciones)
+TIPOS_INFRACCION_CATEGORIAS = [
+    "Vertimientos",
+    "Emisiones atmosféricas",
+    "Residuos sólidos",
+    "Incumplimiento de norma",
+    "Manejo de aguas",
+    "Tala o afectación de bosques",
+    "Incumplimiento del PMA",
+    "Cierre de pozos",
+    "No presentar informes"
+]
+
 # ==================== INICIALIZAR CONEXIONES ====================
 
 mongo = MongoDB(MONGO_URI, MONGO_DB)
@@ -66,167 +81,204 @@ def about():
     """Página About"""
     return render_template('about.html', version=VERSION_APP, creador=CREATOR_APP)
 
+# ==================== FUNCIÓN NORMALIZAR PROFUNDO ====================
+
+def normalizar_profundo(texto: str) -> str:
+    """Normaliza texto para comparar empresas (mayúsculas, sin acentos, sin signos)."""
+    if not texto:
+        return ""
+    t = texto.upper()
+    t = ''.join(c for c in unicodedata.normalize('NFD', t) if unicodedata.category(c) != 'Mn')
+    t = re.sub(r"[^A-Z0-9\s]", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
 # ==================== BUSCADOR ELASTIC (PÚBLICO) ====================
 
-@app.route('/buscador')
+@app.route('/buscador') 
 def buscador():
     """
-    Página de búsqueda pública.
-    Permite filtrar por:
-      - texto libre
-      - empresa
-      - año de la resolución
-      - número de resolución
-      - número de expediente
+    Página de búsqueda pública con filtros:
+    - texto libre
+    - empresa (select)
+    - año de resolución
+    - número de resolución
+    - número de expediente
+    - tipo de infracción (select)
     """
-    # Parámetros del formulario (GET)
+    # ---- Parámetros de la URL (GET) ----
     texto = (request.args.get('texto') or '').strip()
-    empresa_filtro = (request.args.get('empresa') or '').strip()
-    anio_filtro = (request.args.get('anio') or '').strip()
-    num_resolucion_filtro = (request.args.get('num_resolucion') or '').strip()
-    num_expediente_filtro = (request.args.get('num_expediente') or '').strip()
+    empresa = (request.args.get('empresa') or '').strip()
+    anio = (request.args.get('anio') or '').strip()
+    num_resolucion = (request.args.get('num_resolucion') or '').strip()
+    num_expediente = (request.args.get('num_expediente') or '').strip()
+    tipo_infraccion = (request.args.get('tipo_infraccion') or '').strip()
 
-    resultados = None
-    total = None
+    resultados = []
+    total = 0
     error = None
+    filtros_activos = {}
 
-    # ¿Hay al menos un filtro activo?
-    hay_filtros = any([
-        texto,
-        empresa_filtro,
-        anio_filtro,
-        num_resolucion_filtro,
-        num_expediente_filtro
-    ])
+    # listas para los <select>
+    empresas_opciones = []
+    tipos_infraccion_opciones = []
 
-    if hay_filtros:
-        try:
-            must_clauses = []
+    try:
+        must_clauses = []
 
-            # ---- TEXTO GENERAL ----
-            if texto:
-                must_clauses.append({
-                    "multi_match": {
-                        "query": texto,
-                        "fields": [
-                            "texto_completo",
-                            "numero_resolución^3",
-                            "nombre_proyecto^2",
-                            "empresa^2",
-                            "descripcion^2",
-                            "numero_expediente",
-                            "radicados"
-                        ]
-                    }
-                })
+        # ---- TEXTO LIBRE ----
+        if texto:
+            filtros_activos["Texto"] = texto
+            must_clauses.append({
+                "multi_match": {
+                    "query": texto,
+                    "fields": [
+                        "texto_completo",
+                        "numero_resolución^3",
+                        "descripcion^2",
+                        "nombre_proyecto^2",
+                        "empresa^2",
+                        "numero_expediente",
+                        "radicados"
+                    ]
+                }
+            })
 
-            # ---- EMPRESA ----
-            if empresa_filtro:
-                must_clauses.append({
-                    "match": {
-                        "empresa": {
-                            "query": empresa_filtro,
-                            "operator": "and"
-                        }
-                    }
-                })
+        # ---- EMPRESA (select) ----
+        if empresa:
+            filtros_activos["Empresa"] = empresa
+            empresa_norm = normalizar_profundo(empresa)
+            must_clauses.append({
+                "bool": {
+                    "should": [
+                        {"match_phrase": {"empresa": empresa}},
+                        {"match_phrase": {"empresa_normalizada": empresa_norm}}
+                    ],
+                    "minimum_should_match": 1
+                }
+            })
 
-            # ---- AÑO RESOLUCIÓN (rango de fechas) ----
-            if anio_filtro.isdigit():
-                anio_int = int(anio_filtro)
+        # ---- AÑO RESOLUCIÓN ----
+        if anio:
+            filtros_activos["Año"] = anio
+            try:
+                anio_int = int(anio)
                 must_clauses.append({
                     "range": {
                         "fecha_resolución": {
-                            "gte": f"{anio_int}-01-01",
-                            "lte": f"{anio_int}-12-31"
+                            "gte": f"{anio_int:04d}-01-01",
+                            "lte": f"{anio_int:04d}-12-31"
                         }
                     }
                 })
+            except ValueError:
+                # si el año no es válido, no aplicamos filtro
+                pass
 
-            # ---- NÚMERO DE RESOLUCIÓN ----
-            if num_resolucion_filtro:
-                # Usamos wildcard porque en el campo suele venir
-                # 'RESOLUCIÓN N° 0003', 'RESOLUCIÓN 01186', etc.
-                must_clauses.append({
-                    "wildcard": {
-                        "numero_resolución.keyword": f"*{num_resolucion_filtro}*"
-                    }
-                })
-
-            # ---- NÚMERO DE EXPEDIENTE ----
-            if num_expediente_filtro:
-                must_clauses.append({
-                    "wildcard": {
-                        "numero_expediente.keyword": f"*{num_expediente_filtro}*"
-                    }
-                })
-
-            # Si por alguna razón no se construyó nada, hacemos match_all
-            if must_clauses:
-                query_base = {
-                    "query": {
-                        "bool": {
-                            "must": must_clauses
-                        }
-                    }
+        # ---- NÚMERO DE RESOLUCIÓN (fragmento) ----
+        if num_resolucion:
+            filtros_activos["N° resolución"] = num_resolucion
+            must_clauses.append({
+                "wildcard": {
+                    "numero_resolución": f"*{num_resolucion}*"
                 }
-            else:
-                query_base = {
-                    "query": {
-                        "match_all": {}
-                    }
-                }
+            })
 
-            # ====== AGGREGATIONS (opcional, por ahora no las mostramos) ======
-            aggs = {
-                "resoluciones_por_anio": {
-                    "date_histogram": {
-                        "field": "fecha_resolución",
-                        "calendar_interval": "year"
-                    }
-                },
-                "resoluciones_por_empresa": {
-                    "terms": {
-                        "field": "empresa.keyword",
-                        "size": 10
-                    }
-                },
-                "resoluciones_por_infraccion": {
-                    "terms": {
-                        "field": "tipos_infraccion",
-                        "size": 10
-                    }
+        # ---- NÚMERO DE EXPEDIENTE (fragmento) ----
+        if num_expediente:
+            filtros_activos["N° expediente"] = num_expediente
+            must_clauses.append({
+                "wildcard": {
+                    "numero_expediente": f"*{num_expediente}*"
+                }
+            })
+
+        # ---- TIPO DE INFRACCIÓN (select) ----
+        if tipo_infraccion:
+            filtros_activos["Tipo de infracción"] = tipo_infraccion
+            must_clauses.append({
+                "term": {
+                    "tipos_infraccion_normalizados.keyword": tipo_infraccion
+                }
+            })
+
+        # ---- QUERY PRINCIPAL ----
+        if not must_clauses:
+            query_body = {"query": {"match_all": {}}}
+        else:
+            query_body = {"query": {"bool": {"must": must_clauses}}}
+
+        # ---- AGREGACIONES PARA LLENAR LOS SELECTS ----
+        aggs = {
+            "empresas": {
+                "terms": {
+                    "field": "empresa.keyword",
+                    "size": 200
+                }
+            },
+            "tipos_infraccion": {
+                "terms": {
+                    "field": "tipos_infraccion_normalizados.keyword",
+                    "size": 200
                 }
             }
+        }
 
-            resultado = elastic.buscar(
-                index=ELASTIC_INDEX_DEFAULT,
-                query=query_base,
-                aggs=aggs,
-                size=50
-            )
+        # Llamada a Elasticsearch mediante tu helper
+        resultado = elastic.buscar(
+            index=ELASTIC_INDEX_DEFAULT,
+            query=query_body,
+            aggs=aggs,
+            size=100
+        )
 
-            if resultado.get('success'):
-                resultados = resultado.get('resultados', [])
-                total = resultado.get('total', 0)
-            else:
-                error = resultado.get('error', 'Error desconocido en Elastic')
+        if resultado.get('success'):
+            resultados = resultado.get('resultados', [])
+            total = resultado.get('total', 0)
 
-        except Exception as e:
-            error = str(e)
+            # leer agregaciones (asumiendo que tu helper devuelve 'aggs')
+            aggs_result = resultado.get('aggs', {})
+
+            empresas_opciones = [
+                b["key"] for b in aggs_result.get("empresas", {}).get("buckets", [])
+            ]
+            tipos_infraccion_opciones = [
+                b["key"] for b in aggs_result.get("tipos_infraccion", {}).get("buckets", [])
+            ]
+
+            # ordenar alfabéticamente
+            empresas_opciones = sorted(empresas_opciones)
+            tipos_infraccion_opciones = sorted(tipos_infraccion_opciones)
+
+            # Fallback: si Elastic no devuelve tipos de infracción, usar constantes
+            if not tipos_infraccion_opciones and TIPOS_INFRACCION_CATEGORIAS:
+                tipos_infraccion_opciones = TIPOS_INFRACCION_CATEGORIAS
+
+        else:
+            error = resultado.get('error', 'Error desconocido en Elastic')
+
+    except Exception as e:
+        error = str(e)
 
     return render_template(
         'buscador.html',
         version=VERSION_APP,
         creador=CREATOR_APP,
+        # valores actuales de filtros (para que queden seleccionados)
         texto=texto,
-        empresa_filtro=empresa_filtro,
-        anio_filtro=anio_filtro,
-        num_resolucion_filtro=num_resolucion_filtro,
-        num_expediente_filtro=num_expediente_filtro,
+        empresa=empresa,
+        anio=anio,
+        num_resolucion=num_resolucion,
+        num_expediente=num_expediente,
+        tipo_infraccion=tipo_infraccion,
+        # opciones dinámicas para los select
+        empresas_opciones=empresas_opciones,
+        tipos_infraccion_opciones=tipos_infraccion_opciones,
+        # resultados
         resultados=resultados,
         total=total,
-        error=error
+        error=error,
+        filtros_activos=filtros_activos
     )
 # ==================== AUTENTICACIÓN / USUARIOS (MONGO) ====================
 
