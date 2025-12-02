@@ -100,7 +100,7 @@ def buscador():
     """
     Página de búsqueda pública con filtros:
     - texto libre
-    - empresa (select, usando empresa_normalizada)
+    - empresa (select)
     - año de resolución
     - número de resolución
     - número de expediente
@@ -109,7 +109,7 @@ def buscador():
 
     # ---- Parámetros de la URL (GET) ----
     texto = (request.args.get('texto') or '').strip()
-    empresa = (request.args.get('empresa') or '').strip()          # valor = empresa_normalizada
+    empresa = (request.args.get('empresa') or '').strip()
     anio = (request.args.get('anio') or '').strip()
     num_resolucion = (request.args.get('num_resolucion') or '').strip()
     num_expediente = (request.args.get('num_expediente') or '').strip()
@@ -139,19 +139,20 @@ def buscador():
                         "descripcion^2",
                         "nombre_proyecto^2",
                         "empresa^2",
-                        "empresa_normalizada^3",   # 👈 también buscar en normalizada
+                        # si quieres sigues buscando también en empresa_normalizada:
+                        # "empresa_normalizada^3",
                         "numero_expediente",
                         "radicados"
                     ]
                 }
             })
 
-        # ---- EMPRESA (select, usando empresa_normalizada) ----
+        # ---- EMPRESA (select) - usamos empresa.keyword ----
         if empresa:
             filtros_activos["Empresa"] = empresa
             must_clauses.append({
                 "term": {
-                    "empresa_normalizada.keyword": empresa   # 👈 filtro por normalizada
+                    "empresa.keyword": empresa   # 👈 mismo campo que el combo
                 }
             })
 
@@ -169,7 +170,6 @@ def buscador():
                     }
                 })
             except ValueError:
-                # si el año no es válido, no aplicamos filtro
                 pass
 
         # ---- NÚMERO DE RESOLUCIÓN (fragmento) ----
@@ -207,17 +207,9 @@ def buscador():
 
         # ---- AGREGACIONES PARA LLENAR LOS SELECTS ----
         aggs = {
-            # primero intentamos con empresa_normalizada
             "empresas": {
                 "terms": {
-                    "field": "empresa_normalizada.keyword",
-                    "size": 200
-                }
-            },
-            # fallback: empresa original por si la normalizada falla
-            "empresas_raw": {
-                "terms": {
-                    "field": "empresa.keyword",
+                    "field": "empresa.keyword",   # 👈 igual que el filtro
                     "size": 200
                 }
             },
@@ -241,20 +233,11 @@ def buscador():
             resultados = resultado.get('resultados', [])
             total = resultado.get('total', 0)
 
-            # leer agregaciones
             aggs_result = resultado.get('aggs', {}) or {}
 
-            # 1º intento: empresas normalizadas
             empresas_opciones = [
                 b["key"] for b in aggs_result.get("empresas", {}).get("buckets", [])
             ]
-
-            # Fallback: si no hay nada en empresa_normalizada, usamos empresa.keyword
-            if not empresas_opciones:
-                empresas_opciones = [
-                    b["key"] for b in aggs_result.get("empresas_raw", {}).get("buckets", [])
-                ]
-
             tipos_infraccion_opciones = [
                 b["key"] for b in aggs_result.get("tipos_infraccion", {}).get("buckets", [])
             ]
@@ -262,13 +245,11 @@ def buscador():
             empresas_opciones = sorted(empresas_opciones)
             tipos_infraccion_opciones = sorted(tipos_infraccion_opciones)
 
-            # fallback: si no hay tipos de infracción en aggs, usa la lista fija
             if not tipos_infraccion_opciones and TIPOS_INFRACCION_CATEGORIAS:
                 tipos_infraccion_opciones = TIPOS_INFRACCION_CATEGORIAS[:]
 
         else:
             error = resultado.get('error', 'Error desconocido en Elastic')
-            # fallback mínimo para que al menos salga algo
             tipos_infraccion_opciones = TIPOS_INFRACCION_CATEGORIAS[:]
 
     except Exception as e:
@@ -286,17 +267,14 @@ def buscador():
         'buscador.html',
         version=VERSION_APP,
         creador=CREATOR_APP,
-        # valores actuales de filtros (para que queden seleccionados)
         texto=texto,
         empresa=empresa,
         anio=anio,
         num_resolucion=num_resolucion,
         num_expediente=num_expediente,
         tipo_infraccion=tipo_infraccion,
-        # opciones dinámicas para los select
         empresas_opciones=empresas_opciones,
         tipos_infraccion_opciones=tipos_infraccion_opciones,
-        # resultados
         resultados=resultados,
         total=total,
         error=error,
