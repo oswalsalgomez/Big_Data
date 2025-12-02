@@ -139,7 +139,7 @@ def buscador():
                         "descripcion^2",
                         "nombre_proyecto^2",
                         "empresa^2",
-                        "empresa_normalizada^3",          
+                        "empresa_normalizada^3",   # 👈 también buscar en normalizada
                         "numero_expediente",
                         "radicados"
                     ]
@@ -151,8 +151,7 @@ def buscador():
             filtros_activos["Empresa"] = empresa
             must_clauses.append({
                 "term": {
-                    # usamos el campo normalizado para agrupar variantes
-                    "empresa_normalizada.keyword": empresa
+                    "empresa_normalizada.keyword": empresa   # 👈 filtro por normalizada
                 }
             })
 
@@ -208,10 +207,17 @@ def buscador():
 
         # ---- AGREGACIONES PARA LLENAR LOS SELECTS ----
         aggs = {
+            # primero intentamos con empresa_normalizada
             "empresas": {
                 "terms": {
-                    
                     "field": "empresa_normalizada.keyword",
+                    "size": 200
+                }
+            },
+            # fallback: empresa original por si la normalizada falla
+            "empresas_raw": {
+                "terms": {
+                    "field": "empresa.keyword",
                     "size": 200
                 }
             },
@@ -238,9 +244,17 @@ def buscador():
             # leer agregaciones
             aggs_result = resultado.get('aggs', {}) or {}
 
+            # 1º intento: empresas normalizadas
             empresas_opciones = [
                 b["key"] for b in aggs_result.get("empresas", {}).get("buckets", [])
             ]
+
+            # Fallback: si no hay nada en empresa_normalizada, usamos empresa.keyword
+            if not empresas_opciones:
+                empresas_opciones = [
+                    b["key"] for b in aggs_result.get("empresas_raw", {}).get("buckets", [])
+                ]
+
             tipos_infraccion_opciones = [
                 b["key"] for b in aggs_result.get("tipos_infraccion", {}).get("buckets", [])
             ]
