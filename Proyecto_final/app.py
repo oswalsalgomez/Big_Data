@@ -95,12 +95,12 @@ def normalizar_profundo(texto: str) -> str:
 
 # ==================== BUSCADOR ELASTIC (PÚBLICO) ====================
 
-@app.route('/buscador')
+@app.route('/buscador') 
 def buscador():
     """
     Página de búsqueda pública con filtros:
     - texto libre
-    - empresa (select)
+    - empresa (select, usando empresa_normalizada)
     - año de resolución
     - número de resolución
     - número de expediente
@@ -109,7 +109,7 @@ def buscador():
 
     # ---- Parámetros de la URL (GET) ----
     texto = (request.args.get('texto') or '').strip()
-    empresa = (request.args.get('empresa') or '').strip()
+    empresa = (request.args.get('empresa') or '').strip()          # valor = empresa_normalizada
     anio = (request.args.get('anio') or '').strip()
     num_resolucion = (request.args.get('num_resolucion') or '').strip()
     num_expediente = (request.args.get('num_expediente') or '').strip()
@@ -139,20 +139,23 @@ def buscador():
                         "descripcion^2",
                         "nombre_proyecto^2",
                         "empresa^2",
+                        "empresa_normalizada^3",          
                         "numero_expediente",
                         "radicados"
                     ]
                 }
             })
 
-        # ---- EMPRESA (select) ----
+        # ---- EMPRESA (select, usando empresa_normalizada) ----
         if empresa:
             filtros_activos["Empresa"] = empresa
             must_clauses.append({
                 "term": {
-                    "empresa.keyword": empresa   # coincidencia exacta contra el combo
+                    # usamos el campo normalizado para agrupar variantes
+                    "empresa_normalizada.keyword": empresa
                 }
             })
+
         # ---- AÑO RESOLUCIÓN ----
         if anio:
             filtros_activos["Año"] = anio
@@ -193,9 +196,10 @@ def buscador():
             filtros_activos["Tipo de infracción"] = tipo_infraccion
             must_clauses.append({
                 "term": {
-                    "tipos_infraccion": tipo_infraccion   # 👈 campo keyword directo
+                    "tipos_infraccion": tipo_infraccion
                 }
             })
+
         # ---- QUERY PRINCIPAL ----
         if not must_clauses:
             query_body = {"query": {"match_all": {}}}
@@ -206,13 +210,14 @@ def buscador():
         aggs = {
             "empresas": {
                 "terms": {
-                    "field": "empresa.keyword",   # 👈 empresa.keyword
+                    
+                    "field": "empresa_normalizada.keyword",
                     "size": 200
                 }
             },
             "tipos_infraccion": {
                 "terms": {
-                    "field": "tipos_infraccion",  # 👈 SIN .keyword
+                    "field": "tipos_infraccion",
                     "size": 200
                 }
             }
