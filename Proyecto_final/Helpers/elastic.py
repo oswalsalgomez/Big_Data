@@ -303,7 +303,7 @@ class ElasticSearch:
                 'success': True,
                 'total': response['hits']['total']['value'],
                 'resultados': response['hits']['hits'],
-                'aggs': response.get('aggregations', {})   # 👈 CAMBIO AQUÍ
+                'aggs': response.get('aggregations', {})   # devolvemos las aggs reales
             }
         except Exception as e:
             return {
@@ -482,16 +482,39 @@ def crear_indice_anla_si_no_existe(index_name: str = None):
                 "fuente":            { "type": "keyword" },
                 "numero_resolución": { "type": "text" },
                 "fecha_resolución":  { "type": "date", "format": "yyyy-MM-dd" },
+
+                # Año de resolución (string 4 dígitos)
+                "anio_resolucion":   { "type": "keyword" },          # <<< NUEVO
+
                 "nombre_proyecto":   { "type": "text" },
+                "nombre_proyecto_normalizado": { "type": "text" },   # <<< NUEVO
+
                 "ubicación":         { "type": "text" },
+
+                # Nombre tal como sale en la resolución
                 "empresa": {
                     "type": "text",
-                    "fields": { "keyword": { "type": "keyword" } }
+                    "fields": {
+                        "keyword": { "type": "keyword" }
+                    }
                 },
+
+                # Nombre normalizado para agrupar/buscar
+                "empresa_normalizada": { "type": "keyword" },        # <<< NUEVO
+
+                # Opcional: nombre canónico que tú definas (si lo usas luego)
+                "empresa_canonica":    { "type": "keyword" },        # <<< NUEVO
+
                 "numero_expediente": { "type": "keyword" },
                 "radicados":         { "type": "keyword" },
                 "descripcion":       { "type": "text" },
+
+                # Lista legible
                 "tipos_infraccion":  { "type": "keyword" },
+
+                # Lista normalizada para filtros
+                "tipos_infraccion_normalizados": { "type": "keyword" },  # <<< NUEVO
+
                 "pdf_id":            { "type": "keyword" },
                 "file_name":         { "type": "keyword" },
                 "texto_completo":    { "type": "text" }
@@ -554,7 +577,9 @@ def buscar_resoluciones_anla(texto: str, size: int = 10, index_name: str = None)
                     "texto_completo",
                     "descripcion",
                     "empresa",
+                    "empresa_normalizada",   # <<< también miramos la normalizada
                     "nombre_proyecto",
+                    "nombre_proyecto_normalizado",
                     "ubicación",
                     "numero_expediente",
                     "numero_resolución"
