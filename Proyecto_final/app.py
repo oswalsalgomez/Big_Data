@@ -207,14 +207,13 @@ def buscador():
         aggs = {
             "empresas": {
                 "terms": {
-                    # empresa_normalizada según tu JSON
-                    "field": "empresa_normalizada.keyword",
+                    "field": "empresa.keyword",   # 👈 empresa.keyword
                     "size": 200
                 }
             },
             "tipos_infraccion": {
                 "terms": {
-                    "field": "tipos_infraccion.keyword",
+                    "field": "tipos_infraccion",  # 👈 SIN .keyword
                     "size": 200
                 }
             }
