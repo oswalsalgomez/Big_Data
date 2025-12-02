@@ -59,7 +59,7 @@
                            class="form-control"
                            id="num_resolucion"
                            name="num_resolucion"
-                           placeholder="Ej: 01186"
+                           placeholder="Ej: 00093"
                            value="{{ num_resolucion or '' }}">
                 </div>
 
@@ -97,12 +97,14 @@
                 </div>
             </div>
 
-            {% if empresa or anio or num_resolucion or num_expediente or tipo_infraccion %}
+            <!-- FILTROS ACTIVOS -->
+            {% if empresa or anio or num_resolucion or num_expediente or tipo_infraccion or texto %}
             <div class="row mt-3">
                 <div class="col">
                     <span class="badge bg-secondary me-2">
                         Filtros activos:
-                        {% if empresa %} Empresa="{{ empresa }}"{% endif %}
+                        {% if texto %} Texto="{{ texto }}"{% endif %}
+                        {% if empresa %} · Empresa="{{ empresa }}"{% endif %}
                         {% if anio %} · Año={{ anio }}{% endif %}
                         {% if num_resolucion %} · Res={{ num_resolucion }}{% endif %}
                         {% if num_expediente %} · Exp={{ num_expediente }}{% endif %}
@@ -118,16 +120,15 @@
     </div>
 </div>
 
-
 <!-- MENSAJE DE ERROR -->
 {% if error %}
 <div class="alert alert-danger">{{ error }}</div>
 {% endif %}
 
 <!-- MENSAJE SIN RESULTADOS -->
-{% if resultados is not none and total == 0 %}
+{% if resultados is not none and total == 0 and not error %}
 <div class="alert alert-warning">
-    No se encontraron documentos para <strong>"{{ texto }}"</strong>.
+    No se encontraron documentos para los filtros seleccionados.
 </div>
 {% endif %}
 
@@ -174,7 +175,6 @@
                                 <span class="text-muted">Sin PDF</span>
                             {% endif %}
                         </td>
-
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -185,4 +185,3 @@
 {% endif %}
 
 {% endblock %}
-
