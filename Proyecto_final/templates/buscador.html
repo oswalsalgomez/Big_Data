@@ -22,15 +22,19 @@
                            value="{{ texto or '' }}">
                 </div>
 
-                <!-- EMPRESA -->
+                <!-- EMPRESA (SELECT) -->
                 <div class="col-md-3">
                     <label for="empresa" class="form-label">Empresa</label>
-                    <input type="text"
-                           class="form-control"
-                           id="empresa"
-                           name="empresa"
-                           placeholder="Ej: Ecopetrol S.A."
-                           value="{{ empresa_filtro or '' }}">
+                    <select id="empresa"
+                            name="empresa"
+                            class="form-select">
+                        <option value="">-- Todas --</option>
+                        {% for emp in empresas_opciones %}
+                            <option value="{{ emp }}" {% if emp == empresa %}selected{% endif %}>
+                                {{ emp }}
+                            </option>
+                        {% endfor %}
+                    </select>
                 </div>
 
                 <!-- AÑO -->
@@ -43,7 +47,7 @@
                            min="1990"
                            max="2100"
                            placeholder="Ej: 2023"
-                           value="{{ anio_filtro or '' }}">
+                           value="{{ anio or '' }}">
                 </div>
             </div>
 
@@ -56,7 +60,7 @@
                            id="num_resolucion"
                            name="num_resolucion"
                            placeholder="Ej: 01186"
-                           value="{{ num_resolucion_filtro or '' }}">
+                           value="{{ num_resolucion or '' }}">
                 </div>
 
                 <!-- NÚMERO DE EXPEDIENTE -->
@@ -67,26 +71,42 @@
                            id="num_expediente"
                            name="num_expediente"
                            placeholder="Ej: LAM-1234"
-                           value="{{ num_expediente_filtro or '' }}">
+                           value="{{ num_expediente or '' }}">
+                </div>
+
+                <!-- TIPO DE INFRACCIÓN (SELECT) -->
+                <div class="col-md-4">
+                    <label for="tipo_infraccion" class="form-label">Tipo de infracción</label>
+                    <select id="tipo_infraccion"
+                            name="tipo_infraccion"
+                            class="form-select">
+                        <option value="">-- Todas --</option>
+                        {% for t in tipos_infraccion_opciones %}
+                            <option value="{{ t }}" {% if t == tipo_infraccion %}selected{% endif %}>
+                                {{ t }}
+                            </option>
+                        {% endfor %}
+                    </select>
                 </div>
 
                 <!-- BOTÓN BUSCAR -->
-                <div class="col-md-2 offset-md-4 d-flex align-items-end">
+                <div class="col-md-2 d-flex align-items-end">
                     <button type="submit" class="btn btn-primary w-100">
                         Buscar
                     </button>
                 </div>
             </div>
 
-            {% if empresa_filtro or anio_filtro or num_resolucion_filtro or num_expediente_filtro %}
+            {% if empresa or anio or num_resolucion or num_expediente or tipo_infraccion %}
             <div class="row mt-3">
                 <div class="col">
                     <span class="badge bg-secondary me-2">
                         Filtros activos:
-                        {% if empresa_filtro %} Empresa="{{ empresa_filtro }}"{% endif %}
-                        {% if anio_filtro %} · Año={{ anio_filtro }}{% endif %}
-                        {% if num_resolucion_filtro %} · Res={{ num_resolucion_filtro }}{% endif %}
-                        {% if num_expediente_filtro %} · Exp={{ num_expediente_filtro }}{% endif %}
+                        {% if empresa %} Empresa="{{ empresa }}"{% endif %}
+                        {% if anio %} · Año={{ anio }}{% endif %}
+                        {% if num_resolucion %} · Res={{ num_resolucion }}{% endif %}
+                        {% if num_expediente %} · Exp={{ num_expediente }}{% endif %}
+                        {% if tipo_infraccion %} · Tipo="{{ tipo_infraccion }}"{% endif %}
                     </span>
                     <a href="{{ url_for('buscador') }}" class="btn btn-sm btn-outline-secondary">
                         Limpiar filtros
