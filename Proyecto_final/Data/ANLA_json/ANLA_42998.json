@@ -3,10 +3,10 @@
   "numero_resolución": "RESOLUCIÓN N° 1364",
   "fecha_resolución": "1993-12-22",
   "anio_resolucion": "1993",
-  "nombre_proyecto": "en mención",
-  "nombre_proyecto_normalizado": "EN MENCION",
+  "nombre_proyecto": null,
+  "nombre_proyecto_normalizado": null,
   "ubicación": "departamento de Bolívar; Puerto Wilches y Sabana",
-  "empresa": "ECOPETROL",
+  "empresa": "ECOPETROL S.A.",
   "empresa_normalizada": "ECOPETROL",
   "numero_expediente": "con",
   "radicados": [

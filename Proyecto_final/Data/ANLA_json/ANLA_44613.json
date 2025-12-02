@@ -3,11 +3,11 @@
   "numero_resolución": "RESOLUCIÓN N° 2671",
   "fecha_resolución": "2023-05-23",
   "anio_resolucion": "2023",
-  "nombre_proyecto": "Campo de Producción Castilla y Chichimene”,",
-  "nombre_proyecto_normalizado": "CAMPO DE PRODUCCION CASTILLA Y CHICHIMENE",
-  "ubicación": "municipio de Castilla La Nueva, u otras entidades o grupos",
-  "empresa": "ECOPETROL",
-  "empresa_normalizada": "ECOPETROL",
+  "nombre_proyecto": null,
+  "nombre_proyecto_normalizado": null,
+  "ubicación": "localizado en jurisdicción de los municipios de Acacías, Guamal, Castilla la Nueva y Villavicencio, departamento del Meta",
+  "empresa": "CHEVRON PETROLEUMCOMPANY OF COLOMBIA",
+  "empresa_normalizada": "CHEVRON PETROLEUMCOMPANY OF COLOMBIA",
   "numero_expediente": "LAM0227",
   "radicados": [
     "2015022481"

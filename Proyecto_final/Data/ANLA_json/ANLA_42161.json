@@ -3,11 +3,11 @@
   "numero_resolución": "RESOLUCIÓN N° 00651",
   "fecha_resolución": "2023-04-03",
   "anio_resolucion": "2023",
-  "nombre_proyecto": "Área de la locación pozo Cusiana T,",
-  "nombre_proyecto_normalizado": "AREA DE LA LOCACION POZO CUSIANA T",
-  "ubicación": "departamento de Casanare, a favor de ECOPETROL S",
-  "empresa": "ECOPETROL",
-  "empresa_normalizada": "ECOPETROL",
+  "nombre_proyecto": "de",
+  "nombre_proyecto_normalizado": "DE",
+  "ubicación": null,
+  "empresa": "BP EXPLORATION COMPANY LTDA",
+  "empresa_normalizada": "BP EXPLORATION COMPANY",
   "numero_expediente": "No",
   "radicados": [
     "2023020016"

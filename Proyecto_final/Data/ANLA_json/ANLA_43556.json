@@ -3,11 +3,11 @@
   "numero_resolución": "RESOLUCIÓN N° 1763",
   "fecha_resolución": "1993-12-22",
   "anio_resolucion": "1993",
-  "nombre_proyecto": "para el proyecto “Campo Toqui Toqui”, localizado en el municipio de",
-  "nombre_proyecto_normalizado": "PARA EL PROYECTO CAMPO TOQUI TOQUI LOCALIZADO EN EL MUNICIPIO DE",
-  "ubicación": "Municipio de Piedras en el",
-  "empresa": "ECOPETROL",
-  "empresa_normalizada": "ECOPETROL",
+  "nombre_proyecto": null,
+  "nombre_proyecto_normalizado": null,
+  "ubicación": "Municipio de Piedras, Departamento de Tolima",
+  "empresa": "AMERICAN INTERNATIONAL",
+  "empresa_normalizada": "AMERICAN INTERNATIONAL",
   "numero_expediente": "LAM0203",
   "radicados": [
     "20236200223602"

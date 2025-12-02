@@ -6,8 +6,8 @@
   "nombre_proyecto": "Campo Colón",
   "nombre_proyecto_normalizado": "CAMPO COLON",
   "ubicación": "departamento de Santander",
-  "empresa": "ENCARGADO ENTRE OTRAS COSAS",
-  "empresa_normalizada": "ENCARGADO ENTRE OTRAS COSAS",
+  "empresa": null,
+  "empresa_normalizada": null,
   "numero_expediente": "como",
   "radicados": [
     "2019184354",

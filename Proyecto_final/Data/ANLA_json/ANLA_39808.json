@@ -3,11 +3,11 @@
   "numero_resolución": "RESOLUCIÓN N° 01566",
   "fecha_resolución": "2022-07-21",
   "anio_resolucion": "2022",
-  "nombre_proyecto": "Cuando se presente cambios de gobierno local, en las cuales se informe la",
-  "nombre_proyecto_normalizado": "CUANDO SE PRESENTE CAMBIOS DE GOBIERNO LOCAL EN LAS CUALES SE INFORME LA",
-  "ubicación": "departamento de Casanare",
-  "empresa": "ECOPETROL",
-  "empresa_normalizada": "ECOPETROL",
+  "nombre_proyecto": null,
+  "nombre_proyecto_normalizado": null,
+  "ubicación": "Municipio De Monterrey, Departamento De Casanare",
+  "empresa": "CHEVRON PETROLEUM COMPANY OF COLOMBIA",
+  "empresa_normalizada": "CHEVRON PETROLEUM COMPANY OF COLOMBIA",
   "numero_expediente": "LAM0522",
   "radicados": [
     "2020235678"

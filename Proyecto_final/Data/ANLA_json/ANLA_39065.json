@@ -6,8 +6,8 @@
   "nombre_proyecto": "Campos Petroleros Cantagallo y Aledaños ( conformado por los Campos",
   "nombre_proyecto_normalizado": "CAMPOS PETROLEROS CANTAGALLO Y ALEDANOS CONFORMADO POR LOS CAMPOS",
   "ubicación": "departamento de Bolívar en los",
-  "empresa": "ECOPETROL",
-  "empresa_normalizada": "ECOPETROL",
+  "empresa": null,
+  "empresa_normalizada": null,
   "numero_expediente": "SAN0160-00-2018",
   "radicados": [
     "2020051895"
