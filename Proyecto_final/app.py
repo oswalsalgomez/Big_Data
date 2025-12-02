@@ -95,7 +95,7 @@ def normalizar_profundo(texto: str) -> str:
 
 # ==================== BUSCADOR ELASTIC (PÚBLICO) ====================
 
-@app.route('/buscador') 
+@app.route('/buscador')
 def buscador():
     """
     Página de búsqueda pública con filtros:
@@ -106,6 +106,7 @@ def buscador():
     - número de expediente
     - tipo de infracción (select)
     """
+
     # ---- Parámetros de la URL (GET) ----
     texto = (request.args.get('texto') or '').strip()
     empresa = (request.args.get('empresa') or '').strip()
@@ -147,15 +148,8 @@ def buscador():
         # ---- EMPRESA (select) ----
         if empresa:
             filtros_activos["Empresa"] = empresa
-            empresa_norm = normalizar_profundo(empresa)
             must_clauses.append({
-                "bool": {
-                    "should": [
-                        {"match_phrase": {"empresa": empresa}},
-                        {"match_phrase": {"empresa_normalizada": empresa_norm}}
-                    ],
-                    "minimum_should_match": 1
-                }
+                "match_phrase": {"empresa_normalizada.keyword": empresa}
             })
 
         # ---- AÑO RESOLUCIÓN ----
@@ -198,7 +192,7 @@ def buscador():
             filtros_activos["Tipo de infracción"] = tipo_infraccion
             must_clauses.append({
                 "term": {
-                    # usamos el campo original del JSON
+                    # usamos el campo tal cual está en tus JSON
                     "tipos_infraccion.keyword": tipo_infraccion
                 }
             })
@@ -213,13 +207,13 @@ def buscador():
         aggs = {
             "empresas": {
                 "terms": {
-                    "field": "empresa.keyword",
+                    # empresa_normalizada según tu JSON
+                    "field": "empresa_normalizada.keyword",
                     "size": 200
                 }
             },
             "tipos_infraccion": {
                 "terms": {
-                    # de nuevo, usamos el campo del JSON
                     "field": "tipos_infraccion.keyword",
                     "size": 200
                 }
@@ -248,19 +242,28 @@ def buscador():
                 b["key"] for b in aggs_result.get("tipos_infraccion", {}).get("buckets", [])
             ]
 
-            # ordenar (queda más bonito)
             empresas_opciones = sorted(empresas_opciones)
             tipos_infraccion_opciones = sorted(tipos_infraccion_opciones)
 
-            # Fallback: si no hay tipos de infracción en aggs, usa la lista fija
+            # fallback: si no hay tipos de infracción en aggs, usa la lista fija
             if not tipos_infraccion_opciones and TIPOS_INFRACCION_CATEGORIAS:
                 tipos_infraccion_opciones = TIPOS_INFRACCION_CATEGORIAS[:]
 
         else:
             error = resultado.get('error', 'Error desconocido en Elastic')
+            # fallback mínimo para que al menos salga algo
+            tipos_infraccion_opciones = TIPOS_INFRACCION_CATEGORIAS[:]
 
     except Exception as e:
         error = str(e)
+        tipos_infraccion_opciones = TIPOS_INFRACCION_CATEGORIAS[:]
+
+    # ---- DEBUG EN CONSOLA ----
+    print("=== DEBUG BUSCADOR ===")
+    print("Empresas AGG:", empresas_opciones)
+    print("Infracciones AGG:", tipos_infraccion_opciones)
+    print("Total resultados:", total)
+    print("======================")
 
     return render_template(
         'buscador.html',
