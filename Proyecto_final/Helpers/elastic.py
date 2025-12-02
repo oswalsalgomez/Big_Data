@@ -292,21 +292,18 @@ class ElasticSearch:
             size: Número de resultados
         """
         try:
-            # Construir el body de la búsqueda
             body = query.copy() if query else {}
-            
-            # Agregar las agregaciones al body si existen
+
             if aggs:
                 body['aggs'] = aggs
-            
-            # Ejecutar búsqueda
+
             response = self.client.search(index=index, body=body, size=size)
-            
+
             return {
                 'success': True,
                 'total': response['hits']['total']['value'],
                 'resultados': response['hits']['hits'],
-                'aggs': aggs
+                'aggs': response.get('aggregations', {})   # 👈 CAMBIO AQUÍ
             }
         except Exception as e:
             return {
