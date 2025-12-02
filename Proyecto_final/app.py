@@ -149,9 +149,10 @@ def buscador():
         if empresa:
             filtros_activos["Empresa"] = empresa
             must_clauses.append({
-                "match_phrase": {"empresa_normalizada.keyword": empresa}
+                "term": {
+                    "empresa.keyword": empresa   # coincidencia exacta contra el combo
+                }
             })
-
         # ---- AÑO RESOLUCIÓN ----
         if anio:
             filtros_activos["Año"] = anio
@@ -192,11 +193,9 @@ def buscador():
             filtros_activos["Tipo de infracción"] = tipo_infraccion
             must_clauses.append({
                 "term": {
-                    # usamos el campo tal cual está en tus JSON
-                    "tipos_infraccion.keyword": tipo_infraccion
+                    "tipos_infraccion": tipo_infraccion   # 👈 campo keyword directo
                 }
             })
-
         # ---- QUERY PRINCIPAL ----
         if not must_clauses:
             query_body = {"query": {"match_all": {}}}
