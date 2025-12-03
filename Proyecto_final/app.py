@@ -284,40 +284,54 @@ def buscador():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    """Página de login con validación"""
+    error_message = None  # Ahora sí lo usaremos correctamente
+
     if request.method == 'POST':
         usuario = request.form.get('usuario')
         password = request.form.get('password')
-        
-        # Validar usuario en MongoDB
+
+        # Validación en MongoDB
         user_data = mongo.validar_usuario(usuario, password, MONGO_COLECCION)
-        
+
         if user_data:
-            # Guardar sesión
             session['usuario'] = usuario
             session['permisos'] = user_data.get('permisos', {})
             session['logged_in'] = True
-            
-            flash('¡Bienvenido! Inicio de sesión exitoso', 'success')
-            return redirect(url_for('admin'))
+
+            # Si el usuario es admin_usuarios → va al gestor
+            if user_data.get('permisos', {}).get('admin_usuarios', False):
+                return redirect(url_for('gestor_usuarios'))
+
+            # Si no es admin_usuarios → va al buscador
+            return redirect(url_for('buscador'))
+
         else:
-            flash('Usuario o contraseña incorrectos', 'danger')
-    
-    return render_template('login.html')
+            error_message = "Usuario o contraseña incorrectos."
+
+    return render_template('login.html', error_message=error_message)
+
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
 
 @app.route('/listar-usuarios')
 def listar_usuarios():
-    """API para listar usuarios desde Mongo"""
+    if not session.get('logged_in'):
+        return jsonify({'error': 'No autorizado'}), 401
+
+    permisos = session.get('permisos', {})
+    if not permisos.get('admin_usuarios'):
+        return jsonify({'error': 'No tiene permisos para listar usuarios'}), 403
+
     try:
         usuarios = mongo.listar_usuarios(MONGO_COLECCION)
-        
-        # Convertir ObjectId a string para serialización JSON
         for usuario in usuarios:
             usuario['_id'] = str(usuario['_id'])
-        
         return jsonify(usuarios)
     except Exception as e:
-        return jsonify({'error': str(e)}), 500 
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/gestor_usuarios')
 def gestor_usuarios():
