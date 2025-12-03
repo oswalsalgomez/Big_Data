@@ -820,6 +820,7 @@ def admin():
 
     # 1. Verificar login
     if not session.get('logged_in'):
+        # No hay sesión -> al login
         flash('Por favor, inicia sesión para acceder al área de administración', 'warning')
         return redirect(url_for('login'))
 
