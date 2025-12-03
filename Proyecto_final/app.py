@@ -811,19 +811,39 @@ def cargar_documentos_elastic():
 
 @app.route('/admin')
 def admin():
-    """Página de administración (protegida requiere login)"""
+    """
+    Panel de administración.
+    Requiere:
+      - Estar logueado
+      - Tener al menos UN permiso de administración
+    """
+
+    # 1. Verificar login
     if not session.get('logged_in'):
         flash('Por favor, inicia sesión para acceder al área de administración', 'warning')
         return redirect(url_for('login'))
-    
+
+    # 2. Verificar permisos de administración
+    permisos = session.get('permisos', {})
+
+    es_admin = (
+        permisos.get('admin_usuarios', False) or
+        permisos.get('admin_elastic', False) or
+        permisos.get('admin_data_elastic', False)
+    )
+
+    if not es_admin:
+        flash('No tienes permisos para acceder al panel de administración', 'danger')
+        return redirect(url_for('login'))
+
+    # 3. Renderizar panel
     return render_template(
         'admin.html',
         usuario=session.get('usuario'),
-        permisos=session.get('permisos'),
+        permisos=permisos,
         version=VERSION_APP,
         creador=CREATOR_APP
     )
-
 # ==================== MAIN ====================
 
 if __name__ == '__main__':
